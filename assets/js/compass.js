@@ -20,6 +20,8 @@ const OUT_OF_SCOPE = [
 const SURFACE = "home";
 
 const base = document.documentElement.dataset.base || "";
+// build stamp (export.build_id): new code always fetches the data built with it
+const V = document.documentElement.dataset.build ? `?v=${document.documentElement.dataset.build}` : "";
 const url = (p) => `${base}/${String(p).replace(/^\/+/, "")}`;
 const $ = (id) => document.getElementById(id);
 const form = $("ask");
@@ -33,8 +35,8 @@ let extractorPromise = null;
 function loadData() {
   if (!dataPromise) {
     dataPromise = Promise.all([
-      fetch(url("data/compass.json")).then((r) => r.json()),
-      fetch(url("data/router.json")).then((r) => r.json()),
+      fetch(url("data/compass.json") + V).then((r) => r.json()),
+      fetch(url("data/router.json") + V).then((r) => r.json()),
     ]).then(([compass, router]) => ({ compass, router }));
   }
   return dataPromise;
