@@ -1,0 +1,13 @@
+id,name,provider,tier,credits_per_image,user_available,deep_link,params
+gpt-image-2,GPT Image 2,OpenAI,premium,5.0,true,https://picsart.com/ai-playground/app/?model=gpt-image-2&mode=image,"{""quality"":""high"",""count"":1}"
+gemini-3-pro-image,Nano Banana Pro,Google,premium,5.0,true,https://picsart.com/ai-playground/app/?model=gemini-3-pro-image&mode=image,"{""resolution"":""1K"",""count"":1}"
+hunyuan-v3,Hunyuan V3,Tencent,standard,3.0,true,https://picsart.com/ai-playground/app/?model=hunyuan-v3&mode=image,"{""count"":1}"
+ideogram-4-5,Ideogram 4.5,Ideogram,standard,3.0,true,https://picsart.com/ai-playground/app/?model=ideogram-4-5&mode=image,"{""resolution"":""1K"",""quality"":""high"",""count"":1}"
+gemini-3.1-flash-image,Nano Banana 2,Google,standard,3.0,true,https://picsart.com/ai-playground/app/?model=gemini-3.1-flash-image&mode=image,"{""resolution"":""1K"",""count"":1}"
+gpt-image-2.5-sunburst,GPT Image 2.5 Sunburst,OpenAI,standard,2.0,true,https://picsart.com/ai-playground/app/?model=gpt-image-2.5-sunburst&mode=image,"{""quality"":""high"",""count"":1}"
+luma-uni-1,Luma UNI-1,Luma AI,standard,2.0,true,https://picsart.com/ai-playground/app/?model=luma-uni-1&mode=image,{}
+recraftv4_1,Recraft V4.1,Recraft,standard,2.0,true,https://picsart.com/ai-playground/app/?model=recraftv4_1&mode=image,"{""count"":1}"
+seedream-5.0-pro,Seedream 5.0 Pro,ByteDance,standard,2.0,true,https://picsart.com/ai-playground/app/?model=seedream-5.0-pro&mode=image,"{""resolution"":""1K""}"
+flux-2-pro,Flux 2 Pro,Black Forest Labs,standard,1.0,true,https://picsart.com/ai-playground/app/?model=flux-2-pro&mode=image,"{""resolution"":""1K"",""count"":1}"
+kling-3.0-image,Kling 3.0 Image,Kuaishou,standard,1.0,true,https://picsart.com/ai-playground/app/?model=kling-3.0-image&mode=image,"{""resolution"":""1k"",""count"":1}"
+gemini-2.5-flash-image,Nano Banana,Google,fast,2.0,true,https://picsart.com/ai-playground/app/?model=gemini-2.5-flash-image&mode=image,"{""count"":1}"

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-base="/model-compass">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download the Model Compass benchmark data</title>
+<meta name="description" content="Open data behind Model Compass: 12 Picsart AI models, 80 prompts, 960 scored images and per-task ratings with error bars, as CSV and JSON under CC BY 4.0.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/data/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Model Compass">
+<meta property="og:title" content="Download the Model Compass benchmark data">
+<meta property="og:description" content="Open data behind Model Compass: 12 Picsart AI models, 80 prompts, 960 scored images and per-task ratings with error bars, as CSV and JSON under CC BY 4.0.">
+<meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/data/">
+<meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef1f4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1419">
+<link rel="icon" href="/model-compass/assets/img/rose.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/model-compass/assets/css/site.css">
+<link rel="stylesheet" href="/model-compass/assets/css/pages-text.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Model Compass benchmark: Picsart AI image models by task","description":"12 Picsart AI image models on 80 prompts across 8 tasks: CLIP prompt match, aesthetic score, OCR text accuracy, mean rank from a shuffled AI judge, and Plackett-Luce ratings with 95% bootstrap intervals.","url":"https://vilyapoghosyan.github.io/model-compass/data/","sameAs":"https://vilyapoghosyan.github.io/model-compass/","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Vilya Poghosyan"},"dateModified":"2026-10-07","version":"2026-10-07","keywords":["AI image models","benchmark","Picsart","text to image","model comparison","Plackett-Luce"],"variableMeasured":["clip_score","aesthetic","ocr_exact","ocr_similarity","judge_rank_mean","strength","win_prob_vs_field"],"distribution":[{"@type":"DataDownload","name":"prompts.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/prompts.csv"},{"@type":"DataDownload","name":"models.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/models.csv"},{"@type":"DataDownload","name":"scores.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/scores.csv"},{"@type":"DataDownload","name":"ratings.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/ratings.csv"},{"@type":"DataDownload","name":"compass.json","encodingFormat":"application/json","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/compass.json"},{"@type":"DataDownload","name":"router.json","encodingFormat":"application/json","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/router.json"}]}</script>
+</head>
+<body class="page-text page-data" data-utm='{&#34;source&#34;:&#34;model-compass&#34;,&#34;medium&#34;:&#34;referral&#34;,&#34;campaign&#34;:&#34;open-doors&#34;}'>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap site-head__row">
+    <a class="brand" href="/model-compass/" aria-label="Model Compass home">
+      <svg class="brand__rose" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><use href="/model-compass/assets/img/rose.svg#rose"/></svg>
+      <span class="brand__name">Model Compass</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/model-compass/#tasks">Tasks</a>
+      <a href="/model-compass/compare/">Compare</a>
+      <a href="/model-compass/method/">Method</a>
+      <a href="/model-compass/data/" aria-current="page">Data</a>
+      <a href="/model-compass/about/">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<header class="text-hero">
+  <h1>The data behind every claim</h1>
+  <p class="lede">Every number on this site is in these files: the prompts, the models and their settings, every image's scores and judge rank, and the per-task ratings with their intervals. Download them, check them, build on them.</p>
+  <ul class="stat-row" aria-label="Dataset size">
+    <li class="stat"><span class="stat__value">80</span><span class="stat__label">prompts</span></li>
+    <li class="stat"><span class="stat__value">12</span><span class="stat__label">models</span></li>
+    <li class="stat"><span class="stat__value">960</span><span class="stat__label">scored images</span></li>
+    <li class="stat stat--date"><span class="stat__value">2026-10-07</span><span class="stat__label">data date (version 2026-10-07)</span></li>
+  </ul>
+</header>
+
+
+<div class="text-grid">
+  <nav class="toc" aria-label="On this page">
+    <details open>
+      <summary>On this page</summary>
+      <p class="toc__title">On this page</p>
+      <ol>
+        <li><a href="#files">Files</a></li>
+        <li><a href="#dictionary">Data dictionary</a></li>
+        <li><a href="#how">How the data was made</a></li>
+        <li><a href="#licence">Licence and attribution</a></li>
+      </ol>
+    </details>
+  </nav>
+
+  <article class="prose">
+    <section id="files">
+      <h2>Files</h2>
+      <p>CSV files open in any spreadsheet. The two JSON files are what the site itself loads. All files are regenerated together on every export, so they always agree with each other and with the pages.</p>
+      <ul class="files">
+        <li class="file">
+          <a class="file__name" href="/model-compass/data/prompts.csv" download>prompts.csv</a>
+          <p class="file__meta">80 rows, 15 KB</p>
+          <p class="file__desc">One row per prompt: the request, task, required text.</p>
+          <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/prompts.csv" download>Download</a></p>
+        </li>
+        <li class="file">
+          <a class="file__name" href="/model-compass/data/models.csv" download>models.csv</a>
+          <p class="file__meta">12 rows, 2 KB</p>
+          <p class="file__desc">One row per model: maker, tier, credits, settings, link.</p>
+          <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/models.csv" download>Download</a></p>
+        </li>
+        <li class="file">
+          <a class="file__name" href="/model-compass/data/scores.csv" download>scores.csv</a>
+          <p class="file__meta">960 rows, 163 KB</p>
+          <p class="file__desc">One row per prompt and model: the three automatic scores and the mean judge rank.</p>
+          <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/scores.csv" download>Download</a></p>
+        </li>
+        <li class="file">
+          <a class="file__name" href="/model-compass/data/ratings.csv" download>ratings.csv</a>
+          <p class="file__meta">96 rows, 8 KB</p>
+          <p class="file__desc">One row per task and model: Plackett–Luce strength, interval, rank, win probability.</p>
+          <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/ratings.csv" download>Download</a></p>
+        </li>
+        <li class="file">
+          <a class="file__name" href="/model-compass/data/compass.json" download>compass.json</a>
+          <p class="file__meta">80 prompts, 301 KB</p>
+          <p class="file__desc">Everything the site shows in one file: models, tasks with rankings and recommendations, prompts with image paths.</p>
+          <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/compass.json" download>Download</a></p>
+        </li>
+        <li class="file">
+          <a class="file__name" href="/model-compass/data/router.json" download>router.json</a>
+          <p class="file__meta">80 embeddings, 249 KB</p>
+          <p class="file__desc">What the browser router loads: 384-number embeddings of every prompt, per-task recommendation, keyword fallback, evaluation.</p>
+          <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/router.json" download>Download</a></p>
+        </li>
+      </ul>
+      <p class="small muted">Images are on the site at the paths named in <code>scores.csv</code> (1024 px WebP with the Picsart AI label); the 512 px thumbnails live under <code>img/thumbs/</code> with the same path. Raw judge sheets and the two full rankings per prompt are available on request (see <a href="/model-compass/about/">about</a>).</p>
+    </section>
+
+    <section id="dictionary">
+      <h2>Data dictionary</h2>
+      <div class="table-wrap">
+        <table class="table table--stack">
+          <thead><tr><th>File</th><th>Column</th><th>Meaning</th></tr></thead>
+          <tbody>
+          <tr><td><code>prompts.csv</code></td><td><code>id</code></td><td>Prompt id, `&lt;task&gt;-NN`.</td></tr>
+          <tr><td><code>prompts.csv</code></td><td><code>task</code></td><td>Task id (see models and tasks below).</td></tr>
+          <tr><td><code>prompts.csv</code></td><td><code>text</code></td><td>The exact request sent to every model.</td></tr>
+          <tr><td><code>prompts.csv</code></td><td><code>needs_text / expected_text</code></td><td>Whether words must appear in the image, and which words (checked with OCR).</td></tr>
+          <tr><td><code>prompts.csv</code></td><td><code>aspect_ratio</code></td><td>Aspect ratio requested.</td></tr>
+          <tr><td><code>prompts.csv</code></td><td><code>n_outputs</code></td><td>Images we have for this prompt.</td></tr>
+          <tr><td><code>models.csv</code></td><td><code>id</code></td><td>Model id as used in Picsart&#39;s AI Playground link.</td></tr>
+          <tr><td><code>models.csv</code></td><td><code>name / provider</code></td><td>Name shown in Picsart, and the maker.</td></tr>
+          <tr><td><code>models.csv</code></td><td><code>tier</code></td><td>premium, standard or fast, following Picsart&#39;s labels and price.</td></tr>
+          <tr><td><code>models.csv</code></td><td><code>credits_per_image</code></td><td>Picsart&#39;s cost estimate at the benchmark settings, on the data date.</td></tr>
+          <tr><td><code>models.csv</code></td><td><code>deep_link</code></td><td>AI Playground URL with the model preselected.</td></tr>
+          <tr><td><code>models.csv</code></td><td><code>params</code></td><td>Extra generation settings sent on every call (JSON).</td></tr>
+          <tr><td><code>scores.csv</code></td><td><code>clip_score</code></td><td>Prompt match: cosine similarity times 100. Compare only within one prompt.</td></tr>
+          <tr><td><code>scores.csv</code></td><td><code>aesthetic</code></td><td>Aesthetic predictor, about 1 to 10.</td></tr>
+          <tr><td><code>scores.csv</code></td><td><code>ocr_exact / ocr_similarity / ocr_text</code></td><td>Text tasks only: every letter right (true/false), 1 minus normalised edit distance, and what the reader saw. Empty for other tasks.</td></tr>
+          <tr><td><code>scores.csv</code></td><td><code>judge_rank_mean</code></td><td>Mean position of this image across the judge&#39;s two shuffled runs (1 = best).</td></tr>
+          <tr><td><code>scores.csv</code></td><td><code>image</code></td><td>Path of the 1024 px image on this site.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>strength</code></td><td>Plackett–Luce log-strength, centred on 0 within the task.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>ci_low / ci_high</code></td><td>95% bootstrap interval over prompts.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>rank</code></td><td>Position by strength, 1 = best.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>win_prob_vs_field</code></td><td>Probability of being ranked first among the task&#39;s models.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>clip_mean / aesthetic_mean / ocr_accuracy</code></td><td>Per-model means of the automatic scores on this task; ocr_accuracy is the exact-match share.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>judge_agreement_tau</code></td><td>Mean Kendall tau between the judge&#39;s two runs on this task.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Task ids and their public names: <code>product-photo</code> (Product photo), <code>logo</code> (Logo with text), <code>poster-flyer</code> (Poster and flyer), <code>portrait-headshot</code> (Portrait and headshot), <code>anime-illustration</code> (Anime and illustration), <code>interior-design</code> (Interior and architecture), <code>fantasy-concept-art</code> (Fantasy and concept art), <code>sticker-icon</code> (Stickers and icons).</p>
+      <p>Empty cells mean "not measured" (for example OCR columns on tasks without text), never zero.</p>
+    </section>
+
+    <section id="how">
+      <h2>How the data was made</h2>
+      <ol>
+        <li>80 prompts in 8 tasks were fixed before generation (<code>prompts.csv</code>).</li>
+        <li>Every prompt was sent once to each of 12 models at the settings in <code>models.csv</code>, through Picsart's AI Playground models. One image per prompt, no re-rolls.</li>
+        <li>Three programs scored every image: prompt match, aesthetic score, and for text tasks OCR spelling (<code>scores.csv</code>).</li>
+        <li>An AI judge ranked each prompt's images twice in shuffled order without seeing model names; the mean position is <code>judge_rank_mean</code>.</li>
+        <li>Per task, the rankings were fitted with Plackett–Luce and bootstrapped 1,000 times over prompts (<code>ratings.csv</code>).</li>
+        <li>Prompts were embedded with a small sentence model for the browser router (<code>router.json</code>).</li>
+      </ol>
+      <p>The full method, with every limit we know of, is on <a href="/model-compass/method/">the method page</a>.</p>
+    </section>
+
+    <section id="licence">
+      <h2>Licence and attribution</h2>
+      <p>The benchmark data (all files on this page) is released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. You may copy, share, adapt and build on it, including commercially, as long as you credit the source. A line like this is enough:</p>
+      <div class="callout callout--quiet">
+        <p><code id="attribution">Model Compass benchmark data by Vilya Poghosyan, https://vilyapoghosyan.github.io/model-compass/, licensed under CC BY 4.0.</code></p>
+      </div>
+      <p class="small muted">The images were generated with Picsart AI models and carry the Picsart AI label; they are shown here as evidence for the scores. Model names belong to their makers. Nothing here is an official Picsart publication.</p>
+    </section>
+  </article>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__disclosure">
+      <p>Built by Vilya Poghosyan, who works at Picsart. This is a personal project, not an official Picsart page. Every image here was made with Picsart models through Picsart's AI Playground and carries the Picsart AI label.</p>
+      <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Last updated 2026-10-07.</p>
+    </div>
+    <div class="site-foot__links">
+      <a href="/model-compass/method/">How we measure</a>
+      <a href="/model-compass/data/">Download the data</a>
+      <a href="/model-compass/about/">About and contact</a>
+      <span class="built-with"><span class="built-with__dot" aria-hidden="true"></span>built with Picsart models</span>
+    </div>
+  </div>
+</footer>
+<script src="/model-compass/assets/js/site.js" defer></script>
+<script>if (window.matchMedia && window.matchMedia("(max-width: 899px)").matches) { var d = document.querySelector(".toc details"); if (d) d.open = false; }</script>
+<script data-goatcounter="https://vilya.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

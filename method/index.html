@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" data-base="/model-compass">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we measure: the Model Compass method</title>
+<meta name="description" content="How Model Compass ranks 12 Picsart AI models on 80 prompts across 8 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/method/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Model Compass">
+<meta property="og:title" content="How we measure: the Model Compass method">
+<meta property="og:description" content="How Model Compass ranks 12 Picsart AI models on 80 prompts across 8 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
+<meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/method/">
+<meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef1f4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1419">
+<link rel="icon" href="/model-compass/assets/img/rose.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/model-compass/assets/css/site.css">
+<link rel="stylesheet" href="/model-compass/assets/css/pages-text.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Model Compass measures Picsart AI models","url":"https://vilyapoghosyan.github.io/model-compass/method/","author":{"@type":"Person","name":"Vilya Poghosyan"},"dateModified":"2026-10-07","license":"https://creativecommons.org/licenses/by/4.0/","about":"An open benchmark and router for choosing a Picsart AI image model per task.","isPartOf":{"@type":"WebSite","name":"Model Compass","url":"https://vilyapoghosyan.github.io/model-compass/"},"description":"12 models, 8 tasks, 80 prompts, three automatic scores, a shuffled AI judge, human spot checks, Plackett-Luce ratings with bootstrap error bars and a leave-one-out evaluated router."}</script>
+</head>
+<body class="page-text page-method" data-utm='{&#34;source&#34;:&#34;model-compass&#34;,&#34;medium&#34;:&#34;referral&#34;,&#34;campaign&#34;:&#34;open-doors&#34;}'>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap site-head__row">
+    <a class="brand" href="/model-compass/" aria-label="Model Compass home">
+      <svg class="brand__rose" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><use href="/model-compass/assets/img/rose.svg#rose"/></svg>
+      <span class="brand__name">Model Compass</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/model-compass/#tasks">Tasks</a>
+      <a href="/model-compass/compare/">Compare</a>
+      <a href="/model-compass/method/" aria-current="page">Method</a>
+      <a href="/model-compass/data/">Data</a>
+      <a href="/model-compass/about/">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<header class="text-hero">
+  <h1>How we measure, and where it can be wrong</h1>
+  <p class="lede">Every model got the same requests. Scores you can check, a judge that never sees model names, a human check, and error bars that say how sure we are. This page explains each step in plain words and lists the limits.</p>
+  <ul class="stat-row" aria-label="Key numbers">
+    <li class="stat"><span class="stat__value">12</span><span class="stat__label">models you can pick in Picsart</span></li>
+    <li class="stat"><span class="stat__value">80</span><span class="stat__label">prompts in 8 tasks</span></li>
+    <li class="stat"><span class="stat__value">0.57</span><span class="stat__label">judge agreement between two shuffled runs (Kendall tau)</span></li>
+    <li class="stat"><span class="stat__value">76%</span><span class="stat__label">router picks the right task, leave-one-out</span></li>
+  </ul>
+</header>
+
+
+<div class="text-grid">
+  <nav class="toc" aria-label="On this page">
+    <details open>
+      <summary>On this page</summary>
+      <p class="toc__title">On this page</p>
+      <ol>
+<li><a href="#tasks">The tasks</a></li><li><a href="#prompts">The prompts</a></li><li><a href="#models">The models</a></li><li><a href="#settings">Generation settings</a></li><li><a href="#scores">Three automatic scores</a></li><li><a href="#judge">The AI judge</a></li><li><a href="#human">Human check</a></li><li><a href="#ratings">Ratings and error bars</a></li><li><a href="#router">The router</a></li><li><a href="#recommendation">How we recommend</a></li><li><a href="#limits">Limits</a></li><li><a href="#changelog">Changelog</a></li><li><a href="#reproduce">Reproduce it</a></li>      </ol>
+    </details>
+  </nav>
+
+  <article class="prose">
+    <section id="tasks">
+      <h2>The tasks</h2>
+      <p>We did not invent the tasks. We looked at what other AI design tools sell as separate single-purpose products (an "AI product photo generator", an "AI logo maker", an "AI poster generator" and so on), grouped those into clusters, and kept the 8 clusters that came up again and again. A task is in the benchmark because real people are already searching for a tool that does exactly that.</p>
+      <p>2 of the tasks need words inside the image (a brand name in a logo, a headline on a poster). For those we can check spelling objectively, so they carry an extra score.</p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Task</th><th class="num">Prompts</th><th class="num">Single-task tools found</th><th>Text in image</th><th class="num">Judge agreement</th></tr></thead>
+          <tbody>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/product-photos/">Product photo</a></td>
+            <td class="num">10</td>
+            <td class="num">9</td>
+            <td>no</td>
+            <td class="num">0.63</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/logos/">Logo with text</a></td>
+            <td class="num">10</td>
+            <td class="num">8</td>
+            <td>yes, checked with OCR</td>
+            <td class="num">0.60</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/posters-and-flyers/">Poster and flyer</a></td>
+            <td class="num">10</td>
+            <td class="num">9</td>
+            <td>yes, checked with OCR</td>
+            <td class="num">0.67</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/portraits-and-headshots/">Portrait and headshot</a></td>
+            <td class="num">10</td>
+            <td class="num">9</td>
+            <td>no</td>
+            <td class="num">0.59</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/anime-and-illustration/">Anime and illustration</a></td>
+            <td class="num">10</td>
+            <td class="num">10</td>
+            <td>no</td>
+            <td class="num">0.39</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/interior-design/">Interior and architecture</a></td>
+            <td class="num">10</td>
+            <td class="num">7</td>
+            <td>no</td>
+            <td class="num">0.50</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/fantasy-and-concept-art/">Fantasy and concept art</a></td>
+            <td class="num">10</td>
+            <td class="num">9</td>
+            <td>no</td>
+            <td class="num">0.52</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/stickers-and-icons/">Stickers and icons</a></td>
+            <td class="num">10</td>
+            <td class="num">9</td>
+            <td>no</td>
+            <td class="num">0.63</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="prompts">
+      <h2>The prompts</h2>
+      <p>Ten prompts per task, 80 in total, written the way people actually type: some are five words and sloppy, some are detailed briefs with subject, lighting, materials and style. Each task spreads its prompts over the sub-uses the single-task tools sell separately (for product photos: cosmetics, shoes, drinks, electronics, packaging, food and more), so no niche decides the ranking.</p>
+      <ul>
+        <li>No real brand names, real people or copyrighted characters, and nothing a model would refuse. A refusal would decide the ranking instead of quality.</li>
+        <li>Text prompts carry the exact words the image must show, in quotes, in plain letters. Every word is unique across the whole set, so a word read by OCR can belong to only one prompt.</li>
+        <li>The prompt set was fixed and checked by tests before any image was generated. Prompts were not rewritten after we saw which model won.</li>
+      </ul>
+      <p>All prompts are in <a href="/model-compass/data/">the data download</a>.</p>
+    </section>
+
+    <section id="models">
+      <h2>The models</h2>
+      <p>We benchmark only models you can pick yourself in Picsart's AI Playground, and we recorded where we saw each one offered. A model that exists only behind an API, or that we could not confirm in the picker, is not in the table. We stopped at 12 models to keep every prompt affordable to run through all of them.</p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Model</th><th>Maker</th><th>Tier</th><th class="num">Credits per image</th><th>Settings used</th></tr></thead>
+          <tbody>
+          <tr>
+            <td>GPT Image 2</td>
+            <td>OpenAI</td>
+            <td><span class="tier tier--premium">premium</span></td>
+            <td class="num">5</td>
+            <td class="small">quality high, count 1</td>
+          </tr>
+          <tr>
+            <td>Nano Banana Pro</td>
+            <td>Google</td>
+            <td><span class="tier tier--premium">premium</span></td>
+            <td class="num">5</td>
+            <td class="small">resolution 1K, count 1</td>
+          </tr>
+          <tr>
+            <td>Hunyuan V3</td>
+            <td>Tencent</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">3</td>
+            <td class="small">count 1</td>
+          </tr>
+          <tr>
+            <td>Ideogram 4.5</td>
+            <td>Ideogram</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">3</td>
+            <td class="small">resolution 1K, quality high, count 1</td>
+          </tr>
+          <tr>
+            <td>Nano Banana 2</td>
+            <td>Google</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">3</td>
+            <td class="small">resolution 1K, count 1</td>
+          </tr>
+          <tr>
+            <td>GPT Image 2.5 Sunburst</td>
+            <td>OpenAI</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">2</td>
+            <td class="small">quality high, count 1</td>
+          </tr>
+          <tr>
+            <td>Luma UNI-1</td>
+            <td>Luma AI</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">2</td>
+            <td class="small">defaults</td>
+          </tr>
+          <tr>
+            <td>Recraft V4.1</td>
+            <td>Recraft</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">2</td>
+            <td class="small">count 1</td>
+          </tr>
+          <tr>
+            <td>Seedream 5.0 Pro</td>
+            <td>ByteDance</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">2</td>
+            <td class="small">resolution 1K</td>
+          </tr>
+          <tr>
+            <td>Flux 2 Pro</td>
+            <td>Black Forest Labs</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">1</td>
+            <td class="small">resolution 1K, count 1</td>
+          </tr>
+          <tr>
+            <td>Kling 3.0 Image</td>
+            <td>Kuaishou</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">1</td>
+            <td class="small">resolution 1K, count 1</td>
+          </tr>
+          <tr>
+            <td>Nano Banana</td>
+            <td>Google</td>
+            <td><span class="tier tier--fast">fast</span></td>
+            <td class="num">2</td>
+            <td class="small">count 1</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">Tier follows Picsart's own labelling: premium models carry the premium badge or cost five credits or more. Credits were read from Picsart's cost estimate on 2026-10-07 and can change.</p>
+    </section>
+
+    <section id="settings">
+      <h2>Generation settings</h2>
+      <p>Same rules for every model:</p>
+      <ul>
+        <li><strong>Resolution 1K</strong> (about 1024 pixels on the long side) wherever the model offers a choice; models without the option ran at their default size.</li>
+        <li><strong>One image per prompt.</strong> No picking the best of four, no re-rolls. What the model gave first is what we scored.</li>
+        <li><strong>Default settings otherwise.</strong> No style presets, no negative prompts, no reference images, the aspect ratio the prompt asks for. What a new user would get.</li>
+        <li>Every output is stored with its settings, cost and time, so anyone can check that a row in the data matches an image on the site.</li>
+      </ul>
+      <p>Using defaults means a model that would shine with careful tuning may rank lower here. We think that is fair: this site is for people choosing a model, not for people who already know how to tune one.</p>
+    </section>
+
+    <section id="scores">
+      <h2>Three automatic scores</h2>
+      <p>Three programs score every image. They are quick, repeatable and blind to who made the image, and each has a known blind spot. They are shown as supporting columns; the ranking itself comes from the judge below.</p>
+      <h3>Does it show what was asked? (CLIP)</h3>
+      <p>A vision model that puts images and sentences into the same space; the score is how close the image is to the prompt (a cosine similarity times 100; about 28 to 38 means a good match). It only compares outputs of the same prompt: long prompts score lower for every model, so the raw number is never compared across prompts. <strong>Limits:</strong> it cannot read letters, treats the prompt as a bag of words ("a cat chasing a dog" scores like the reverse), is weak on counts and positions, and rewards literal, centred, saturated pictures.</p>
+      <h3>Does it look good? (aesthetic score)</h3>
+      <p>A predictor trained on human 1-to-10 ratings of photos and AI images; most good generations land between 5.5 and 7. <strong>Limits:</strong> it never sees the prompt, so a beautiful picture of the wrong thing scores high; it loves painterly, warm, detailed images and marks down clean, flat, minimal design even when that is what was asked. For logos, posters and icons we weight it lightly.</p>
+      <h3>Is the text spelled right? (OCR)</h3>
+      <p>For the 2 text tasks only, on-device text recognition reads the image and we compare it with the words the prompt required. Automatic spelling correction is off on purpose: we want the letters the model actually drew. We report the share of prompts with every letter right (exact match) and a softer similarity that separates "one letter off" from gibberish. Case, quotes and punctuation are ignored. <strong>Limits:</strong> very decorative or curved lettering, tiny or low-contrast text can be misread even when a person reads it fine; extra invented text around the right words is not penalised here (the judge catches it). All models face the same reader on the same prompts, so the comparison stays fair, but single images carry noise. The check is strict and the recogniser often fails on script, outlined or curved lettering, so the “text exact” column undercounts correct text: in our spot checks several logos it marked wrong read perfectly to a person. Treat it as a floor, not a verdict; the judge also reads the text and writes down what it saw.</p>
+    </section>
+
+    <section id="judge">
+      <h2>The AI judge</h2>
+      <p>The primary ranking comes from an AI judge that looks at all of a prompt's images at once, laid out as numbered tiles on one sheet, and ranks them from best to worst. The judge is told the request and, for text tasks, the exact words that must appear. It judges faithfulness first, then text correctness, then image quality and artefacts, then looks.</p>
+      <p>Two things make the judge hard to fool:</p>
+      <ul>
+        <li><strong>It never sees model names</strong>, prices or any hint of where a tile came from. Tiles are only numbers.</li>
+        <li><strong>Every prompt is judged twice, in a different shuffled order.</strong> Judges (human and AI) tend to favour the first tile or the centre tile. Two shuffles cancel most of that bias, and comparing the two runs tells us how stable the judge is.</li>
+      </ul>
+      <p>The agreement between the two runs is <strong>0.57</strong> on average (Kendall tau: 1 means identical order, 0 means no relation). Per task it ranges from 0.39 to 0.67; see the task table above. Where agreement is low the judge itself is unsure, and the error bars below are wider for that reason.</p>
+      <p>The judge is one AI model looking at a contact sheet. It shares some taste with the aesthetic score, it may prefer a certain kind of image, and it can misread text. That is why its ranking is shown next to the objective OCR check and why real people spot-check it.</p>
+    </section>
+
+    <section id="human">
+      <h2>Human check</h2>
+      <p>People vote on about 150 image pairs ("which one is better for this request?") without knowing which model made which. We then count how often they agree with the AI judge on the pairs where the judge had a clear preference, and report that share with its interval and the chance level (50%). The number appears here as soon as the votes are in.</p>
+    </section>
+
+    <section id="ratings">
+      <h2>Ratings and error bars</h2>
+      <p>Each task's judge rankings are turned into one strength number per model with a <strong>Plackett–Luce</strong> model, a chess-rating-like method for whole ranked lists. The idea: when the judge picks the best image, each model's chance of being picked is in proportion to its strength; then the best of the rest, and so on. Fitting finds the strengths that make the rankings we saw most likely. It looks at <em>who</em> a model beat, not just its average position, and copes with a model missing from a list (a refused prompt) without distorting the rest.</p>
+      <p>Strengths are on a log scale, centred on zero within each task. A gap of 1.0 means the higher model is about 2.7 times as likely to be picked when the two meet; 0 is a coin flip. The "chance of ranking first" shown on task pages is the model's probability of being the judge's top pick among all the task's models.</p>
+      <h3>How to read the bars</h3>
+      <p>We ask: if we had chosen a different set of prompts, would the table look the same? So we redraw the prompts 1,000 times with replacement (keeping both judge runs of a prompt together), refit, and keep the middle 95% of each model's strength. That range is the bar.</p>
+      <ul class="ci-demo" aria-label="Three example bars">
+        <li><span class="ci-demo__name"><strong>Model A</strong></span><span class="ci-demo__track"><span class="ci-demo__zero" aria-hidden="true"></span><span class="ci" style="left:58%;width:30%"></span></span></li>
+        <li><span class="ci-demo__name"><strong>Model B</strong></span><span class="ci-demo__track"><span class="ci-demo__zero" aria-hidden="true"></span><span class="ci" style="left:44%;width:28%"></span></span></li>
+        <li><span class="ci-demo__name"><strong>Model C</strong></span><span class="ci-demo__track"><span class="ci-demo__zero" aria-hidden="true"></span><span class="ci ci--pale" style="left:8%;width:26%"></span></span></li>
+      </ul>
+      <ul>
+        <li><strong>Bars that do not overlap</strong> (A and C above): a real gap on this benchmark. The higher model is the safer pick.</li>
+        <li><strong>Bars that overlap</strong> (A and B): we cannot separate them with this many prompts. Their order is a point estimate, not a verdict.</li>
+        <li><strong>A narrower bar</strong> means more prompts agreed. With ten prompts per task, bars are wide on purpose.</li>
+        <li>A model that was never ranked for a task has no measurement and is shown as not benchmarked, not as a bar.</li>
+      </ul>
+    </section>
+
+    <section id="router">
+      <h2>The router</h2>
+      <p>When you type a request on the home page, we have no result for that exact sentence. So the router answers a smaller question: which of our 8 tasks is this request closest to? A small sentence model (22 million parameters, 23 MB, running in your browser) turns your text into 384 numbers; we compare them with the numbers of every benchmark prompt, keep the 5 most similar prompts, and let them vote for their task, weighted by similarity. The recommendation is that task's best model, and the neighbours themselves are shown as proof so you can see when the router guessed wrong.</p>
+      <p>The router also knows when to stay quiet. It only answers when the nearest benchmark prompt is at least 0.35 cosine-similar to your request and the winning task holds at least 40% of the vote; below either line it says it is not sure and shows the two closest tasks instead of a verdict. 88% of the benchmark prompts clear that gate when held out. Requests it cannot serve at all (video, photo editing, upscaling, writing) are told so before the model even loads.</p>
+      <p>Nothing you type leaves your browser. If the model fails to download, a plain keyword list per task takes over.</p>
+      <h3>How well it routes</h3>
+      <p>There is no separate test set, so we make one from the data we have: take one prompt out, route it using the other 79, check the answer, repeat for all 80. This is <strong>leave-one-out accuracy</strong>.</p>
+      <p>The router puts a held-out prompt in the right task <strong>76%</strong> of the time (guessing at random would score 12%). The harder question is whether the model it recommends is the one the judge actually preferred for that exact prompt, which changes from prompt to prompt inside one task:</p>
+      <ul class="bars" aria-label="Recommended model equals the judge's winner">
+        <li class="is-router"><span class="bars__label"><strong>Compass router (leave-one-out)</strong></span><span class="bars__track"><span class="bars__fill" style="width:31.2%"></span></span><span class="bars__value">31%</span></li>
+        <li class=""><span class="bars__label"><strong>Always the most common winner</strong></span><span class="bars__track"><span class="bars__fill" style="width:21.2%"></span></span><span class="bars__value">21%</span></li>
+        <li class=""><span class="bars__label"><strong>Always the most expensive model</strong></span><span class="bars__track"><span class="bars__fill" style="width:17.5%"></span></span><span class="bars__value">18%</span></li>
+        <li class="is-oracle"><span class="bars__label"><strong>Oracle: knows the true task</strong></span><span class="bars__track"><span class="bars__fill" style="width:35.0%"></span></span><span class="bars__value">35%</span></li>
+      </ul>
+      <p class="small muted">All four rows answer the same question on the same 80 prompts: how often is the recommended model the judge's winner for that prompt? The oracle knows the true task and picks its best model; a task-based router can normally only approach it, and the gap between the two is the price of imperfect routing. The per-task ratings used by the oracle and the router were fitted on all prompts, so those two rows are slightly optimistic; the task accuracy itself is clean leave-one-out.</p>
+      <p>Why nearest neighbours and not a trained classifier? With about ten prompts per task there is not enough data to beat "look at the most similar examples", it needs no training step, it is easy to explain, and the neighbours double as the proof gallery.</p>
+    </section>
+
+    <section id="recommendation">
+      <h2>How we recommend</h2>
+      <p>The headline recommendation is always the model ranked first by the judge for that task. It is often a premium model, and we show why it is worth it: the win probability, the runner-up, and for text tasks how often it spelled the words right. We do not rank by price.</p>
+      <p>When the runner-up's error bar overlaps the winner's, the page says so: a "Close race" badge appears, the sentence under the headline explains why the winner still ranks first (the rating counts every placement, not only first picks), and the runner-up gets its own "Or make it with" button. Either is a defensible pick in that case.</p>
+      <p>Behind a collapsed "Low on credits?" row we name one alternative, and only when it is a serious contender: it must rank in the top three for the task, keep at least half of the winner's chance of ranking first, have an error bar that overlaps the winner's, and cost fewer credits per image. If no model clears all four, there is no alternative to show.</p>
+    </section>
+
+    <section id="limits">
+      <h2>Limits</h2>
+      <ul>
+        <li><strong>80 prompts is small.</strong> One prompt is ten percentage points of a task's accuracy. Read whole numbers as "about", and do not read a rank difference inside overlapping bars as a finding.</li>
+        <li><strong>One image per prompt per model.</strong> Generative models vary between runs; a second image could rank differently. The bars partly cover this, the judge's two runs do not (they see the same image twice).</li>
+        <li><strong>We wrote the prompts.</strong> They imitate real requests, but a different author would get different absolute numbers. Real visitors type shorter and stranger things, so expect the router to do worse in the wild than in leave-one-out.</li>
+        <li><strong>The judge has taste.</strong> One AI model looking at a contact sheet, with a known lean towards polished, detailed images, and it can misread text. Shuffled runs, the OCR check and the human votes limit the damage; they do not remove it.</li>
+        <li><strong>English only.</strong> Prompts, OCR and the router's sentence model are English-centric. Other languages route worse and text in other scripts is out of scope.</li>
+        <li><strong>Defaults only.</strong> A model that is excellent with tuning may rank lower here than it deserves.</li>
+        <li><strong>Dated.</strong> Models change without notice and prices change. Every page carries the date of the data it shows (2026-10-07); when a model is updated or added we rerun it and note it in the changelog.</li>
+        <li><strong>Built by someone who works at Picsart</strong>, as an independent project. The method and all the data are public so you can check it or rerun it; see <a href="/model-compass/about/">about</a>.</li>
+      </ul>
+    </section>
+
+    <section id="changelog">
+      <h2>Changelog</h2>
+      <ul class="changelog">
+        <li><time datetime="2026-10-09">2026-10-09</time><span>First public release: 12 models, 8 tasks, 80 prompts, 960 images, two judge runs per prompt, router evaluated leave-one-out.</span></li>
+        <li><time datetime="2026-10-06">2026-10-06</time><span>Method fixed before any image was generated: tasks, prompts, model list, generation settings and the judge prompt were written down and checked by tests first.</span></li>
+      </ul>
+    </section>
+
+    <section id="reproduce">
+      <h2>Reproduce it</h2>
+      <p>Everything on the site is computed from the files on <a href="/model-compass/data/">the data page</a>: the prompts, the model list with settings and costs, every image's scores and mean judge rank, and the per-task ratings with their intervals. To check a single claim, open the compare view for a prompt and look at the images yourself. To rerun the maths:</p>
+      <ol>
+        <li>Download <code>scores.csv</code> and <code>ratings.csv</code>. Each row names the prompt, the model and the numbers behind it.</li>
+        <li>Fit Plackett–Luce to the judge rankings per task (mean judge rank in <code>scores.csv</code> is the summary; the two full rankings per prompt are in the raw judge files, available on request).</li>
+        <li>Bootstrap over prompts, 1,000 draws, keep the 2.5th and 97.5th percentiles.</li>
+        <li>Embed the prompts in <code>prompts.csv</code> with the sentence model named in <code>router.json</code> and run the leave-one-out loop with k = 5.</li>
+      </ol>
+      <p>If you get a different answer, or want a task or a model added, say so on <a href="/model-compass/about/">the about page</a>.</p>
+    </section>
+  </article>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__disclosure">
+      <p>Built by Vilya Poghosyan, who works at Picsart. This is a personal project, not an official Picsart page. Every image here was made with Picsart models through Picsart's AI Playground and carries the Picsart AI label.</p>
+      <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Last updated 2026-10-07.</p>
+    </div>
+    <div class="site-foot__links">
+      <a href="/model-compass/method/">How we measure</a>
+      <a href="/model-compass/data/">Download the data</a>
+      <a href="/model-compass/about/">About and contact</a>
+      <span class="built-with"><span class="built-with__dot" aria-hidden="true"></span>built with Picsart models</span>
+    </div>
+  </div>
+</footer>
+<script src="/model-compass/assets/js/site.js" defer></script>
+<script>if (window.matchMedia && window.matchMedia("(max-width: 899px)").matches) { var d = document.querySelector(".toc details"); if (d) d.open = false; }</script>
+<script data-goatcounter="https://vilya.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

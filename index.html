@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-base="/model-compass">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Compass: which Picsart AI model should you use?</title>
+<meta name="description" content="Type what you want to make. Model Compass measured 12 Picsart AI models on 80 real requests across 8 tasks and points you to the one that wins, with proof.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Model Compass">
+<meta property="og:title" content="Model Compass: which Picsart AI model should you use?">
+<meta property="og:description" content="Type what you want to make. Model Compass measured 12 Picsart AI models on 80 real requests across 8 tasks and points you to the one that wins, with proof.">
+<meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/">
+<meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef1f4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1419">
+<link rel="icon" href="/model-compass/assets/img/rose.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/model-compass/assets/css/site.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"WebSite","name":"Model Compass","url":"https://vilyapoghosyan.github.io/model-compass/","description":"Which Picsart AI model should you use? Measured on real requests, with proof.","author":{"@type":"Person","name":"Vilya Poghosyan"},"license":"https://creativecommons.org/licenses/by/4.0/","dateModified":"2026-10-07"},{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Model Compass","url":"https://vilyapoghosyan.github.io/model-compass/","applicationCategory":"DesignApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Type what you want to make; Model Compass recommends the Picsart AI model that wins for that task on a public benchmark and opens Picsart with it selected.","author":{"@type":"Person","name":"Vilya Poghosyan"},"dateModified":"2026-10-07"}]</script>
+</head>
+<body class="page-home" data-utm='{&#34;source&#34;:&#34;model-compass&#34;,&#34;medium&#34;:&#34;referral&#34;,&#34;campaign&#34;:&#34;open-doors&#34;}'>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap site-head__row">
+    <a class="brand" href="/model-compass/" aria-label="Model Compass home">
+      <svg class="brand__rose" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><use href="/model-compass/assets/img/rose.svg#rose"/></svg>
+      <span class="brand__name">Model Compass</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/model-compass/#tasks">Tasks</a>
+      <a href="/model-compass/compare/">Compare</a>
+      <a href="/model-compass/method/">Method</a>
+      <a href="/model-compass/data/">Data</a>
+      <a href="/model-compass/about/">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="hero">
+  <h1 class="hero__title">Which AI model should you use?</h1>
+  <p class="hero__promise">Type what you want to make. Compass measured 12 of Picsart's AI models on 80 real requests and points you to the one that wins for your task, with proof, then opens Picsart with that model ready.</p>
+
+  <form class="instrument" id="ask" action="/model-compass/" method="get" autocomplete="off">
+    <label class="instrument__label" for="prompt">What do you want to make?</label>
+    <div class="instrument__row">
+      <textarea class="instrument__input" id="prompt" name="q" rows="2" maxlength="600" placeholder="A logo for a bakery called Golden Crumb, warm brown and cream" required></textarea>
+      <button class="instrument__go" type="submit" aria-label="Find the best model">
+        <svg class="rose" width="44" height="44" viewBox="0 0 32 32" aria-hidden="true"><use href="/model-compass/assets/img/rose.svg#rose"/></svg>
+      </button>
+    </div>
+    <div class="chips" aria-label="Examples">
+      <button class="chip" type="button" data-example="Minimal logo for a bakery called &#34;Golden Crumb&#34;, warm brown and cream">Logo for a bakery</button>
+      <button class="chip" type="button" data-example="Studio photo of a frosted glass serum bottle on wet slate, soft light">Serum bottle product shot</button>
+      <button class="chip" type="button" data-example="Anime girl with a red umbrella on a neon street in the rain, cel shading">Anime scene in the rain</button>
+      <button class="chip" type="button" data-example="Photorealistic Scandinavian living room with oak floors and morning light">Living room render</button>
+      <button class="chip" type="button" data-example="Poster for an event that says &#34;Summer Jazz Night&#34;, bold typography">Jazz night poster</button>
+      <button class="chip" type="button" data-example="Die-cut sticker of a smiling avocado, thick white outline, glossy">Avocado sticker</button>
+    </div>
+    <p class="instrument__status" id="status" aria-live="polite"></p>
+  </form>
+
+  <section class="verdict" id="verdict" hidden aria-live="polite" aria-labelledby="verdict-title">
+    <div class="verdict__main">
+      <p class="verdict__task" id="verdict-task"></p>
+      <h2 class="verdict__model" id="verdict-title"></h2>
+      <p class="verdict__meta"><span id="verdict-provider"></span> <span class="tier" id="verdict-tier"></span> <span class="close-race" id="verdict-close" hidden title="The runner-up's error bar overlaps the winner's">Close race</span></p>
+      <p class="verdict__why" id="verdict-why"></p>
+      <div class="verdict__actions">
+        <a class="btn btn--primary" id="verdict-go" href="#" target="_blank" rel="noopener" data-out="">Make it in Picsart</a>
+        <a class="btn btn--quiet" id="verdict-alt" href="#" target="_blank" rel="noopener" data-out="" hidden>Or make it with the runner-up</a>
+        <a class="btn btn--quiet" id="verdict-task-link" href="#">See all results</a>
+      </div>
+      <details class="fallback" id="fallback" hidden>
+        <summary>Low on credits?</summary>
+        <p id="fallback-text"></p>
+        <a class="btn btn--quiet" id="fallback-go" href="#" target="_blank" rel="noopener" data-out="">Open it instead</a>
+      </details>
+      <p class="verdict__confidence" id="verdict-confidence"></p>
+    </div>
+    <div class="verdict__proof">
+      <p class="verdict__proof-title" id="verdict-proof-title">Nearest tested requests, made with this model</p>
+      <ul class="proof" id="proof"></ul>
+    </div>
+  </section>
+
+  <section class="pick-task" id="pick-task" hidden aria-live="polite">
+    <p id="pick-task-text">Compass could not tell what you want to make. Pick the closest task:</p>
+    <p class="pick-task__near" id="pick-task-near" hidden></p>
+    <ul class="pick-task__list">
+<li><a href="/model-compass/best-ai-model-for/product-photos/">Product photo</a></li><li><a href="/model-compass/best-ai-model-for/logos/">Logo with text</a></li><li><a href="/model-compass/best-ai-model-for/posters-and-flyers/">Poster and flyer</a></li><li><a href="/model-compass/best-ai-model-for/portraits-and-headshots/">Portrait and headshot</a></li><li><a href="/model-compass/best-ai-model-for/anime-and-illustration/">Anime and illustration</a></li><li><a href="/model-compass/best-ai-model-for/interior-design/">Interior and architecture</a></li><li><a href="/model-compass/best-ai-model-for/fantasy-and-concept-art/">Fantasy and concept art</a></li><li><a href="/model-compass/best-ai-model-for/stickers-and-icons/">Stickers and icons</a></li>    </ul>
+  </section>
+</section>
+
+<section class="strip" aria-labelledby="strip-title">
+  <p class="strip__title" id="strip-title">One request per task, made with the model that won it</p>
+  <ul class="strip__list">
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/product-photos/">
+        <img class="strip__img" src="/model-compass/img/thumbs/product-photo/product-photo-07/gpt-image-2.5-sunburst.webp" width="512" height="512" loading="eager" decoding="async" alt="GPT Image 2.5 Sunburst output for: Macro product photo of a thin gold ring with a small emerald on a white marble block, shallow depth of field, soft shadow, luxury catalogue style">
+        <span class="strip__cap"><span class="strip__task">Product photo:</span> GPT Image 2.5 Sunburst</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/logos/">
+        <img class="strip__img" src="/model-compass/img/thumbs/logo/logo-07/gpt-image-2.5-sunburst.webp" width="512" height="512" loading="eager" decoding="async" alt="GPT Image 2.5 Sunburst output for: I need a logo for a landscaping company, text &#34;Verdant Yard&#34;, a leaf shape, two greens, simple enough to print on the side of a truck">
+        <span class="strip__cap"><span class="strip__task">Logo with text:</span> GPT Image 2.5 Sunburst</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/posters-and-flyers/">
+        <img class="strip__img" src="/model-compass/img/thumbs/poster-flyer/poster-flyer-05/gpt-image-2.webp" width="512" height="512" loading="lazy" decoding="async" alt="GPT Image 2 output for: Promo flyer for a shoe store sale, headline &#34;Midnight Deals&#34; in huge neon letters on a dark background, sneakers floating around the text">
+        <span class="strip__cap"><span class="strip__task">Poster and flyer:</span> GPT Image 2</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/portraits-and-headshots/">
+        <img class="strip__img" src="/model-compass/img/thumbs/portrait-headshot/portrait-headshot-03/gpt-image-2.5-sunburst.webp" width="512" height="512" loading="lazy" decoding="async" alt="GPT Image 2.5 Sunburst output for: Editorial black and white portrait of an elderly fisherman with deep wrinkles and a wool cap, dramatic side light, dark background, fine film grain">
+        <span class="strip__cap"><span class="strip__task">Portrait and headshot:</span> GPT Image 2.5 Sunburst</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/anime-and-illustration/">
+        <img class="strip__img" src="/model-compass/img/thumbs/anime-illustration/anime-illustration-02/gpt-image-2.5-sunburst.webp" width="512" height="512" loading="lazy" decoding="async" alt="GPT Image 2.5 Sunburst output for: cute chibi cat wizard, pastel, simple background">
+        <span class="strip__cap"><span class="strip__task">Anime and illustration:</span> GPT Image 2.5 Sunburst</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/interior-design/">
+        <img class="strip__img" src="/model-compass/img/thumbs/interior-design/interior-design-05/hunyuan-v3.webp" width="512" height="512" loading="lazy" decoding="async" alt="Hunyuan V3 output for: cozy home office in an attic with slanted ceilings, built in bookshelves, a leather chair, a desk by a round window, evening lamp light">
+        <span class="strip__cap"><span class="strip__task">Interior and architecture:</span> Hunyuan V3</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/fantasy-and-concept-art/">
+        <img class="strip__img" src="/model-compass/img/thumbs/fantasy-concept-art/fantasy-concept-art-03/gemini-3.1-flash-image.webp" width="512" height="512" loading="lazy" decoding="async" alt="Nano Banana 2 output for: Epic wide establishing shot of floating islands chained together above an endless sea of clouds, waterfalls spilling into the void, tiny airships, golden hour, matte painting style">
+        <span class="strip__cap"><span class="strip__task">Fantasy and concept art:</span> Nano Banana 2</span>
+      </a>
+    </li>
+    <li class="strip__item">
+      <a class="strip__link" href="/model-compass/best-ai-model-for/stickers-and-icons/">
+        <img class="strip__img" src="/model-compass/img/thumbs/sticker-icon/sticker-icon-10/gpt-image-2.webp" width="512" height="512" loading="lazy" decoding="async" alt="GPT Image 2 output for: sticker of a corgi astronaut floating with a tiny planet, thick white die-cut border, vibrant colours, cartoon style">
+        <span class="strip__cap"><span class="strip__task">Stickers and icons:</span> GPT Image 2</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="tasks" id="tasks" aria-labelledby="tasks-title">
+  <div class="section-head">
+    <h2 id="tasks-title">8 tasks, measured the same way</h2>
+    <p>Every model got the same 80 requests. The best model per task is the one most likely to rank first with our judge; the agreement number says how stable that judge was between two shuffled runs.</p>
+  </div>
+  <ul class="task-grid">
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/product-photos/">
+        <h3 class="task-card__title">Best AI model for product photos</h3>
+        <p class="task-card__best"><span class="task-card__best-name">GPT Image 2.5 Sunburst</span> <span class="tier tier--standard">standard</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.63</dd></div>
+<div><dt>Chance of ranking first</dt><dd>21%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/logos/">
+        <h3 class="task-card__title">Best AI model for logos</h3>
+        <p class="task-card__best"><span class="task-card__best-name">GPT Image 2.5 Sunburst</span> <span class="tier tier--standard">standard</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.60</dd></div>
+<div><dt>Chance of ranking first</dt><dd>27%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/posters-and-flyers/">
+        <h3 class="task-card__title">Best AI model for posters and flyers</h3>
+        <p class="task-card__best"><span class="task-card__best-name">GPT Image 2</span> <span class="tier tier--premium">premium</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.67</dd></div>
+<div><dt>Chance of ranking first</dt><dd>25%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/portraits-and-headshots/">
+        <h3 class="task-card__title">Best AI model for portraits and headshots</h3>
+        <p class="task-card__best"><span class="task-card__best-name">GPT Image 2.5 Sunburst</span> <span class="tier tier--standard">standard</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.59</dd></div>
+<div><dt>Chance of ranking first</dt><dd>25%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/anime-and-illustration/">
+        <h3 class="task-card__title">Best AI model for anime and illustration</h3>
+        <p class="task-card__best"><span class="task-card__best-name">GPT Image 2.5 Sunburst</span> <span class="tier tier--standard">standard</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.39</dd></div>
+<div><dt>Chance of ranking first</dt><dd>16%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/interior-design/">
+        <h3 class="task-card__title">Best AI model for interior design</h3>
+        <p class="task-card__best"><span class="task-card__best-name">Hunyuan V3</span> <span class="tier tier--standard">standard</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.50</dd></div>
+<div><dt>Chance of ranking first</dt><dd>30%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/fantasy-and-concept-art/">
+        <h3 class="task-card__title">Best AI model for fantasy and concept art</h3>
+        <p class="task-card__best"><span class="task-card__best-name">Nano Banana 2</span> <span class="tier tier--standard">standard</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.52</dd></div>
+<div><dt>Chance of ranking first</dt><dd>29%</dd></div>        </dl>
+      </a>
+    </li>
+    <li class="task-card">
+      <a class="task-card__link" href="/model-compass/best-ai-model-for/stickers-and-icons/">
+        <h3 class="task-card__title">Best AI model for stickers and icons</h3>
+        <p class="task-card__best"><span class="task-card__best-name">GPT Image 2</span> <span class="tier tier--premium">premium</span></p>
+        <dl class="task-card__spec">
+          <div><dt>Requests</dt><dd>10</dd></div>
+          <div><dt>Judge agreement</dt><dd>0.63</dd></div>
+<div><dt>Chance of ranking first</dt><dd>30%</dd></div>        </dl>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section class="measure" aria-labelledby="measure-title">
+  <div class="section-head">
+    <h2 id="measure-title">How we measure</h2>
+  </div>
+  <ol class="measure__steps">
+    <li><strong>Same requests to every model.</strong> 80 prompts written like real users write them, 8 tasks, 12 models you can pick in Picsart's AI Playground, every output kept with its settings and cost.</li>
+    <li><strong>Scores you can check.</strong> CLIP similarity for prompt match, an aesthetic predictor for looks, and OCR for tasks where the text must be spelled right.</li>
+    <li><strong>A judge that cannot cheat.</strong> An AI judge ranks each prompt's outputs twice in shuffled order without seeing model names; humans spot-check it. Rankings become Plackett–Luce ratings with bootstrap error bars.</li>
+  </ol>
+  <p><a class="btn btn--quiet" href="/model-compass/method/">Read the full method and its limits</a></p>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__disclosure">
+      <p>Built by Vilya Poghosyan, who works at Picsart. This is a personal project, not an official Picsart page. Every image here was made with Picsart models through Picsart's AI Playground and carries the Picsart AI label.</p>
+      <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Last updated 2026-10-07.</p>
+    </div>
+    <div class="site-foot__links">
+      <a href="/model-compass/method/">How we measure</a>
+      <a href="/model-compass/data/">Download the data</a>
+      <a href="/model-compass/about/">About and contact</a>
+      <span class="built-with"><span class="built-with__dot" aria-hidden="true"></span>built with Picsart models</span>
+    </div>
+  </div>
+</footer>
+<script src="/model-compass/assets/js/site.js" defer></script>
+<script type="module" src="/model-compass/assets/js/compass.js"></script>
+<script data-goatcounter="https://vilya.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

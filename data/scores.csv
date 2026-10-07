@@ -1,0 +1,961 @@
+prompt_id,task,model,clip_score,aesthetic,ocr_exact,ocr_similarity,ocr_text,judge_rank_mean,image
+product-photo-01,product-photo,gpt-image-2,35.77783203125,5.137784957885742,,,,6.5,img/product-photo/product-photo-01/gpt-image-2.webp
+product-photo-01,product-photo,gemini-3-pro-image,34.839046478271484,4.7624969482421875,,,,5.0,img/product-photo/product-photo-01/gemini-3-pro-image.webp
+product-photo-01,product-photo,hunyuan-v3,41.922271728515625,5.134890079498291,,,,12.0,img/product-photo/product-photo-01/hunyuan-v3.webp
+product-photo-01,product-photo,ideogram-4-5,39.24216842651367,5.296137809753418,,,,9.5,img/product-photo/product-photo-01/ideogram-4-5.webp
+product-photo-01,product-photo,gemini-3.1-flash-image,39.46037292480469,5.14122200012207,,,,7.5,img/product-photo/product-photo-01/gemini-3.1-flash-image.webp
+product-photo-01,product-photo,gpt-image-2.5-sunburst,40.62736892700195,5.393235683441162,,,,4.0,img/product-photo/product-photo-01/gpt-image-2.5-sunburst.webp
+product-photo-01,product-photo,luma-uni-1,44.60261535644531,5.615029811859131,,,,7.5,img/product-photo/product-photo-01/luma-uni-1.webp
+product-photo-01,product-photo,recraftv4_1,43.46565628051758,5.294921875,,,,11.0,img/product-photo/product-photo-01/recraftv4_1.webp
+product-photo-01,product-photo,seedream-5.0-pro,34.855064392089844,5.104803562164307,,,,8.0,img/product-photo/product-photo-01/seedream-5.0-pro.webp
+product-photo-01,product-photo,flux-2-pro,41.07678985595703,5.405029296875,,,,4.0,img/product-photo/product-photo-01/flux-2-pro.webp
+product-photo-01,product-photo,kling-3.0-image,37.95334243774414,5.658473014831543,,,,1.0,img/product-photo/product-photo-01/kling-3.0-image.webp
+product-photo-01,product-photo,gemini-2.5-flash-image,41.76934814453125,5.462575912475586,,,,2.0,img/product-photo/product-photo-01/gemini-2.5-flash-image.webp
+product-photo-02,product-photo,gpt-image-2,33.78738784790039,5.68892765045166,,,,5.0,img/product-photo/product-photo-02/gpt-image-2.webp
+product-photo-02,product-photo,gemini-3-pro-image,30.271339416503906,5.482945442199707,,,,2.0,img/product-photo/product-photo-02/gemini-3-pro-image.webp
+product-photo-02,product-photo,hunyuan-v3,35.83365249633789,5.5944108963012695,,,,6.5,img/product-photo/product-photo-02/hunyuan-v3.webp
+product-photo-02,product-photo,ideogram-4-5,39.48653793334961,5.615560054779053,,,,9.5,img/product-photo/product-photo-02/ideogram-4-5.webp
+product-photo-02,product-photo,gemini-3.1-flash-image,33.70233917236328,5.5291266441345215,,,,11.5,img/product-photo/product-photo-02/gemini-3.1-flash-image.webp
+product-photo-02,product-photo,gpt-image-2.5-sunburst,30.84174346923828,5.9098358154296875,,,,2.0,img/product-photo/product-photo-02/gpt-image-2.5-sunburst.webp
+product-photo-02,product-photo,luma-uni-1,35.98248291015625,5.523914813995361,,,,7.0,img/product-photo/product-photo-02/luma-uni-1.webp
+product-photo-02,product-photo,recraftv4_1,35.91862106323242,5.429292678833008,,,,9.0,img/product-photo/product-photo-02/recraftv4_1.webp
+product-photo-02,product-photo,seedream-5.0-pro,34.82830047607422,5.280219554901123,,,,2.0,img/product-photo/product-photo-02/seedream-5.0-pro.webp
+product-photo-02,product-photo,flux-2-pro,37.374454498291016,6.038542747497559,,,,11.5,img/product-photo/product-photo-02/flux-2-pro.webp
+product-photo-02,product-photo,kling-3.0-image,36.842681884765625,5.694441795349121,,,,6.5,img/product-photo/product-photo-02/kling-3.0-image.webp
+product-photo-02,product-photo,gemini-2.5-flash-image,37.7010612487793,5.83217716217041,,,,5.5,img/product-photo/product-photo-02/gemini-2.5-flash-image.webp
+product-photo-03,product-photo,gpt-image-2,36.57093048095703,5.385653018951416,,,,1.0,img/product-photo/product-photo-03/gpt-image-2.webp
+product-photo-03,product-photo,gemini-3-pro-image,36.578460693359375,5.216141700744629,,,,11.5,img/product-photo/product-photo-03/gemini-3-pro-image.webp
+product-photo-03,product-photo,hunyuan-v3,36.04589080810547,4.918222904205322,,,,11.0,img/product-photo/product-photo-03/hunyuan-v3.webp
+product-photo-03,product-photo,ideogram-4-5,38.7024040222168,5.865156173706055,,,,8.0,img/product-photo/product-photo-03/ideogram-4-5.webp
+product-photo-03,product-photo,gemini-3.1-flash-image,36.88911437988281,5.541831970214844,,,,2.0,img/product-photo/product-photo-03/gemini-3.1-flash-image.webp
+product-photo-03,product-photo,gpt-image-2.5-sunburst,35.94955825805664,5.175097942352295,,,,3.5,img/product-photo/product-photo-03/gpt-image-2.5-sunburst.webp
+product-photo-03,product-photo,luma-uni-1,40.30404281616211,5.323230743408203,,,,9.0,img/product-photo/product-photo-03/luma-uni-1.webp
+product-photo-03,product-photo,recraftv4_1,42.7739143371582,5.520824432373047,,,,8.0,img/product-photo/product-photo-03/recraftv4_1.webp
+product-photo-03,product-photo,seedream-5.0-pro,34.139747619628906,5.309787750244141,,,,6.5,img/product-photo/product-photo-03/seedream-5.0-pro.webp
+product-photo-03,product-photo,flux-2-pro,38.59996795654297,5.704779148101807,,,,8.5,img/product-photo/product-photo-03/flux-2-pro.webp
+product-photo-03,product-photo,kling-3.0-image,37.479515075683594,5.718578338623047,,,,5.5,img/product-photo/product-photo-03/kling-3.0-image.webp
+product-photo-03,product-photo,gemini-2.5-flash-image,40.21369171142578,5.609554767608643,,,,3.5,img/product-photo/product-photo-03/gemini-2.5-flash-image.webp
+product-photo-04,product-photo,gpt-image-2,36.268341064453125,5.7743449211120605,,,,2.0,img/product-photo/product-photo-04/gpt-image-2.webp
+product-photo-04,product-photo,gemini-3-pro-image,38.51896667480469,5.659542083740234,,,,5.5,img/product-photo/product-photo-04/gemini-3-pro-image.webp
+product-photo-04,product-photo,hunyuan-v3,38.8639030456543,5.5846452713012695,,,,8.0,img/product-photo/product-photo-04/hunyuan-v3.webp
+product-photo-04,product-photo,ideogram-4-5,36.60194778442383,5.648758888244629,,,,4.5,img/product-photo/product-photo-04/ideogram-4-5.webp
+product-photo-04,product-photo,gemini-3.1-flash-image,41.205753326416016,5.149294853210449,,,,11.0,img/product-photo/product-photo-04/gemini-3.1-flash-image.webp
+product-photo-04,product-photo,gpt-image-2.5-sunburst,37.90347671508789,5.6285247802734375,,,,1.5,img/product-photo/product-photo-04/gpt-image-2.5-sunburst.webp
+product-photo-04,product-photo,luma-uni-1,39.62323760986328,5.579105377197266,,,,6.5,img/product-photo/product-photo-04/luma-uni-1.webp
+product-photo-04,product-photo,recraftv4_1,40.10810089111328,5.634335994720459,,,,10.5,img/product-photo/product-photo-04/recraftv4_1.webp
+product-photo-04,product-photo,seedream-5.0-pro,38.55236053466797,5.298815727233887,,,,10.0,img/product-photo/product-photo-04/seedream-5.0-pro.webp
+product-photo-04,product-photo,flux-2-pro,39.00828552246094,5.680205345153809,,,,3.0,img/product-photo/product-photo-04/flux-2-pro.webp
+product-photo-04,product-photo,kling-3.0-image,36.130367279052734,5.811082363128662,,,,6.5,img/product-photo/product-photo-04/kling-3.0-image.webp
+product-photo-04,product-photo,gemini-2.5-flash-image,37.90602493286133,5.560826301574707,,,,9.0,img/product-photo/product-photo-04/gemini-2.5-flash-image.webp
+product-photo-05,product-photo,gpt-image-2,38.8685302734375,5.488694190979004,,,,3.5,img/product-photo/product-photo-05/gpt-image-2.webp
+product-photo-05,product-photo,gemini-3-pro-image,38.0037841796875,5.7378129959106445,,,,6.0,img/product-photo/product-photo-05/gemini-3-pro-image.webp
+product-photo-05,product-photo,hunyuan-v3,39.34001159667969,5.574831008911133,,,,8.5,img/product-photo/product-photo-05/hunyuan-v3.webp
+product-photo-05,product-photo,ideogram-4-5,36.198455810546875,5.3163604736328125,,,,11.0,img/product-photo/product-photo-05/ideogram-4-5.webp
+product-photo-05,product-photo,gemini-3.1-flash-image,37.806026458740234,5.7742695808410645,,,,1.5,img/product-photo/product-photo-05/gemini-3.1-flash-image.webp
+product-photo-05,product-photo,gpt-image-2.5-sunburst,38.21333312988281,5.722949028015137,,,,2.0,img/product-photo/product-photo-05/gpt-image-2.5-sunburst.webp
+product-photo-05,product-photo,luma-uni-1,40.018375396728516,5.593806266784668,,,,5.0,img/product-photo/product-photo-05/luma-uni-1.webp
+product-photo-05,product-photo,recraftv4_1,36.74729919433594,5.665512561798096,,,,12.0,img/product-photo/product-photo-05/recraftv4_1.webp
+product-photo-05,product-photo,seedream-5.0-pro,36.580928802490234,5.80684232711792,,,,10.0,img/product-photo/product-photo-05/seedream-5.0-pro.webp
+product-photo-05,product-photo,flux-2-pro,38.608917236328125,5.232582092285156,,,,8.0,img/product-photo/product-photo-05/flux-2-pro.webp
+product-photo-05,product-photo,kling-3.0-image,39.8125114440918,5.338150978088379,,,,4.5,img/product-photo/product-photo-05/kling-3.0-image.webp
+product-photo-05,product-photo,gemini-2.5-flash-image,38.688289642333984,5.456487655639648,,,,6.0,img/product-photo/product-photo-05/gemini-2.5-flash-image.webp
+product-photo-06,product-photo,gpt-image-2,36.56780242919922,5.61126708984375,,,,1.5,img/product-photo/product-photo-06/gpt-image-2.webp
+product-photo-06,product-photo,gemini-3-pro-image,39.017616271972656,5.373229026794434,,,,11.5,img/product-photo/product-photo-06/gemini-3-pro-image.webp
+product-photo-06,product-photo,hunyuan-v3,36.469783782958984,5.782072067260742,,,,2.0,img/product-photo/product-photo-06/hunyuan-v3.webp
+product-photo-06,product-photo,ideogram-4-5,39.24998092651367,5.710392475128174,,,,7.0,img/product-photo/product-photo-06/ideogram-4-5.webp
+product-photo-06,product-photo,gemini-3.1-flash-image,34.95033264160156,5.548659801483154,,,,7.0,img/product-photo/product-photo-06/gemini-3.1-flash-image.webp
+product-photo-06,product-photo,gpt-image-2.5-sunburst,35.516357421875,5.675381660461426,,,,3.5,img/product-photo/product-photo-06/gpt-image-2.5-sunburst.webp
+product-photo-06,product-photo,luma-uni-1,40.20280838012695,5.269737243652344,,,,6.5,img/product-photo/product-photo-06/luma-uni-1.webp
+product-photo-06,product-photo,recraftv4_1,39.41407012939453,5.446181297302246,,,,11.5,img/product-photo/product-photo-06/recraftv4_1.webp
+product-photo-06,product-photo,seedream-5.0-pro,33.60516357421875,5.731202602386475,,,,9.5,img/product-photo/product-photo-06/seedream-5.0-pro.webp
+product-photo-06,product-photo,flux-2-pro,36.01418685913086,5.622040748596191,,,,5.0,img/product-photo/product-photo-06/flux-2-pro.webp
+product-photo-06,product-photo,kling-3.0-image,35.34233474731445,5.5787272453308105,,,,5.0,img/product-photo/product-photo-06/kling-3.0-image.webp
+product-photo-06,product-photo,gemini-2.5-flash-image,36.09013366699219,5.460383415222168,,,,8.0,img/product-photo/product-photo-06/gemini-2.5-flash-image.webp
+product-photo-07,product-photo,gpt-image-2,37.74203872680664,5.368015766143799,,,,6.0,img/product-photo/product-photo-07/gpt-image-2.webp
+product-photo-07,product-photo,gemini-3-pro-image,38.30087661743164,5.262929916381836,,,,6.5,img/product-photo/product-photo-07/gemini-3-pro-image.webp
+product-photo-07,product-photo,hunyuan-v3,40.14326095581055,5.296093940734863,,,,2.5,img/product-photo/product-photo-07/hunyuan-v3.webp
+product-photo-07,product-photo,ideogram-4-5,40.281044006347656,5.1356987953186035,,,,6.0,img/product-photo/product-photo-07/ideogram-4-5.webp
+product-photo-07,product-photo,gemini-3.1-flash-image,41.70206069946289,5.305869102478027,,,,7.0,img/product-photo/product-photo-07/gemini-3.1-flash-image.webp
+product-photo-07,product-photo,gpt-image-2.5-sunburst,37.75432586669922,5.3255815505981445,,,,1.0,img/product-photo/product-photo-07/gpt-image-2.5-sunburst.webp
+product-photo-07,product-photo,luma-uni-1,39.08718490600586,5.049830436706543,,,,2.5,img/product-photo/product-photo-07/luma-uni-1.webp
+product-photo-07,product-photo,recraftv4_1,41.92049026489258,4.83292818069458,,,,10.0,img/product-photo/product-photo-07/recraftv4_1.webp
+product-photo-07,product-photo,seedream-5.0-pro,34.10770797729492,5.436657905578613,,,,12.0,img/product-photo/product-photo-07/seedream-5.0-pro.webp
+product-photo-07,product-photo,flux-2-pro,40.53257751464844,4.999492645263672,,,,9.0,img/product-photo/product-photo-07/flux-2-pro.webp
+product-photo-07,product-photo,kling-3.0-image,37.9999885559082,5.415259838104248,,,,11.0,img/product-photo/product-photo-07/kling-3.0-image.webp
+product-photo-07,product-photo,gemini-2.5-flash-image,40.002994537353516,5.261270523071289,,,,4.5,img/product-photo/product-photo-07/gemini-2.5-flash-image.webp
+product-photo-08,product-photo,gpt-image-2,36.871673583984375,5.614941596984863,,,,1.5,img/product-photo/product-photo-08/gpt-image-2.webp
+product-photo-08,product-photo,gemini-3-pro-image,35.65047836303711,5.01818323135376,,,,8.0,img/product-photo/product-photo-08/gemini-3-pro-image.webp
+product-photo-08,product-photo,hunyuan-v3,38.42287063598633,5.459429740905762,,,,5.0,img/product-photo/product-photo-08/hunyuan-v3.webp
+product-photo-08,product-photo,ideogram-4-5,37.64271545410156,5.803282737731934,,,,4.0,img/product-photo/product-photo-08/ideogram-4-5.webp
+product-photo-08,product-photo,gemini-3.1-flash-image,37.07025909423828,5.8455047607421875,,,,8.5,img/product-photo/product-photo-08/gemini-3.1-flash-image.webp
+product-photo-08,product-photo,gpt-image-2.5-sunburst,36.60477066040039,5.39462423324585,,,,6.0,img/product-photo/product-photo-08/gpt-image-2.5-sunburst.webp
+product-photo-08,product-photo,luma-uni-1,36.44573211669922,5.517569541931152,,,,5.0,img/product-photo/product-photo-08/luma-uni-1.webp
+product-photo-08,product-photo,recraftv4_1,35.561065673828125,5.833505630493164,,,,10.5,img/product-photo/product-photo-08/recraftv4_1.webp
+product-photo-08,product-photo,seedream-5.0-pro,37.18526840209961,6.013881683349609,,,,11.0,img/product-photo/product-photo-08/seedream-5.0-pro.webp
+product-photo-08,product-photo,flux-2-pro,37.85784912109375,5.429762840270996,,,,5.0,img/product-photo/product-photo-08/flux-2-pro.webp
+product-photo-08,product-photo,kling-3.0-image,37.3730583190918,5.7747883796691895,,,,2.0,img/product-photo/product-photo-08/kling-3.0-image.webp
+product-photo-08,product-photo,gemini-2.5-flash-image,33.319427490234375,5.523568153381348,,,,11.5,img/product-photo/product-photo-08/gemini-2.5-flash-image.webp
+product-photo-09,product-photo,gpt-image-2,38.2669792175293,5.26909065246582,,,,3.5,img/product-photo/product-photo-09/gpt-image-2.webp
+product-photo-09,product-photo,gemini-3-pro-image,34.61183166503906,5.2507524490356445,,,,3.5,img/product-photo/product-photo-09/gemini-3-pro-image.webp
+product-photo-09,product-photo,hunyuan-v3,40.56666946411133,5.251658916473389,,,,11.5,img/product-photo/product-photo-09/hunyuan-v3.webp
+product-photo-09,product-photo,ideogram-4-5,34.697731018066406,5.386075496673584,,,,9.0,img/product-photo/product-photo-09/ideogram-4-5.webp
+product-photo-09,product-photo,gemini-3.1-flash-image,36.749603271484375,5.558928489685059,,,,5.5,img/product-photo/product-photo-09/gemini-3.1-flash-image.webp
+product-photo-09,product-photo,gpt-image-2.5-sunburst,38.81544494628906,5.484935283660889,,,,1.5,img/product-photo/product-photo-09/gpt-image-2.5-sunburst.webp
+product-photo-09,product-photo,luma-uni-1,43.52421188354492,5.504263877868652,,,,7.0,img/product-photo/product-photo-09/luma-uni-1.webp
+product-photo-09,product-photo,recraftv4_1,37.47529220581055,5.401772499084473,,,,11.5,img/product-photo/product-photo-09/recraftv4_1.webp
+product-photo-09,product-photo,seedream-5.0-pro,37.041141510009766,5.761056900024414,,,,7.5,img/product-photo/product-photo-09/seedream-5.0-pro.webp
+product-photo-09,product-photo,flux-2-pro,42.16716766357422,5.5368757247924805,,,,3.0,img/product-photo/product-photo-09/flux-2-pro.webp
+product-photo-09,product-photo,kling-3.0-image,39.547691345214844,5.400934219360352,,,,5.0,img/product-photo/product-photo-09/kling-3.0-image.webp
+product-photo-09,product-photo,gemini-2.5-flash-image,42.64670944213867,5.6792988777160645,,,,9.5,img/product-photo/product-photo-09/gemini-2.5-flash-image.webp
+product-photo-10,product-photo,gpt-image-2,44.525753021240234,5.761754989624023,,,,6.5,img/product-photo/product-photo-10/gpt-image-2.webp
+product-photo-10,product-photo,gemini-3-pro-image,43.96533203125,5.809229850769043,,,,6.0,img/product-photo/product-photo-10/gemini-3-pro-image.webp
+product-photo-10,product-photo,hunyuan-v3,44.15493392944336,5.825320243835449,,,,7.0,img/product-photo/product-photo-10/hunyuan-v3.webp
+product-photo-10,product-photo,ideogram-4-5,44.419490814208984,5.844480991363525,,,,7.0,img/product-photo/product-photo-10/ideogram-4-5.webp
+product-photo-10,product-photo,gemini-3.1-flash-image,44.772003173828125,5.881038665771484,,,,8.0,img/product-photo/product-photo-10/gemini-3.1-flash-image.webp
+product-photo-10,product-photo,gpt-image-2.5-sunburst,43.69125747680664,6.137050151824951,,,,10.0,img/product-photo/product-photo-10/gpt-image-2.5-sunburst.webp
+product-photo-10,product-photo,luma-uni-1,43.85443878173828,6.047536373138428,,,,1.0,img/product-photo/product-photo-10/luma-uni-1.webp
+product-photo-10,product-photo,recraftv4_1,38.00082778930664,5.90395450592041,,,,11.5,img/product-photo/product-photo-10/recraftv4_1.webp
+product-photo-10,product-photo,seedream-5.0-pro,44.79423904418945,5.663511276245117,,,,4.0,img/product-photo/product-photo-10/seedream-5.0-pro.webp
+product-photo-10,product-photo,flux-2-pro,42.145042419433594,5.842855930328369,,,,2.5,img/product-photo/product-photo-10/flux-2-pro.webp
+product-photo-10,product-photo,kling-3.0-image,43.260948181152344,5.536600112915039,,,,11.5,img/product-photo/product-photo-10/kling-3.0-image.webp
+product-photo-10,product-photo,gemini-2.5-flash-image,41.82466125488281,5.745616436004639,,,,3.0,img/product-photo/product-photo-10/gemini-2.5-flash-image.webp
+logo-01,logo,gpt-image-2,37.30448913574219,4.503060340881348,false,0.41666666666666663,Tslden | lden,1.5,img/logo/logo-01/gpt-image-2.webp
+logo-01,logo,gemini-3-pro-image,38.61071014404297,4.72075891494751,false,0.75,jolden | Crитb,7.0,img/logo/logo-01/gemini-3-pro-image.webp
+logo-01,logo,hunyuan-v3,36.27249526977539,4.753548622131348,false,0.9166666666666666,Golen | CruMB | LESENRAL,12.0,img/logo/logo-01/hunyuan-v3.webp
+logo-01,logo,ideogram-4-5,38.95209884643555,5.100559711456299,false,0.6,Golden | dodada | Crumbr | ARTISAN BAKERY • EST. 2024,7.0,img/logo/logo-01/ideogram-4-5.webp
+logo-01,logo,gemini-3.1-flash-image,39.98562240600586,4.679220676422119,true,1.0,GOLDEN | CRUMB,2.5,img/logo/logo-01/gemini-3.1-flash-image.webp
+logo-01,logo,gpt-image-2.5-sunburst,41.203285217285156,5.207552433013916,true,1.0,GOLDEN CRUMB | -BAKERY-,7.0,img/logo/logo-01/gpt-image-2.5-sunburst.webp
+logo-01,logo,luma-uni-1,38.29241943359375,5.02745246887207,true,1.0,Golden Crumb | Artisan Bakery,9.0,img/logo/logo-01/luma-uni-1.webp
+logo-01,logo,recraftv4_1,40.179039001464844,4.666497707366943,false,0.6923076923076923,Gekden | Crukmo,5.0,img/logo/logo-01/recraftv4_1.webp
+logo-01,logo,seedream-5.0-pro,40.75590515136719,4.860093593597412,false,0.9166666666666666,Goden | Crumb,2.0,img/logo/logo-01/seedream-5.0-pro.webp
+logo-01,logo,flux-2-pro,38.223106384277344,4.564949989318848,false,0.8333333333333334,G | LDEN | GRUMB,5.0,img/logo/logo-01/flux-2-pro.webp
+logo-01,logo,kling-3.0-image,39.714210510253906,4.828734874725342,true,1.0,„Golden | Crumb,11.0,img/logo/logo-01/kling-3.0-image.webp
+logo-01,logo,gemini-2.5-flash-image,39.141761779785156,4.778698444366455,true,1.0,GOLDEN | CRUMB,9.0,img/logo/logo-01/gemini-2.5-flash-image.webp
+logo-02,logo,gpt-image-2,46.59180450439453,5.058880805969238,true,1.0,EMBER ROAST | COFFEE ROASTERS,1.5,img/logo/logo-02/gpt-image-2.webp
+logo-02,logo,gemini-3-pro-image,47.68760299682617,5.250537872314453,true,1.0,EMBER ROAST | COFFEE ROASTERY,8.0,img/logo/logo-02/gemini-3-pro-image.webp
+logo-02,logo,hunyuan-v3,49.00923538208008,4.182870864868164,true,1.0,Ember | Roast | MY COFFE POSTERY®,11.5,img/logo/logo-02/hunyuan-v3.webp
+logo-02,logo,ideogram-4-5,46.48917007446289,4.684047222137451,true,1.0,EMBER ROAST | SINGLE ORIGIN • SMALL BATCH,4.0,img/logo/logo-02/ideogram-4-5.webp
+logo-02,logo,gemini-3.1-flash-image,44.91670227050781,5.3612060546875,true,1.0,EMBER ROAST | SPECIALTY COFFEE ROASTERY | EST. 2023 | HAND-CRAFTED,10.5,img/logo/logo-02/gemini-3.1-flash-image.webp
+logo-02,logo,gpt-image-2.5-sunburst,46.17131805419922,5.0848283767700195,true,1.0,EMBER ROAST | ROASTERY | COFFEE,1.5,img/logo/logo-02/gpt-image-2.5-sunburst.webp
+logo-02,logo,luma-uni-1,47.67097473144531,4.922746181488037,true,1.0,EMBER | ROAST | SPECIALTY COFFEE ROASTERS,5.0,img/logo/logo-02/luma-uni-1.webp
+logo-02,logo,recraftv4_1,46.31635665893555,4.343551158905029,false,0.8181818181818181,=moer | Roast,10.5,img/logo/logo-02/recraftv4_1.webp
+logo-02,logo,seedream-5.0-pro,43.295658111572266,4.89334774017334,true,1.0,EMBER | ROAST,9.0,img/logo/logo-02/seedream-5.0-pro.webp
+logo-02,logo,flux-2-pro,45.927734375,4.565654277801514,true,1.0,Ember Roast,3.5,img/logo/logo-02/flux-2-pro.webp
+logo-02,logo,kling-3.0-image,44.93592834472656,5.086717128753662,true,1.0,Ember Roast,7.5,img/logo/logo-02/kling-3.0-image.webp
+logo-02,logo,gemini-2.5-flash-image,43.82065200805664,4.731509208679199,true,1.0,EMBER ROAST,5.5,img/logo/logo-02/gemini-2.5-flash-image.webp
+logo-03,logo,gpt-image-2,44.17734909057617,4.461157321929932,true,1.0,Still Lotus,4.5,img/logo/logo-03/gpt-image-2.webp
+logo-03,logo,gemini-3-pro-image,46.75556945800781,4.7148284912109375,true,1.0,STILL LOTUS,5.5,img/logo/logo-03/gemini-3-pro-image.webp
+logo-03,logo,hunyuan-v3,46.409385681152344,4.258978843688965,true,1.0,Still Lotus | LNYLUTOR,12.0,img/logo/logo-03/hunyuan-v3.webp
+logo-03,logo,ideogram-4-5,47.13719177246094,4.082292079925537,true,1.0,STILL LOTUS,7.5,img/logo/logo-03/ideogram-4-5.webp
+logo-03,logo,gemini-3.1-flash-image,47.48959732055664,4.686182498931885,true,1.0,STILL | LOTUS,4.5,img/logo/logo-03/gemini-3.1-flash-image.webp
+logo-03,logo,gpt-image-2.5-sunburst,46.29181671142578,4.465556621551514,true,1.0,STILL LOTUS,1.5,img/logo/logo-03/gpt-image-2.5-sunburst.webp
+logo-03,logo,luma-uni-1,45.95192337036133,4.909825801849365,true,1.0,/ | Still Lotus | yoga studio,6.5,img/logo/logo-03/luma-uni-1.webp
+logo-03,logo,recraftv4_1,45.01862335205078,4.368721008300781,true,1.0,Still Lotus,4.5,img/logo/logo-03/recraftv4_1.webp
+logo-03,logo,seedream-5.0-pro,44.712806701660156,4.150293827056885,true,1.0,Still | Lotus,9.5,img/logo/logo-03/seedream-5.0-pro.webp
+logo-03,logo,flux-2-pro,47.37150192260742,4.428202152252197,true,1.0,Still Lotus,3.5,img/logo/logo-03/flux-2-pro.webp
+logo-03,logo,kling-3.0-image,39.3946533203125,4.616248607635498,true,1.0,Still Lotus,11.0,img/logo/logo-03/kling-3.0-image.webp
+logo-03,logo,gemini-2.5-flash-image,45.93836212158203,4.60835599899292,true,1.0,STILL LOTUS,7.5,img/logo/logo-03/gemini-2.5-flash-image.webp
+logo-04,logo,gpt-image-2,40.28480529785156,5.378912925720215,false,0.8333333333333334,Nexera,5.0,img/logo/logo-04/gpt-image-2.webp
+logo-04,logo,gemini-3-pro-image,39.573402404785156,5.201229095458984,false,0.7142857142857143,Nexe | ra,6.5,img/logo/logo-04/gemini-3-pro-image.webp
+logo-04,logo,hunyuan-v3,42.47269821166992,4.820694923400879,true,1.0,Nexora,3.0,img/logo/logo-04/hunyuan-v3.webp
+logo-04,logo,ideogram-4-5,44.039608001708984,5.008211612701416,true,1.0,Nexora,7.5,img/logo/logo-04/ideogram-4-5.webp
+logo-04,logo,gemini-3.1-flash-image,41.975242614746094,5.105705738067627,true,1.0,NEXORA,11.0,img/logo/logo-04/gemini-3.1-flash-image.webp
+logo-04,logo,gpt-image-2.5-sunburst,42.718231201171875,5.018824577331543,false,0.8333333333333334,Nexera,3.5,img/logo/logo-04/gpt-image-2.5-sunburst.webp
+logo-04,logo,luma-uni-1,43.14647674560547,4.775638103485107,false,0.5,Nex,2.5,img/logo/logo-04/luma-uni-1.webp
+logo-04,logo,recraftv4_1,43.2542839050293,4.622790336608887,true,1.0,Nexora,9.5,img/logo/logo-04/recraftv4_1.webp
+logo-04,logo,seedream-5.0-pro,37.85775375366211,4.5589680671691895,true,1.0,Nexora,8.5,img/logo/logo-04/seedream-5.0-pro.webp
+logo-04,logo,flux-2-pro,42.13896942138672,4.796303749084473,false,0.8333333333333334,Nex | ra,8.0,img/logo/logo-04/flux-2-pro.webp
+logo-04,logo,kling-3.0-image,41.98343276977539,4.807917594909668,false,0.8333333333333334,Nex | ra,1.0,img/logo/logo-04/kling-3.0-image.webp
+logo-04,logo,gemini-2.5-flash-image,41.91163635253906,5.110608100891113,true,1.0,NEXORA | Innovate. Connect. Future.,12.0,img/logo/logo-04/gemini-2.5-flash-image.webp
+logo-05,logo,gpt-image-2,35.82535934448242,5.406182289123535,false,0.6666666666666667,ТРОТТОААРО ГОРО | 2020 | Lотb | Iron | CLEAN LINES | CLASSIC CUTS | OLDSCHOOL | TRUE CRAFT,4.5,img/logo/logo-05/gpt-image-2.webp
+logo-05,logo,gemini-3-pro-image,32.62010192871094,5.15643310546875,false,0.7777777777777778,RON COME | SRON CONS | *,7.0,img/logo/logo-05/gemini-3-pro-image.webp
+logo-05,logo,hunyuan-v3,33.890682220458984,5.615582466125488,false,0.8888888888888888,Tron Comb,11.0,img/logo/logo-05/hunyuan-v3.webp
+logo-05,logo,ideogram-4-5,34.55649185180664,5.915132522583008,false,0.6666666666666667,TON COMS | EST. 1952 | CLASSIC CUTS • SHAVES • STYLE,9.5,img/logo/logo-05/ideogram-4-5.webp
+logo-05,logo,gemini-3.1-flash-image,39.9078483581543,5.946948051452637,false,0.8888888888888888,CATMAN'S OROONINE | EST. 2019% | OPAOS | BARBER SHOP | RON COMB | • TRADE MARK•,3.0,img/logo/logo-05/gemini-3.1-flash-image.webp
+logo-05,logo,gpt-image-2.5-sunburst,40.36231231689453,5.514991760253906,true,1.0,ERSHO | BARB | IRON | COMB | CLEAN | HAIRCUTS | SHAVES | LOOKS | GROOMING | STRONGER | MEN | ALWAYS | EST. 2018,1.5,img/logo/logo-05/gpt-image-2.5-sunburst.webp
+logo-05,logo,luma-uni-1,44.016380310058594,5.783881187438965,false,0.18181818181818177,•GARBEPSHO™®,7.0,img/logo/logo-05/luma-uni-1.webp
+logo-05,logo,recraftv4_1,40.89046096801758,4.885096549987793,false,0.8888888888888888,Tron Comb,9.0,img/logo/logo-05/recraftv4_1.webp
+logo-05,logo,seedream-5.0-pro,38.321441650390625,5.900306701660156,false,0.7777777777777778,Jron | Сomb | EST. 1923,1.5,img/logo/logo-05/seedream-5.0-pro.webp
+logo-05,logo,flux-2-pro,43.15060043334961,5.592870712280273,true,1.0,IRON COMB | BARBERSHOP,4.5,img/logo/logo-05/flux-2-pro.webp
+logo-05,logo,kling-3.0-image,37.31473159790039,5.218607425689697,true,1.0,Iron Comb,10.5,img/logo/logo-05/kling-3.0-image.webp
+logo-05,logo,gemini-2.5-flash-image,39.2840461730957,5.673613548278809,false,0.7777777777777778,TRON COMD | • | • | EST. 1920,9.0,img/logo/logo-05/gemini-2.5-flash-image.webp
+logo-06,logo,gpt-image-2,43.118709564208984,5.011263847351074,true,1.0,Happy Paws | DOG GROOMING SALON,1.5,img/logo/logo-06/gpt-image-2.webp
+logo-06,logo,gemini-3-pro-image,43.567020416259766,4.865845203399658,true,1.0,Happy Paws | DOG GROOMING,9.0,img/logo/logo-06/gemini-3-pro-image.webp
+logo-06,logo,hunyuan-v3,37.82351303100586,4.754087924957275,true,1.0,Happy | Paws | salun,12.0,img/logo/logo-06/hunyuan-v3.webp
+logo-06,logo,ideogram-4-5,41.13718795776367,4.705049991607666,true,1.0,Happy | Paws | GROOMING SALON,5.5,img/logo/logo-06/ideogram-4-5.webp
+logo-06,logo,gemini-3.1-flash-image,45.195926666259766,5.182834148406982,false,0.19999999999999996,АРРУ РАDК- | -D0G GROOMING SALON,3.5,img/logo/logo-06/gemini-3.1-flash-image.webp
+logo-06,logo,gpt-image-2.5-sunburst,43.3621826171875,5.118239402770996,true,1.0,Happy Paws | - DOG GROOMING SALON —,1.5,img/logo/logo-06/gpt-image-2.5-sunburst.webp
+logo-06,logo,luma-uni-1,44.80419921875,4.4953837394714355,true,1.0,Happy Paws | Grooming * Salon,7.0,img/logo/logo-06/luma-uni-1.webp
+logo-06,logo,recraftv4_1,43.320228576660156,4.542337417602539,true,1.0,Happy Paws,10.5,img/logo/logo-06/recraftv4_1.webp
+logo-06,logo,seedream-5.0-pro,40.42959976196289,4.412015914916992,true,1.0,Happy. | •Paws | &DG GROOMING 8 & SPA,4.5,img/logo/logo-06/seedream-5.0-pro.webp
+logo-06,logo,flux-2-pro,39.86079788208008,4.453375339508057,true,1.0,Happy Paws,5.5,img/logo/logo-06/flux-2-pro.webp
+logo-06,logo,kling-3.0-image,36.6845703125,4.650441646575928,true,1.0,Happy Paws,7.0,img/logo/logo-06/kling-3.0-image.webp
+logo-06,logo,gemini-2.5-flash-image,43.469764709472656,4.511536121368408,false,0.0,,10.5,img/logo/logo-06/gemini-2.5-flash-image.webp
+logo-07,logo,gpt-image-2,37.397830963134766,4.674354076385498,false,0.9166666666666666,erdant | Yard,8.5,img/logo/logo-07/gpt-image-2.webp
+logo-07,logo,gemini-3-pro-image,39.771915435791016,5.0628743171691895,true,1.0,VERDANT YARD,10.5,img/logo/logo-07/gemini-3-pro-image.webp
+logo-07,logo,hunyuan-v3,37.2630500793457,4.752066612243652,true,1.0,Verdant | Yard,9.5,img/logo/logo-07/hunyuan-v3.webp
+logo-07,logo,ideogram-4-5,42.93316650390625,4.877124309539795,true,1.0,C | VERDANT YARD | LANDSCAPING • LAWN CARE • DESIGN,5.5,img/logo/logo-07/ideogram-4-5.webp
+logo-07,logo,gemini-3.1-flash-image,42.09891128540039,4.880763530731201,true,1.0,VERDANT | YARD,3.0,img/logo/logo-07/gemini-3.1-flash-image.webp
+logo-07,logo,gpt-image-2.5-sunburst,40.26122283935547,4.789590835571289,true,1.0,Verdant Yard,1.0,img/logo/logo-07/gpt-image-2.5-sunburst.webp
+logo-07,logo,luma-uni-1,43.661983489990234,4.495660781860352,true,1.0,Verdant Yard,7.5,img/logo/logo-07/luma-uni-1.webp
+logo-07,logo,recraftv4_1,40.46909713745117,4.8408918380737305,true,1.0,Verdant | Yard &,8.0,img/logo/logo-07/recraftv4_1.webp
+logo-07,logo,seedream-5.0-pro,43.831241607666016,4.686875343322754,true,1.0,Verdant Yard,2.5,img/logo/logo-07/seedream-5.0-pro.webp
+logo-07,logo,flux-2-pro,43.83572006225586,4.76594877243042,true,1.0,Verdant Yard,6.5,img/logo/logo-07/flux-2-pro.webp
+logo-07,logo,kling-3.0-image,41.08943176269531,5.00283145904541,true,1.0,Verdant Yard,7.5,img/logo/logo-07/kling-3.0-image.webp
+logo-07,logo,gemini-2.5-flash-image,41.881473541259766,4.700859546661377,true,1.0,VERDANT | YARD,8.0,img/logo/logo-07/gemini-2.5-flash-image.webp
+logo-08,logo,gpt-image-2,44.572914123535156,5.185014247894287,true,1.0,Quiet Pages | •-,2.0,img/logo/logo-08/gpt-image-2.webp
+logo-08,logo,gemini-3-pro-image,42.53648376464844,5.243757247924805,true,1.0,QP | Quiet Pages,2.5,img/logo/logo-08/gemini-3-pro-image.webp
+logo-08,logo,hunyuan-v3,38.773460388183594,4.378826141357422,true,1.0,Quiet | Pages | EINIIN | NERTUOW,12.0,img/logo/logo-08/hunyuan-v3.webp
+logo-08,logo,ideogram-4-5,43.32216262817383,5.156768321990967,true,1.0,Quiet Pages | EST. BOOKSHOP,8.0,img/logo/logo-08/ideogram-4-5.webp
+logo-08,logo,gemini-3.1-flash-image,40.720211029052734,5.214338302612305,true,1.0,QUIET | PAGES,8.5,img/logo/logo-08/gemini-3.1-flash-image.webp
+logo-08,logo,gpt-image-2.5-sunburst,40.174495697021484,5.001521110534668,true,1.0,Quiet Pages,5.5,img/logo/logo-08/gpt-image-2.5-sunburst.webp
+logo-08,logo,luma-uni-1,42.452423095703125,4.94008731842041,true,1.0,Quiet Pages,10.0,img/logo/logo-08/luma-uni-1.webp
+logo-08,logo,recraftv4_1,41.8863410949707,4.81859827041626,true,1.0,M | Quiet Pages,4.5,img/logo/logo-08/recraftv4_1.webp
+logo-08,logo,seedream-5.0-pro,40.88942337036133,5.209120750427246,true,1.0,Quiet Pages,5.5,img/logo/logo-08/seedream-5.0-pro.webp
+logo-08,logo,flux-2-pro,40.73616409301758,5.023516654968262,true,1.0,QUIET PAGES,7.0,img/logo/logo-08/flux-2-pro.webp
+logo-08,logo,kling-3.0-image,42.53358840942383,4.776488304138184,true,1.0,Quiet Pages | DA | Open book icon,11.0,img/logo/logo-08/kling-3.0-image.webp
+logo-08,logo,gemini-2.5-flash-image,44.07368469238281,5.298883438110352,true,1.0,L | OP | Quiet Pages,1.5,img/logo/logo-08/gemini-2.5-flash-image.webp
+logo-09,logo,gpt-image-2,39.6065673828125,5.2123260498046875,true,1.0,Salt Line | Surf,1.5,img/logo/logo-09/gpt-image-2.webp
+logo-09,logo,gemini-3-pro-image,41.87351608276367,5.129666805267334,false,0.5714285714285714,LINE | SURP | SALT,7.5,img/logo/logo-09/gemini-3-pro-image.webp
+logo-09,logo,hunyuan-v3,36.79828643798828,5.0321946144104,false,0.5714285714285714,J ait Line | fms,5.0,img/logo/logo-09/hunyuan-v3.webp
+logo-09,logo,ideogram-4-5,44.08269500732422,5.2008819580078125,true,1.0,SALT LINE | SURF SCHOOL | EST. 1974,10.5,img/logo/logo-09/ideogram-4-5.webp
+logo-09,logo,gemini-3.1-flash-image,38.99348449707031,5.392738342285156,false,0.2857142857142857,SURE | EST. 1974,3.5,img/logo/logo-09/gemini-3.1-flash-image.webp
+logo-09,logo,gpt-image-2.5-sunburst,40.51325225830078,5.367483615875244,false,0.9285714285714286,SALTLINE | SURF | - SURF SCHOOL -,5.0,img/logo/logo-09/gpt-image-2.5-sunburst.webp
+logo-09,logo,luma-uni-1,39.93834686279297,5.131830215454102,true,1.0,C | Salt Line Surf,4.0,img/logo/logo-09/luma-uni-1.webp
+logo-09,logo,recraftv4_1,39.0406379699707,4.679274082183838,true,1.0,Salt Line Surf,10.5,img/logo/logo-09/recraftv4_1.webp
+logo-09,logo,seedream-5.0-pro,34.717018127441406,5.429316520690918,false,0.9285714285714286,Salt line | Surk,10.0,img/logo/logo-09/seedream-5.0-pro.webp
+logo-09,logo,flux-2-pro,35.339210510253906,5.098913669586182,false,0.9285714285714286,Salt Line Surp,8.5,img/logo/logo-09/flux-2-pro.webp
+logo-09,logo,kling-3.0-image,37.65262985229492,4.884165287017822,true,1.0,Salt Line Surf,8.0,img/logo/logo-09/kling-3.0-image.webp
+logo-09,logo,gemini-2.5-flash-image,41.498870849609375,5.2190680503845215,false,0.2142857142857143,SURS,4.0,img/logo/logo-09/gemini-2.5-flash-image.webp
+logo-10,logo,gpt-image-2,43.59114074707031,4.631917476654053,true,1.0,Brightwell | DENTAL,4.5,img/logo/logo-10/gpt-image-2.webp
+logo-10,logo,gemini-3-pro-image,43.30260467529297,4.70530891418457,true,1.0,Brightwell Dental,5.5,img/logo/logo-10/gemini-3-pro-image.webp
+logo-10,logo,hunyuan-v3,42.68570327758789,4.836739540100098,false,0.8888888888888888,Bbightwell Dentnal® | Brightwell,12.0,img/logo/logo-10/hunyuan-v3.webp
+logo-10,logo,ideogram-4-5,43.941558837890625,4.528007507324219,true,1.0,Brightwell | DENTAL | CARE THAT SHINES,10.0,img/logo/logo-10/ideogram-4-5.webp
+logo-10,logo,gemini-3.1-flash-image,43.103294372558594,4.53382682800293,true,1.0,›Brightwell | Dental,5.0,img/logo/logo-10/gemini-3.1-flash-image.webp
+logo-10,logo,gpt-image-2.5-sunburst,43.7888069152832,4.792737007141113,true,1.0,Brightwell | DENTAL,1.0,img/logo/logo-10/gpt-image-2.5-sunburst.webp
+logo-10,logo,luma-uni-1,42.775081634521484,4.635998249053955,true,1.0,"Brightwell | Dental | Your Smile, Our Care",5.5,img/logo/logo-10/luma-uni-1.webp
+logo-10,logo,recraftv4_1,42.41837692260742,4.6131768226623535,true,1.0,Brightwell | Dental,8.5,img/logo/logo-10/recraftv4_1.webp
+logo-10,logo,seedream-5.0-pro,44.52659606933594,4.601199626922607,false,1.0,Brightwell Dentall,2.5,img/logo/logo-10/seedream-5.0-pro.webp
+logo-10,logo,flux-2-pro,43.48188781738281,4.532324314117432,true,1.0,Brightwell | Dental,5.0,img/logo/logo-10/flux-2-pro.webp
+logo-10,logo,kling-3.0-image,31.355112075805664,5.08563232421875,false,0.0,,11.0,img/logo/logo-10/kling-3.0-image.webp
+logo-10,logo,gemini-2.5-flash-image,45.4515266418457,4.651375770568848,true,1.0,Brightwell | Dental,7.5,img/logo/logo-10/gemini-2.5-flash-image.webp
+poster-flyer-01,poster-flyer,gpt-image-2,39.30303192138672,5.3913893699646,false,0.6666666666666667,"AN INDIE FOLK NIGHT | нulm | Sessionsie | LIVE SONGS. | GOOD PEOPLE. | SOFT LIGHT. | FEATURING | LOCAL ARTISTS | SATURDAY | OCTOBER 18, 2025 | DOORS 7:00 PM | MUSIC 7:30 PM | COME FOR THE MUSIC | THE HOLLOW ROOM | STAY FOR THE NIGHT | 123 MAPLE STREET | YOURTOWN, USA",2.0,img/poster-flyer/poster-flyer-01/gpt-image-2.webp
+poster-flyer-01,poster-flyer,gemini-3-pro-image,42.73222351074219,5.081211090087891,true,1.0,Autumn | Sessions | indie folk night | Tocooo | Live Music • Local Artists • Craft Beer | Oct 26 • The rustic Barn,8.0,img/poster-flyer/poster-flyer-01/gemini-3-pro-image.webp
+poster-flyer-01,poster-flyer,hunyuan-v3,36.768619537353516,5.055708885192871,false,0.9333333333333333,"IDE waveyemd sarde dich aigist 1 ak sarttiss - MELE URART. | Auumn | sessions | The Gite Fold fow Follk Wjsh Night. | KEwninerestcod dihev, aåich crasste thee Uiectisialn Chaiesplssttor",11.0,img/poster-flyer/poster-flyer-01/hunyuan-v3.webp
+poster-flyer-01,poster-flyer,ideogram-4-5,41.358367919921875,4.887670993804932,true,1.0,Autumn | sessions | INDIE FOLK NIGHT | SAT • OCT 18 • 8PM | THE HOLLOW PINE • PORTLAND | $15 ADV / $20 DOOR | FEATURING MAREN ELLIS • THE WILLOW BENDS • JONAH REED & THE DRIFTWOODS,3.0,img/poster-flyer/poster-flyer-01/ideogram-4-5.webp
+poster-flyer-01,poster-flyer,gemini-3.1-flash-image,39.55693817138672,5.169833660125732,true,1.0,AUTUMN SESSIONS | INDIE FOLK NIGHT | A NIGHT OF ACOUSTIC MELODIES? | SONGS & STORIES | FEATURING: | • ELIZA REED • THE RIVER BIRCHES • | LIAM O'SULLIVAN • CALEB FORD | OCTOBER 19 | DOORS 7:00 PM | MUSIC 8:00 PM | $25 ADV / $30 OTD | AT THE OLD OAK TAVERN | THE VILLAGE SQUARE | AUNCTA 19 | THEOLDOAKTAVERN.COM,2.5,img/poster-flyer/poster-flyer-01/gemini-3.1-flash-image.webp
+poster-flyer-01,poster-flyer,gpt-image-2.5-sunburst,42.488494873046875,5.103303909301758,false,0.9333333333333333,RIVERBEND COLLECTIVE PRESENTS | futumn | Sessions | AN EVENING OF | INDIE FOLK MUSIC | THE MAPLE ROUTE | ELI GRANT | SILVER FIELDS | JUNIPER LANE | SAT OCT 14 | THE RIVERBEND HALL | 7PM DOORS | SMALL | SONGS | BRIGHTER | DAYS,3.0,img/poster-flyer/poster-flyer-01/gpt-image-2.5-sunburst.webp
+poster-flyer-01,poster-flyer,luma-uni-1,38.970802307128906,4.426999568939209,true,1.0,Autumn | Sessions | An Evening of Indie Folk | Friday 17 October - Doors 7pm | The Hollow & The Vine | Tickets at the door • All ages welcome,6.5,img/poster-flyer/poster-flyer-01/luma-uni-1.webp
+poster-flyer-01,poster-flyer,recraftv4_1,39.067649841308594,4.547370910644531,false,0.33333333333333337,ossons | INDIE FOLK NIGHT | TICKETS $10 AT THE DOOR | LIVE MUSIC FROM LOCAL ARTISTS | FREE SNACKS AND DRINKS,9.0,img/poster-flyer/poster-flyer-01/recraftv4_1.webp
+poster-flyer-01,poster-flyer,seedream-5.0-pro,40.22014236450195,4.8865766525268555,false,0.9333333333333333,Jutumn: | Sessions | INDIE FOLK NIGHT | I | OCTOBER 12 | FEATURING LIVE MUSIC FROM | THE WOODLAND SINGERS | 7 PM | at | MAPLE & CO. | The Rustic Stage | THE AUTUMN HOURS | TICKETS AT THE DOOR • $15,9.0,img/poster-flyer/poster-flyer-01/seedream-5.0-pro.webp
+poster-flyer-01,poster-flyer,flux-2-pro,40.314083099365234,4.806281089782715,false,0.6,"Autsumn | Siudenses, Jary. 3h • 2:0, pm | Testue: Manury Pleen | Autlesn, Sighing • 0:30 Ot. Pht | Chidortaty, Sahiy, Se. 13:00 Pht | Ladng Fook • Firm",12.0,img/poster-flyer/poster-flyer-01/flux-2-pro.webp
+poster-flyer-01,poster-flyer,kling-3.0-image,36.798221588134766,4.714615821838379,false,0.6,Ай иМи | Sessions | Indie Folk Night | October 15th | 8 PM | Main Stage | Downtown Plaza,6.5,img/poster-flyer/poster-flyer-01/kling-3.0-image.webp
+poster-flyer-01,poster-flyer,gemini-2.5-flash-image,43.979679107666016,5.085269927978516,true,1.0,Autumn | Sessions | AN INDIE FOLK NIGHT | LIVE MUSIC & LOCAL BREWS | ОсT 26th - 7 PM - THE WILDWOOD TAVERN,5.5,img/poster-flyer/poster-flyer-01/gemini-2.5-flash-image.webp
+poster-flyer-02,poster-flyer,gpt-image-2,42.26484298706055,4.897565841674805,false,0.6666666666666667,"SUPPORT | LOCAL | Fresh | GOOD | FOOD | EAT | STRONG | FRESH | COMMUNITY | Satuirdays, | LOCAL | FARMERS | LOCAL | FLAVOR | GROWN | WITH | CARE | FRESH PRODUCE • LOCAL GOODS • GOOD VIBES | EVERY SATURDAY | 8AM - 1PM «6 | See you at the market! | REAL FOOD. REAL PEOPLE. REAL COMMUNITY.",2.5,img/poster-flyer/poster-flyer-02/gpt-image-2.webp
+poster-flyer-02,poster-flyer,gemini-3-pro-image,39.84077072143555,5.111546993255615,true,1.0,FRESH | SATURDAYS,8.0,img/poster-flyer/poster-flyer-02/gemini-3-pro-image.webp
+poster-flyer-02,poster-flyer,hunyuan-v3,40.71742248535156,4.3952956199646,true,1.0,Fresh | Saturdays | CLARTIRALTUTY | Vrovves | Mweienter pow | PEOLOLEIS | CPNGHƠIN: | PETNENNEL | Gtsreencolteacagta0bh0/edemeat///vllbede Asssen | Nhetlentatihosstuelhg: O mertar Auvedsdelnes20110%,11.0,img/poster-flyer/poster-flyer-02/hunyuan-v3.webp
+poster-flyer-02,poster-flyer,ideogram-4-5,41.826744079589844,4.773407936096191,true,1.0,Fresh | Saturdays | WEEKLY FARMERS MARKET | t+I+I+E | EST. 2019 | EVERY SATURDAY • 8AM - 1PM | RIVERSIDE PARK • MAIN GREEN | LOCAL PRODUCE • BAKED GOODS • FLOWERS • ARTISAN CHEESE,4.0,img/poster-flyer/poster-flyer-02/ideogram-4-5.webp
+poster-flyer-02,poster-flyer,gemini-3.1-flash-image,40.20470428466797,5.194702625274658,true,1.0,FRESH | SATURDAYS | FARMERS MARKET • JOIN US! | LOCAL & FRESH } | LOCAL | ORGANIC | EVERY SATURDAY | 9:00 AM - 2:00 PM | TOWNSQUARE PAVILION | 123 MAIN ST | VIBRANT LOCAL VENDORS | FRESH PRODUCE | ARTISANAL GOODS | LIVE MUSIC | COMMUNITY FUN! | SUPPORT YOUR LOCAL FARMERS! | @FreshSaturdays | www.freshsaturdaysmarket.com,3.0,img/poster-flyer/poster-flyer-02/gemini-3.1-flash-image.webp
+poster-flyer-02,poster-flyer,gpt-image-2.5-sunburst,41.20155715942383,5.014411926269531,false,0.7647058823529411,Fresh | SHOP | LOCAL | EAT FRESH | SUPPORT | FARMERS | Saturdays | GOOD FOOD • LOCAL PEOPLE • BRIGHTER DAYS | FARMERS | MARKET | FRESH | LOCAL | HEALTHY | HAPPIER | TOGETHER | STRONGER | FRESH | LOCAL | A BRIGHTER | VENDORS | COMMUNITY | TOMORROW | PRODUCE | REAL FOOD BRIGHTER NEIGHBORS STRONGER TOMORROWS,6.5,img/poster-flyer/poster-flyer-02/gpt-image-2.5-sunburst.webp
+poster-flyer-02,poster-flyer,luma-uni-1,38.626853942871094,5.033478260040283,true,1.0,Fresh | Saturdays | Every Saturday Morning | Local Growers • Seasonal Produce • Handmade Goods | 8:00 AM - 2:00 PM • Maplewood Town Square | Grown with care. Shared with love.,4.5,img/poster-flyer/poster-flyer-02/luma-uni-1.webp
+poster-flyer-02,poster-flyer,recraftv4_1,42.77812957763672,4.718271732330322,false,0.7333333333333334,эrosl | saturaays | FARMERS MARKET | LOCALLY GROWN | EVERY | WEEK | FREE ENTRY | 10AM-2PM,5.5,img/poster-flyer/poster-flyer-02/recraftv4_1.webp
+poster-flyer-02,poster-flyer,seedream-5.0-pro,40.17662811279297,4.944628715515137,true,1.0,"Fresh: | Saturdays | LOCAL FARMERS MARKET | Every Saturday, 9AM - 2PM | Downtown Community Park | • Fresh • Local • Seasonal •",2.0,img/poster-flyer/poster-flyer-02/seedream-5.0-pro.webp
+poster-flyer-02,poster-flyer,flux-2-pro,40.2929573059082,5.002821445465088,true,1.0,"TRESH! | FRESH | SATURDAYS | FARMERS MARKET | 23Н, ОРМ, 10PM",10.0,img/poster-flyer/poster-flyer-02/flux-2-pro.webp
+poster-flyer-02,poster-flyer,kling-3.0-image,40.9638557434082,5.059421539306641,false,0.8,Fresh | Saduriats | Farmers Market | Every Saturday | Downtown Square,12.0,img/poster-flyer/poster-flyer-02/kling-3.0-image.webp
+poster-flyer-02,poster-flyer,gemini-2.5-flash-image,42.59780502319336,4.888965129852295,true,1.0,FRESH | SATURDAYS. | Every Saturday | 9 AM - 1PM | Local Farms | Organic Produce | Handmade Goods,9.0,img/poster-flyer/poster-flyer-02/gemini-2.5-flash-image.webp
+poster-flyer-03,poster-flyer,gpt-image-2,45.81270980834961,3.99265718460083,true,1.0,Begin Again,5.5,img/poster-flyer/poster-flyer-03/gpt-image-2.webp
+poster-flyer-03,poster-flyer,gemini-3-pro-image,43.6746711730957,4.402587413787842,true,1.0,Begin Again,12.0,img/poster-flyer/poster-flyer-03/gemini-3-pro-image.webp
+poster-flyer-03,poster-flyer,hunyuan-v3,43.526607513427734,3.9881696701049805,true,1.0,Begin | Again,7.0,img/poster-flyer/poster-flyer-03/hunyuan-v3.webp
+poster-flyer-03,poster-flyer,ideogram-4-5,43.204437255859375,4.096224784851074,true,1.0,Begin Again,4.0,img/poster-flyer/poster-flyer-03/ideogram-4-5.webp
+poster-flyer-03,poster-flyer,gemini-3.1-flash-image,45.7773323059082,4.2291259765625,true,1.0,Begin Again,11.0,img/poster-flyer/poster-flyer-03/gemini-3.1-flash-image.webp
+poster-flyer-03,poster-flyer,gpt-image-2.5-sunburst,43.00674819946289,4.062976837158203,true,1.0,Begin Again,3.0,img/poster-flyer/poster-flyer-03/gpt-image-2.5-sunburst.webp
+poster-flyer-03,poster-flyer,luma-uni-1,43.33245086669922,3.618807315826416,true,1.0,Begin Again,7.0,img/poster-flyer/poster-flyer-03/luma-uni-1.webp
+poster-flyer-03,poster-flyer,recraftv4_1,38.915489196777344,3.975322723388672,true,1.0,Begin Again,9.5,img/poster-flyer/poster-flyer-03/recraftv4_1.webp
+poster-flyer-03,poster-flyer,seedream-5.0-pro,43.67611312866211,4.231361389160156,true,1.0,Begin Again,1.0,img/poster-flyer/poster-flyer-03/seedream-5.0-pro.webp
+poster-flyer-03,poster-flyer,flux-2-pro,42.104278564453125,4.160454750061035,true,1.0,Begin Again,5.0,img/poster-flyer/poster-flyer-03/flux-2-pro.webp
+poster-flyer-03,poster-flyer,kling-3.0-image,37.46405792236328,3.8300509452819824,true,1.0,Begin Again,9.0,img/poster-flyer/poster-flyer-03/kling-3.0-image.webp
+poster-flyer-03,poster-flyer,gemini-2.5-flash-image,41.204017639160156,4.439350128173828,true,1.0,Begin Again,4.0,img/poster-flyer/poster-flyer-03/gemini-2.5-flash-image.webp
+poster-flyer-04,poster-flyer,gpt-image-2,42.57975387573242,5.005214691162109,true,1.0,"WH | LOSE CONTROL, | EN | ERE'S | N | OWHERE LEFT TO RUN. | ORBUAL | DRCT | ALEX HARROW | FILM | BY | ""ORBITAL DRIFT"" | LUNARIS FILMS | VISTA POINT PICTURES PRESENTS | AN ALEX HARROW FILM | IN ASSOCIATION WITH | DANIEL YORK CLEA TAMNER JAMESKYO AMO SANDRA VOSS musIcaY BENJAMIN WYATT | EDITED BY ALEX HARROW | PRODUCTIOW DESION BY NORA FISHER | DIRECTOR OF PHOTOGRAPHY MATEO VARGAS EXECUTIVE PRODUCEAS LENA CARVER JOWAS REED ALEX HARROW WaITTEN BY ALEX HARROW & LENA | CARVER | PRODUCED BY LENA CARVER DIRECTED BY ALEX HARROW | VISTA | POINT | LUNARIS | SOON | COMING",4.5,img/poster-flyer/poster-flyer-04/gpt-image-2.webp
+poster-flyer-04,poster-flyer,gemini-3-pro-image,42.648719787597656,4.766051292419434,true,1.0,ORBITAL | DRIFT | ORBITAL ORIFT PRUSCDETAY CAUGRGAY NBTUIS KHORV ANO ORBITAL ORIFT | AOORIN MCALSON | NanarSr THIN FRUK | виE MAGAB WIUIIER SAHEN NUUK | eaerm JUAN UENUR a | BER ABODERID'GEAN PITLN PEGTE MORYK GOARGON BCD STEVA DOORLTON,3.0,img/poster-flyer/poster-flyer-04/gemini-3-pro-image.webp
+poster-flyer-04,poster-flyer,hunyuan-v3,39.16514205932617,4.971947193145752,false,0.6923076923076923,ORBISTUE DLIFHU | ORETA- | DPIFT,12.0,img/poster-flyer/poster-flyer-04/hunyuan-v3.webp
+poster-flyer-04,poster-flyer,ideogram-4-5,43.34227752685547,5.07285213470459,false,0.46153846153846156,A FILM BY ELIAS VANCE | SOMETHING OUT THERE ISN'T ALONE. | OBRIFAL | THEATERS NOVEMBER | 14 | IN | MERIDIAN PICTURES PRESENTS -A NORTHWIND PRODUCTION - STARRING KAREKE OKAFOR -MUSC BY HENRIK SOLBERG • DIRECTOR OF PHUTOGRAFHY MIRA TANAKA - EDTED BY JONAS REED • WIRITTEN AND DIRECTED BY ELAS VANCE,5.0,img/poster-flyer/poster-flyer-04/ideogram-4-5.webp
+poster-flyer-04,poster-flyer,gemini-3.1-flash-image,40.84983444213867,5.186934947967529,true,1.0,"IN SPACE, DRIFTING IS THE LEAST OF YOUR FEARS. | ALONE. LOST. UNTIL THE END. | ORBITAL DRIFT | A SCI-FI THRILLER | JOHNSON FILMS PRESENTS | A FILM BY ELIZA REED | STARING MARK FOSTER SARAH JENKINS I ""ORBITAL DRIFT"" | SCREENPLAY BY AMELIA CHEN I DIRECTED BY LEO WRIGHT| FORBITALORIFT | THIS FALL",1.5,img/poster-flyer/poster-flyer-04/gemini-3.1-flash-image.webp
+poster-flyer-04,poster-flyer,gpt-image-2.5-sunburst,43.58168411254883,5.077297687530518,true,1.0,"SOME | DISTANCES | CHANGE | YOU | ORBITAL | DRIFT | HASA | SURVIVAL | GRAVITY | NEW | VANTAGE PICTURES PRESENTS A HELIX FILMS PRODUCTION ""ORBITAL DRIFT"" | ELISE MOREAU DANIEL KELL PRIYA DESAT | PRODUCED BY MARCUS VALE WRITTEN AND DIRECTED BY ADRIAN CROSS | MUSIC BY JONAS RHEE | COMING SOON",7.5,img/poster-flyer/poster-flyer-04/gpt-image-2.5-sunburst.webp
+poster-flyer-04,poster-flyer,luma-uni-1,29.73548698425293,5.762082099914551,true,1.0,A VANTAGE POINT PICTURES PRODUCTION | Some distances | cannotbe | measured | miles. | DIRCTO BY E. SOLANO | ORBITAL DRIFT | COMING SOON,9.5,img/poster-flyer/poster-flyer-04/luma-uni-1.webp
+poster-flyer-04,poster-flyer,recraftv4_1,29.03569984436035,6.082059860229492,true,1.0,Orbital Drift,11.0,img/poster-flyer/poster-flyer-04/recraftv4_1.webp
+poster-flyer-04,poster-flyer,seedream-5.0-pro,41.086368560791016,4.910942554473877,true,1.0,"ORBITAL DRIFT | A FILM BY VISIONARY PICTURES | STARRING: J. HALE, S. MOREAU, K. TAKAHASHI | THE BEYONDIS CALLING",8.0,img/poster-flyer/poster-flyer-04/seedream-5.0-pro.webp
+poster-flyer-04,poster-flyer,flux-2-pro,43.062705993652344,4.92653226852417,true,1.0,"ORBITAL | DRIFT | A SCI-FI THRILLER | ""LSIE | GABCLESII * | POREEVRMSTTESSS aucarn PIOHEI | LAOIVAS SULTEB LAJILE ANENATTOR | TUOS | RLA SAНRACUN сOЖ ( ЗМ ЗЙG E BEMTIHENCIAIN YER CEIVEIENU Buans KNTBIAMK | ZR INS MESTIICS",2.5,img/poster-flyer/poster-flyer-04/flux-2-pro.webp
+poster-flyer-04,poster-flyer,kling-3.0-image,40.587890625,4.828553676605225,true,1.0,ORBITAL DRIFT,9.0,img/poster-flyer/poster-flyer-04/kling-3.0-image.webp
+poster-flyer-04,poster-flyer,gemini-2.5-flash-image,39.03117752075195,5.169625759124756,true,1.0,ORBITAL DRIFT | THE UNIVERSE HOLDS ITS BREATH.,4.5,img/poster-flyer/poster-flyer-04/gemini-2.5-flash-image.webp
+poster-flyer-05,poster-flyer,gpt-image-2,40.960838317871094,4.8480329513549805,false,0.6428571428571428,ONE NIGHT ONLY. EPIC SAVINGS. MAJOR STYLE. | MLDNGHEL | 030-4192 | DEALS | UP TO | 50% | STOREWIDE | TOP BRANDS | FRESH STYLES | IN-STORE & ONLINE | ONE NIGHT ONLY | MAX DISCOUNTS | FOR EVERY STEP | SHOP YOUR WAY | DON'T SLEEP ON IT | TONIGHT ONLY | 8PM - MIDNIGHT | STEP UP | SNEAKER STORE,1.5,img/poster-flyer/poster-flyer-05/gpt-image-2.webp
+poster-flyer-05,poster-flyer,gemini-3-pro-image,40.96184158325195,4.716085910797119,true,1.0,MIDNIGHT | DEALS | 50% OFF ALL SNEAKERS | TONIGHT ONLY! 8 PM - 12 AM | SHOE STORE,1.5,img/poster-flyer/poster-flyer-05/gemini-3-pro-image.webp
+poster-flyer-05,poster-flyer,hunyuan-v3,40.8520622253418,4.183634281158447,false,0.7857142857142857,ONNALR CIELNE TAY | ENEANUNICH LOLV | Foesntve cororna fevauler Sontiprie: | okattrvere wtuttli meld. | → RRETAIN CKOFIT | - ВиSлопо гляЗамаН! | EIlE | Midniant | Deaus | A DOOS 8-O LWAYR | LP LENS & GRUMAILTEGS | • INOLMAYRATOR CUIHOEE | shaty motmangien decdasd aleepny ctesS | meenibs fomodreetes Hatm Entlemn a enydamdoertdced | A STOE Eghonofunati | #Cesdionhartonitrotarticn | 839e0 chiant hucinnelungborble aoe | RUNE WOEROTUG FHOTET BONOUIS,12.0,img/poster-flyer/poster-flyer-05/hunyuan-v3.webp
+poster-flyer-05,poster-flyer,ideogram-4-5,43.80944061279297,4.446652412414551,false,0.8571428571428572,SOLE COLLECTIVE | MIDNICAT | DEALS | UP TO 60% OFF | TONIGHT ONLY • 10PM-2AM | 1428 MARKET ST • SOLECOLLECTIVE.CO,5.0,img/poster-flyer/poster-flyer-05/ideogram-4-5.webp
+poster-flyer-05,poster-flyer,gemini-3.1-flash-image,40.30756378173828,4.759554862976074,true,1.0,"MIDNIGHT | DEALS, | HONEAR | OPEN | LATE | SNEAKER & FOOTWEAR SALE | UP TO 50% OFF | ENDS TONIGHT! STARTS AT 12 AM | LIMITED STOCK! HURRY IN! | STORE: [FOOTPRINT FOOTWEAR] | 123 Main St | Open Until 2 AM! | #SHOP ONLINE: footprintfootwear.com",7.0,img/poster-flyer/poster-flyer-05/gemini-3.1-flash-image.webp
+poster-flyer-05,poster-flyer,gpt-image-2.5-sunburst,43.65052795410156,4.870604515075684,true,1.0,BIGGER | BRANDS | BRIGHTER | SOLE KINGDOM | NIGHTS | SNEAKERS • STYLE • ALWAYS ON | MIDNIGHT | DEALS | TOP SNEAKERS. LOWER PRICES. | FOR A LIMITED TIME ONLY. | EXCLUSIVE | FAST | SHOP | TOP | SHIPPING | BEFORE IT'S GONE | DISCOUNTS | BRANDS | STEP INTO THE DEALS ›,3.5,img/poster-flyer/poster-flyer-05/gpt-image-2.5-sunburst.webp
+poster-flyer-05,poster-flyer,luma-uni-1,41.78248596191406,4.712209224700928,false,0.9285714285714286,Müdnight' | Deals | Sole & Soul Kicks | Up to 60% Off | One Night Only • Shop While It Lasts,6.0,img/poster-flyer/poster-flyer-05/luma-uni-1.webp
+poster-flyer-05,poster-flyer,recraftv4_1,40.30317306518555,4.619845390319824,true,1.0,StepUp Shoes | midnight | Deals | 20% OFF ALL ITEMS | EXCLUSIVE MIDNIGHT SALE | SHOP NOW,10.0,img/poster-flyer/poster-flyer-05/recraftv4_1.webp
+poster-flyer-05,poster-flyer,seedream-5.0-pro,42.16353988647461,4.720263481140137,true,1.0,"Midnight | Deals | UP TO 70% OFF | SATURDAY ONLY | 12AM - 6AM | DOORS OPEN | AT 11:30PM | 123 SNEAKER LANE, | WWW.MIDNIGHTSNEAKERS.COM | DOWNTOWN LA",3.5,img/poster-flyer/poster-flyer-05/seedream-5.0-pro.webp
+poster-flyer-05,poster-flyer,flux-2-pro,43.51947784423828,4.617198944091797,false,0.7857142857142857,"Midmight | pealo | HACK: YOU! | SHOES-5$ 0 2600 | Losen fins thid seeone Ihomhe I deaedefy asham, | teerseif unigbms sare, des iosohe ectent he nounotres, | suloesghed dase i deis aido ao hewe.",11.0,img/poster-flyer/poster-flyer-05/flux-2-pro.webp
+poster-flyer-05,poster-flyer,kling-3.0-image,39.87876892089844,4.394419193267822,false,0.9333333333333333,MIDNIGHTR | DEALS,9.0,img/poster-flyer/poster-flyer-05/kling-3.0-image.webp
+poster-flyer-05,poster-flyer,gemini-2.5-flash-image,41.71726608276367,4.721987247467041,true,1.0,MIDNIGHT | DEALS | UP TO 50% OFF ALL FOOTEWAR | FLASH SALE: 12 AM - 4 AM | SOLE REVIVE | www.solererive.com,8.0,img/poster-flyer/poster-flyer-05/gemini-2.5-flash-image.webp
+poster-flyer-06,poster-flyer,gpt-image-2,43.78572463989258,4.964583396911621,false,0.9090909090909091,"HARRIR | Vash | CHARITY RUN — | RUN. GIVE. MAKE WAVES. | SUPPORT LOCAL | NONPROFITS | 5K & 10K | OPTIONS | STRONGER | TOGETHER | SATURDAY | JUNE 14, 2025 | SUNRISE START | HARBORVIEW DRIVE | SEASIDE, YOUR TOWN | REGISTER TODAY! | HARBORDASH.ORG | TOGETHER, WE CAN CREATE A BETTER TOMORROW.",3.5,img/poster-flyer/poster-flyer-06/gpt-image-2.webp
+poster-flyer-06,poster-flyer,gemini-3-pro-image,49.400962829589844,5.190451622009277,true,1.0,HARBOR DASH | CHARITY RUN - OCTOBER 26 | Sponsor,6.5,img/poster-flyer/poster-flyer-06/gemini-3-pro-image.webp
+poster-flyer-06,poster-flyer,hunyuan-v3,42.931915283203125,4.628839492797852,true,1.0,"Traeet adgrangocy. | Maborr | BOUNS | SHOSILIEN | Harbor | Dash | - Loviges ic heattrettl- | Yarabm Chtmtiom Cirb : hith Grcur | Uatrer Irun Curbiws troud | -Frut itikal Hafifiog Core- | - Es chrpoms berbeurhoan diswurigh of lililretino doctecsemiem donernodae snict, | ee taote tec es tas ow or roastst focmchteutenth tur | etesiBetetullnsfrondoes canthunstrad chuyeesne irteons cttafenses tinonlevceer | ces d nllens d p es taomlss penefol whocd eaces shath of | srtem, Oujue Asariset ic andloom dn hori tıkerzltoa farrattcozl/arlduber: Hoged invtce cnrieer | yerrec hassonic fous Phuonve icbond crame presrito spohpense ttna garpsom 7inr. | DACElamn | ЕСИЛЕТІНЕ | Metrett Scnison | Huv Sendersg & igb... | -EBI S20-00. | Pocnehes RanViITneE. | siun golleim",12.0,img/poster-flyer/poster-flyer-06/hunyuan-v3.webp
+poster-flyer-06,poster-flyer,ideogram-4-5,45.62967300415039,4.815338611602783,true,1.0,HARBOR | DASH | 5K• SEASIDE CHARITY RUN | 247 | SATURDAY • JUNE 14 • 6:00 AM | START LINE• HARBOR PROMENADE | ALL PROCEEDS TO THE COASTAL RESCUE FUND,3.0,img/poster-flyer/poster-flyer-06/ideogram-4-5.webp
+poster-flyer-06,poster-flyer,gemini-3.1-flash-image,44.61591339111328,5.16264533996582,true,1.0,"HARBOR DASH | 5K & 10K CHARITY RUN FOR THE HARBOR COMMUNITY | 009 | вicote De | :089 | HARSOR DACO | 112 | 041 | DATE: SATURDAY, OCTOBER 26 | TIME: 7:00 AM START | LOCATION: SEASIDE PROMENADE, OAKHAVEN HARBOR | REGISTER TODAY: www.HarborDash.com | ALL PROCEEDS BENEFIT LOCAL MARITIME CONSERVATION",2.5,img/poster-flyer/poster-flyer-06/gemini-3.1-flash-image.webp
+poster-flyer-06,poster-flyer,gpt-image-2.5-sunburst,41.323081970214844,5.021576881408691,true,1.0,"CHARITY RUN | RUN FOR A BRIGHTER TOMORROW | COMMUNITY • HEALTH • HOPE | HARBOR | DASH | PEOPLE • PURPOSE • A BRIGHTER TOMORROW | STRONGER | COMMUNITIES | 5K 10K | HARBORVIEW | SAT | HEALTHIER | ALL ARE WELCOME | MAY 17, 2025 | SEASIDE ROUTE | LIVES | SUPPORT | HEALTHIER | BRIGHTER | LOCAL | CAUSES | COMMUNITIES | TOMORROWS",7.0,img/poster-flyer/poster-flyer-06/gpt-image-2.5-sunburst.webp
+poster-flyer-06,poster-flyer,luma-uni-1,45.548194885253906,4.716332912445068,true,1.0,"HARBOR DASH | 5K & 10K CHARITY RUN | SATURDAY, SEPTEMBER 14 | HARBOR FRONT PROMENADE : GATES OPEN 6:30 AM | All proceeds benefit the Coastal Children's Foundation | REGISTER NOW AT HARBORDASH.ORG | Presented by Harborview Community Fund • In partnership with Coastal Health Alliance",6.0,img/poster-flyer/poster-flyer-06/luma-uni-1.webp
+poster-flyer-06,poster-flyer,recraftv4_1,40.34041213989258,4.726254940032959,true,1.0,Harbor | Dash | A 5K charity run to support local families in need. | REGISTER NOW,6.5,img/poster-flyer/poster-flyer-06/recraftv4_1.webp
+poster-flyer-06,poster-flyer,seedream-5.0-pro,47.34519577026367,4.7423858642578125,true,1.0,"Harbor Dash | Charity Run | Run for the Cause | SATURDAY, OCTOBER 12, 2024 7:00 AM | Harbor Front Park, Coastal City | 5K Run/Walk | All Ages Welcome | Register Now: harbordash.com | Proceeds Support Local Youth Programs",1.5,img/poster-flyer/poster-flyer-06/seedream-5.0-pro.webp
+poster-flyer-06,poster-flyer,flux-2-pro,45.08655548095703,4.832085609436035,true,1.0,"HARBOR | DASH | Senday Riwan Rımbary, 23PM | Catle 3-5 pm , 20tm | 531 | 181 | 981 | 109 | 259",11.0,img/poster-flyer/poster-flyer-06/flux-2-pro.webp
+poster-flyer-06,poster-flyer,kling-3.0-image,46.786338806152344,4.764936447143555,true,1.0,Harbor Dash | Charity Run | Join us for a morning run by the harbor | Date: June 21 | Time:6:00 AM | Coastion Road,10.0,img/poster-flyer/poster-flyer-06/kling-3.0-image.webp
+poster-flyer-06,poster-flyer,gemini-2.5-flash-image,50.86512756347656,5.31912899017334,true,1.0,"HARBOR DASH | CHARITY RUN | OCTOBER 26, 2024 | 5K & 10K RACES | SUPPORT LOCAL CAUSES",8.5,img/poster-flyer/poster-flyer-06/gemini-2.5-flash-image.webp
+poster-flyer-07,poster-flyer,gpt-image-2,47.23969268798828,4.021677494049072,true,1.0,"Shapes | Of | Silence | AN EXHIBITION OF | ABSTRACT WORKS | 10 MAY - | 22 JUNE 2024 | OPENING RECEPTION | 10 MAY 2024, 6-8PM | NORTHLIGHT GALLERY | 27 WHITECHAPEL ROAD | LONDON E1 1DU | NORTHLIGHT | GALLERY | WWW.NORTHLIGHTGALLERY.COM",1.5,img/poster-flyer/poster-flyer-07/gpt-image-2.webp
+poster-flyer-07,poster-flyer,gemini-3-pro-image,40.698368072509766,4.347198963165283,true,1.0,"SHAPES | OF SILENCE | OCT 26 - NOV 30 | GALLERY NORD, ZÜRICH",5.0,img/poster-flyer/poster-flyer-07/gemini-3-pro-image.webp
+poster-flyer-07,poster-flyer,hunyuan-v3,44.82146072387695,4.15351676940918,false,0.6470588235294117,"Shapes | REnThapetOfSillience | Ofillence | Mhasec the Off""Soziccs bn Mitxing: | Suffhdfe Naing Chese liu Stugsad | ЗлынОло | tane Wdnitunke Ooorlm | re KouChurpxe | SNaFOrSilence OfBlectet | Theinelsemrrisiers jeffsmniosiciyor.ls, ( | -aatd. flisN | Ereisoans /ind nacéesraceé ogreticrt Polçar Innesanten | Ioskotin Ine pesssfBatend Cosgeniclotenedy pnisos | ay bibermemcepeniuts sducietdflrd Theponedtct6hle | aettfotingomogearisa tui comnok sefcfimu Bftuely | eeEnnutorEe 19tm deeges | 20 251 | Mnere Reataese Shinue hesassialr Rrad | Iзoriee | SAR BWERS TRI NIM | Shertike Eloseneds Tencon/The Iiensisoone &, fer cotstre | Fictvame Etons | SETTWOTAOVY PCOBIE | Obлoоn tлoвк Cie | 2% stiee oud Acatere Tbncdinamtoarpb bnscemmureundt",12.0,img/poster-flyer/poster-flyer-07/hunyuan-v3.webp
+poster-flyer-07,poster-flyer,ideogram-4-5,44.763824462890625,4.4874491691589355,true,1.0,SHAPES | OF | SILENCE | A GROUP EXHIBITION OF ABSTRACT FORMS | OCTOBER 14 - DECEMBER 20 | MERIDIAN GALLERY • 47 HANOVER SQUARE • LONDON W1 | OPENING RECEPTION • FRIDAY OCTOBER 14 • 6-9 PM | meridiangallery.co.uk,6.0,img/poster-flyer/poster-flyer-07/ideogram-4-5.webp
+poster-flyer-07,poster-flyer,gemini-3.1-flash-image,46.81334686279297,4.558939456939697,true,1.0,"SHAPES OF | SILENCE | AN EXHIBITION BY EVA LUND & LIAM CHEN | GALLERY OF MODERN ART | 21 OCTOBER - 14 DECEMBER 2023 | PREVIEW: 20 OCT, 7 PM -9 PM | 14 RUE DU VIEUX-PORT, 1204 GENEVA | WWW.MODERNA.CH",6.0,img/poster-flyer/poster-flyer-07/gemini-3.1-flash-image.webp
+poster-flyer-07,poster-flyer,gpt-image-2.5-sunburst,43.1920051574707,4.0601301193237305,true,1.0,"RIVERTON | 12 | APR - 28 JUN 2025 | CONTEMPORARY | GALLERY | Shapes | Of Silence | ABSTRACTION | MATERIALITY | HUMAN PRESENCE | RIVERTON | CONTEMPORARY GALLERY | ART | LIVES A | 118 Meridian St. | QUIETER LIFE | Riverton, NSW",1.5,img/poster-flyer/poster-flyer-07/gpt-image-2.5-sunburst.webp
+poster-flyer-07,poster-flyer,luma-uni-1,43.97322463989258,3.9500837326049805,true,1.0,"NFG | Shapes Of Silence | Group Exhibition | 14 March - 28 April 2025 | Galerie Neue Form, Zurich",9.5,img/poster-flyer/poster-flyer-07/luma-uni-1.webp
+poster-flyer-07,poster-flyer,recraftv4_1,40.26729965209961,4.025607585906982,true,1.0,a gallery exhibition | of abstract art | expressing the | 10 | unspoken | Shapes | Of Silence,3.5,img/poster-flyer/poster-flyer-07/recraftv4_1.webp
+poster-flyer-07,poster-flyer,seedream-5.0-pro,41.851966857910156,4.2748847007751465,true,1.0,Shapes | Of Silence | Sophie Taeber-Arp | 12.10.2024 - 12.01.2025 | Hauser & Wirth | 32 East 69th Street | New York,4.5,img/poster-flyer/poster-flyer-07/seedream-5.0-pro.webp
+poster-flyer-07,poster-flyer,flux-2-pro,46.63857650756836,4.746934413909912,true,1.0,"Shapes Of | Silence | L | Gallery Name | Gallery Name | Exhibition Dates | Lorem icsum dolor cietiomn iat edcoleacersonion | Lorem insum dolor sieticin ie dnin coctoutting | Orem ipsum dolor iedtion io duin cosotgring | por olbleciie. compemtione ulle dom coce, ce | ne cifloe liore ot conpornionees, eit st colore oit | enlondlocies set comconidotcot fore cototios | aicufhet set si enaibiro acomeas loo roistore | dcoldo: s eit enole colusclererçurer ghoect | coctione dit of the eat cccongoot oor moliding | tengh: toapol ondonices taonito. | annpy he tounoee coctor poreel sudomge. | ericon dochererdolorr ol corols.",9.5,img/poster-flyer/poster-flyer-07/flux-2-pro.webp
+poster-flyer-07,poster-flyer,kling-3.0-image,44.33799362182617,4.442389011383057,true,1.0,Shapes | Of Silence | Gallery Exhibition | 2024,8.0,img/poster-flyer/poster-flyer-07/kling-3.0-image.webp
+poster-flyer-07,poster-flyer,gemini-2.5-flash-image,45.591468811035156,3.6204938888549805,true,1.0,SHAPES OF | SILENCE | GALLERY EXIBITION. OCTOBER 2024. MODERN ART MUSEUM | WWW.SHAPESOFSILENCE.COM,11.0,img/poster-flyer/poster-flyer-07/gemini-2.5-flash-image.webp
+poster-flyer-08,poster-flyer,gpt-image-2,36.79285430908203,4.905154228210449,true,1.0,TECH MEETUP | Build | Night | BUILD. LEARN. CONNECT.,2.0,img/poster-flyer/poster-flyer-08/gpt-image-2.webp
+poster-flyer-08,poster-flyer,gemini-3-pro-image,38.74074172973633,5.190554618835449,true,1.0,BUILD | NIGHT | BEERE | DETAILS: [DATE] | [TIME] | [LOCATION] | [RSVP],6.0,img/poster-flyer/poster-flyer-08/gemini-3-pro-image.webp
+poster-flyer-08,poster-flyer,hunyuan-v3,41.54534912109375,4.381918430328369,false,0.5454545454545454,"Build | fa Mpounes | IN TO BTEIR | BISUHETHHUEU TUELES | лиTи сHо E | Night | Thap3.Gc-mibtiog: | UablleThed Vulenm-Dot Mlinepes Mviacthg | Sponnels, Aaagagarttier 8.SketiOs, AuPioves! | 63U711032130 | Lahc& 78 - Jom Datiem Duvsery 867334 | Pachial Das & DoscfiadAmitiarmaiss •",11.0,img/poster-flyer/poster-flyer-08/hunyuan-v3.webp
+poster-flyer-08,poster-flyer,ideogram-4-5,38.83370590209961,4.823610305786133,false,0.9090909090909091,"BULLD | NIGHT | WEEKLY DEV MEETUP : EST. 2024 | THURSDAYS • 7PM - 10PM | THE FORGE CO-WORKING | 412 MARKET ST, SEATTLE | FREE ENTRY • BYOB | @BUILDNIGHT.SEA",4.5,img/poster-flyer/poster-flyer-08/ideogram-4-5.webp
+poster-flyer-08,poster-flyer,gemini-3.1-flash-image,38.88783264160156,4.848700046539307,true,1.0,"BUILD | NIGHT | K. | IT | CREATE. INNOVATE. HACK. | JOIN THE TECH COMMUNITY FOR A NIGHT | OF COLLABORATION & BUILDING. | B | WHEN: | THURSDAY, OCTOBER 26TH | 6:30 PM - 9:00 PM | 2 | WHERE: [MEETUP LOCATION NAME], [FULL ADDRESS] | WHAT: HANDS-ON PROJECTS | WORKSHOPS | | NETWORKING | BEERS & PIZZA | RSVP: [WEBSITE.COM/REGISTER] or QR CODE | JOIN US | </> | LOCAL | FREE EVENT | TechHub | GROUP",9.5,img/poster-flyer/poster-flyer-08/gemini-3.1-flash-image.webp
+poster-flyer-08,poster-flyer,gpt-image-2.5-sunburst,35.48049545288086,4.944380283355713,false,0.5454545454545454,IDEAS | PEOPLE | PROJECTS | Build | REAL PROGRESS | Night | MEET | BUILD | SHARE | GROW,2.0,img/poster-flyer/poster-flyer-08/gpt-image-2.5-sunburst.webp
+poster-flyer-08,poster-flyer,luma-uni-1,39.44264602661133,4.97434139251709,true,1.0,"Build Night | An evening of making, coding, and connecting. | Thursday, March 20 • 7:00 PM - 10:00 PM | The Workshop at 412 Foundry Street, Suite 3 | Free to attend • RSVP at buildnight.dev",3.5,img/poster-flyer/poster-flyer-08/luma-uni-1.webp
+poster-flyer-08,poster-flyer,recraftv4_1,39.60498046875,4.420940399169922,true,1.0,Build Night | DATE | 10/25/2023 | TIME | 6PM - 9PM | Tech Hub Cafe | LOCATION | RSVP | Link in bio,9.0,img/poster-flyer/poster-flyer-08/recraftv4_1.webp
+poster-flyer-08,poster-flyer,seedream-5.0-pro,33.762996673583984,4.7578511238098145,true,1.0,Build Night | 0017,8.0,img/poster-flyer/poster-flyer-08/seedream-5.0-pro.webp
+poster-flyer-08,poster-flyer,flux-2-pro,42.165672302246094,4.056962966918945,true,1.0,Build | Night | • | BIARTCH MIGHTUP | Buedasy 05070 | Ceterogry S1:30 PM | 205 91 your hatt 530pm | Imy: Shuilleteshgoash2507Tply | Byvneeckirgemaight.com | Viechrare planelugnalgearem@Tech Anstitos,12.0,img/poster-flyer/poster-flyer-08/flux-2-pro.webp
+poster-flyer-08,poster-flyer,kling-3.0-image,36.16429138183594,4.79572057723999,true,1.0,Build Night | Event Details Here,3.0,img/poster-flyer/poster-flyer-08/kling-3.0-image.webp
+poster-flyer-08,poster-flyer,gemini-2.5-flash-image,30.854982376098633,5.148519039154053,true,1.0,"Build Night | Join us for coding, | collaboration & creation",7.5,img/poster-flyer/poster-flyer-08/gemini-2.5-flash-image.webp
+poster-flyer-09,poster-flyer,gpt-image-2,43.025535583496094,6.182419300079346,false,0.9333333333333333,PINERIDGE | *CAMP | LIVE SIMPLY • PLAY HARD• MAKE FRIENDS,5.0,img/poster-flyer/poster-flyer-09/gpt-image-2.webp
+poster-flyer-09,poster-flyer,gemini-3-pro-image,45.35867691040039,5.991491317749023,false,0.9333333333333333,PINE RIOGE | CAMP | EST. 1965 | SUMMER ADVENTURE AWAITS,3.0,img/poster-flyer/poster-flyer-09/gemini-3-pro-image.webp
+poster-flyer-09,poster-flyer,hunyuan-v3,41.55668640136719,6.203630447387695,false,0.7333333333333334,1960 | Ridge | Camp | LIGREAI COISE LIMILEE,12.0,img/poster-flyer/poster-flyer-09/hunyuan-v3.webp
+poster-flyer-09,poster-flyer,ideogram-4-5,44.00663375854492,5.5677032470703125,true,1.0,PINE RIDGE | CAMP | SUMMER SESSIONS • JUNE THROUGH AUGUST | EST. | 1962 | ADMIT ONE,1.5,img/poster-flyer/poster-flyer-09/ideogram-4-5.webp
+poster-flyer-09,poster-flyer,gemini-3.1-flash-image,43.861080169677734,6.059073448181152,true,1.0,PINE RIDGE CAMP | SUMMER ADVENTURES 1960s | SWIMMING • HIKING • BOATING • CAMPFIRES | RESERVE YOUR CABIN NOW! LAKE PLACID • NEW YORK,6.5,img/poster-flyer/poster-flyer-09/gemini-3.1-flash-image.webp
+poster-flyer-09,poster-flyer,gpt-image-2.5-sunburst,44.163516998291016,6.2175445556640625,false,0.9375,PINE RIDGE | • CAM P- | 1lAm | D | D | A | YS AHEAD | G | O,2.5,img/poster-flyer/poster-flyer-09/gpt-image-2.5-sunburst.webp
+poster-flyer-09,poster-flyer,luma-uni-1,39.684242248535156,5.904012680053711,true,1.0,PINE RIDGE CAMP | SUMMERS TO REMEMBER | 4 4 | EST. 1947,10.0,img/poster-flyer/poster-flyer-09/luma-uni-1.webp
+poster-flyer-09,poster-flyer,recraftv4_1,44.14353561401367,5.637149810791016,true,1.0,SUMMER CAMP | Pine Ridge Camp | SWIMMING • CANOEING • SINGING AROUND THE CAMPFIRE,7.5,img/poster-flyer/poster-flyer-09/recraftv4_1.webp
+poster-flyer-09,poster-flyer,seedream-5.0-pro,44.28009796142578,5.856224536895752,true,1.0,Pine Ridge | Camp | A EST. 1952 | A SUMMER FUN IN THE PINES | PINE RIDGE | * CAMP | FUN • FRIENDS • ADVENTURE,8.5,img/poster-flyer/poster-flyer-09/seedream-5.0-pro.webp
+poster-flyer-09,poster-flyer,flux-2-pro,44.565948486328125,6.073342800140381,true,1.0,PINE RIDGE | CAMP,4.5,img/poster-flyer/poster-flyer-09/flux-2-pro.webp
+poster-flyer-09,poster-flyer,kling-3.0-image,41.85439682006836,5.917540550231934,true,1.0,Pine Ridge | Camp,10.5,img/poster-flyer/poster-flyer-09/kling-3.0-image.webp
+poster-flyer-09,poster-flyer,gemini-2.5-flash-image,46.608150482177734,6.107683181762695,true,1.0,PINE RIDGE | CAMP | SUMMER ADVENTURE AWAITSI,6.5,img/poster-flyer/poster-flyer-09/gemini-2.5-flash-image.webp
+poster-flyer-10,poster-flyer,gpt-image-2,43.865718841552734,4.959869861602783,true,1.0,Loud | WhispeRs | THURSDAYS | OPEN | 7:00PM | MIC NIGHT | SIGN UP 6:30PM | SPOKEN WORD. | POETRY. MUSIC. | STORIES. TRUTH. | BE HEARD. | BE REAL. | EVERY VOICE. | BE LOUD. | EVERY STORY. | THIS IS YOUR STAGE. | GOOD VIBES • OPEN MINDS • RESPECT THE MIC,4.0,img/poster-flyer/poster-flyer-10/gpt-image-2.webp
+poster-flyer-10,poster-flyer,gemini-3-pro-image,34.90005874633789,5.5699005126953125,true,1.0,LOUD | WHISPERS | OPEN MIC NIGHT | EVERY TUESDAY 8 PM -THE RED ROOM,4.0,img/poster-flyer/poster-flyer-10/gemini-3-pro-image.webp
+poster-flyer-10,poster-flyer,hunyuan-v3,37.70787811279297,4.931105613708496,true,1.0,Loud | Whispers,4.5,img/poster-flyer/poster-flyer-10/hunyuan-v3.webp
+poster-flyer-10,poster-flyer,ideogram-4-5,42.83483123779297,5.088474273681641,false,0.7692307692307692,LOUU | NHSPERS | OPEN MIC NIGHT | EVERY FRIDAY• 8PM | THE VELVET ROOM | 142 IRON STREET | SIGN-UP AT THE DOOR • $5 COVER,6.5,img/poster-flyer/poster-flyer-10/ideogram-4-5.webp
+poster-flyer-10,poster-flyer,gemini-3.1-flash-image,43.706871032714844,5.025820255279541,true,1.0,"EVERY THURSDAY NIGHT | LOUD | WHISPERS | OPEN MIC NIGHT | SPEAKERS. SINGERS. POETS. MUSICIANS. | ALL TALENTS WELCOME | DOORS: 7:30 PM | STARTS: 8:00 PM | LOCATION: THE BASEMENT BAR & VENUE, 142 OLD STREET | SIGN UP ON ARRIVAL",6.0,img/poster-flyer/poster-flyer-10/gemini-3.1-flash-image.webp
+poster-flyer-10,poster-flyer,gpt-image-2.5-sunburst,44.336063385009766,5.041849136352539,false,0.7692307692307692,MUSIC | REAL | LOUD | POETRY | PEOPLE | COMEDY | REAL | WORDS | STORIES | LOUDER | A | ALL VOICES | WELCOME | TOMORROW | WHISPERS | OPEN MIC NIGHT | THE RED DOOR | THURSDAYS | 7PM | 118 MAPLE AVE | RIVERDALE | SIGN UP | GOOD | PEOPLE | AT THE DOOR | GREAT | ALL ARE | STORIES | WELCOME | SOME | U | LOU | D | T | OFTH | T | H | ES | E | WHISPER | RE | E | D,9.0,img/poster-flyer/poster-flyer-10/gpt-image-2.5-sunburst.webp
+poster-flyer-10,poster-flyer,luma-uni-1,40.47646713256836,5.226692199707031,false,0.8461538461538461,oua | Whispers | Open Mic Night | The Black Room Lounge | Every Friday — Doors Open 8 PM,5.5,img/poster-flyer/poster-flyer-10/luma-uni-1.webp
+poster-flyer-10,poster-flyer,recraftv4_1,37.906490325927734,4.905792713165283,true,1.0,Loud Whispers | OPEN MIC NIGHT | EVERY 3RD THURSDAY OF THE MONTH | DOORS OPEN AT 7PM - PERFORMANCE STARTS AT 8PM | FREE ENTRY - NO COVER CHARGE,2.5,img/poster-flyer/poster-flyer-10/recraftv4_1.webp
+poster-flyer-10,poster-flyer,seedream-5.0-pro,36.293087005615234,5.077763080596924,true,1.0,"OPEN MIC NIGHT | Loud | Whispers | Loud | Whispers | oua | Whispers | OPEN MIC NIGHT | OPEN MIC NIGHT | EVERY THURSDAY | The Laughing Lion Lounge | 123 Main Street, Downtown | Sign-up 7:30PM | Show 8:00PM | d | @LoudWhispersOpen",7.0,img/poster-flyer/poster-flyer-10/seedream-5.0-pro.webp
+poster-flyer-10,poster-flyer,flux-2-pro,41.671241760253906,4.973330497741699,true,1.0,LOUD | WHISPERS | OPEN MIC NIGHT,10.5,img/poster-flyer/poster-flyer-10/flux-2-pro.webp
+poster-flyer-10,poster-flyer,kling-3.0-image,45.2456169128418,5.045191287994385,false,0.7692307692307692,RoudWhippers | Open Mic Night,12.0,img/poster-flyer/poster-flyer-10/kling-3.0-image.webp
+poster-flyer-10,poster-flyer,gemini-2.5-flash-image,38.456851959228516,5.523702621459961,true,1.0,LOUD | WHISPERS | OPEN MIC NIGHT | Every Tuesday - 8 PM | The Scarlet Lounge | Sign-ups at 7:30 PM,6.5,img/poster-flyer/poster-flyer-10/gemini-2.5-flash-image.webp
+portrait-headshot-01,portrait-headshot,gpt-image-2,40.32107162475586,5.38992166519165,,,,6.5,img/portrait-headshot/portrait-headshot-01/gpt-image-2.webp
+portrait-headshot-01,portrait-headshot,gemini-3-pro-image,38.64524459838867,5.316967964172363,,,,5.5,img/portrait-headshot/portrait-headshot-01/gemini-3-pro-image.webp
+portrait-headshot-01,portrait-headshot,hunyuan-v3,37.51857376098633,5.682431221008301,,,,1.5,img/portrait-headshot/portrait-headshot-01/hunyuan-v3.webp
+portrait-headshot-01,portrait-headshot,ideogram-4-5,36.726890563964844,5.899564266204834,,,,9.0,img/portrait-headshot/portrait-headshot-01/ideogram-4-5.webp
+portrait-headshot-01,portrait-headshot,gemini-3.1-flash-image,42.46035385131836,5.566535949707031,,,,8.0,img/portrait-headshot/portrait-headshot-01/gemini-3.1-flash-image.webp
+portrait-headshot-01,portrait-headshot,gpt-image-2.5-sunburst,40.85855484008789,5.290897846221924,,,,3.5,img/portrait-headshot/portrait-headshot-01/gpt-image-2.5-sunburst.webp
+portrait-headshot-01,portrait-headshot,luma-uni-1,38.00086212158203,5.428860664367676,,,,12.0,img/portrait-headshot/portrait-headshot-01/luma-uni-1.webp
+portrait-headshot-01,portrait-headshot,recraftv4_1,39.354026794433594,5.28071403503418,,,,11.0,img/portrait-headshot/portrait-headshot-01/recraftv4_1.webp
+portrait-headshot-01,portrait-headshot,seedream-5.0-pro,37.63208770751953,5.198590278625488,,,,2.0,img/portrait-headshot/portrait-headshot-01/seedream-5.0-pro.webp
+portrait-headshot-01,portrait-headshot,flux-2-pro,42.92790222167969,5.8359904289245605,,,,3.0,img/portrait-headshot/portrait-headshot-01/flux-2-pro.webp
+portrait-headshot-01,portrait-headshot,kling-3.0-image,39.67405700683594,5.939090251922607,,,,10.0,img/portrait-headshot/portrait-headshot-01/kling-3.0-image.webp
+portrait-headshot-01,portrait-headshot,gemini-2.5-flash-image,40.840087890625,5.512919902801514,,,,6.0,img/portrait-headshot/portrait-headshot-01/gemini-2.5-flash-image.webp
+portrait-headshot-02,portrait-headshot,gpt-image-2,32.565982818603516,5.980411529541016,,,,2.0,img/portrait-headshot/portrait-headshot-02/gpt-image-2.webp
+portrait-headshot-02,portrait-headshot,gemini-3-pro-image,33.49168395996094,5.262432098388672,,,,7.0,img/portrait-headshot/portrait-headshot-02/gemini-3-pro-image.webp
+portrait-headshot-02,portrait-headshot,hunyuan-v3,35.574562072753906,5.893224716186523,,,,6.5,img/portrait-headshot/portrait-headshot-02/hunyuan-v3.webp
+portrait-headshot-02,portrait-headshot,ideogram-4-5,31.06206703186035,5.786977767944336,,,,9.5,img/portrait-headshot/portrait-headshot-02/ideogram-4-5.webp
+portrait-headshot-02,portrait-headshot,gemini-3.1-flash-image,32.9752082824707,5.532288551330566,,,,8.0,img/portrait-headshot/portrait-headshot-02/gemini-3.1-flash-image.webp
+portrait-headshot-02,portrait-headshot,gpt-image-2.5-sunburst,31.575101852416992,5.593466758728027,,,,4.0,img/portrait-headshot/portrait-headshot-02/gpt-image-2.5-sunburst.webp
+portrait-headshot-02,portrait-headshot,luma-uni-1,32.51597213745117,5.007617950439453,,,,12.0,img/portrait-headshot/portrait-headshot-02/luma-uni-1.webp
+portrait-headshot-02,portrait-headshot,recraftv4_1,35.52364730834961,5.625435829162598,,,,10.0,img/portrait-headshot/portrait-headshot-02/recraftv4_1.webp
+portrait-headshot-02,portrait-headshot,seedream-5.0-pro,35.32820510864258,5.397515773773193,,,,3.0,img/portrait-headshot/portrait-headshot-02/seedream-5.0-pro.webp
+portrait-headshot-02,portrait-headshot,flux-2-pro,32.891578674316406,5.756237983703613,,,,3.0,img/portrait-headshot/portrait-headshot-02/flux-2-pro.webp
+portrait-headshot-02,portrait-headshot,kling-3.0-image,34.211395263671875,5.436238765716553,,,,3.0,img/portrait-headshot/portrait-headshot-02/kling-3.0-image.webp
+portrait-headshot-02,portrait-headshot,gemini-2.5-flash-image,37.223609924316406,5.725449085235596,,,,10.0,img/portrait-headshot/portrait-headshot-02/gemini-2.5-flash-image.webp
+portrait-headshot-03,portrait-headshot,gpt-image-2,37.470733642578125,6.481138706207275,,,,3.5,img/portrait-headshot/portrait-headshot-03/gpt-image-2.webp
+portrait-headshot-03,portrait-headshot,gemini-3-pro-image,39.99280548095703,6.251645088195801,,,,10.5,img/portrait-headshot/portrait-headshot-03/gemini-3-pro-image.webp
+portrait-headshot-03,portrait-headshot,hunyuan-v3,39.20013427734375,6.892899036407471,,,,7.0,img/portrait-headshot/portrait-headshot-03/hunyuan-v3.webp
+portrait-headshot-03,portrait-headshot,ideogram-4-5,38.39629364013672,6.394416809082031,,,,8.5,img/portrait-headshot/portrait-headshot-03/ideogram-4-5.webp
+portrait-headshot-03,portrait-headshot,gemini-3.1-flash-image,38.44581604003906,6.381280899047852,,,,11.5,img/portrait-headshot/portrait-headshot-03/gemini-3.1-flash-image.webp
+portrait-headshot-03,portrait-headshot,gpt-image-2.5-sunburst,41.37505340576172,6.7556867599487305,,,,1.0,img/portrait-headshot/portrait-headshot-03/gpt-image-2.5-sunburst.webp
+portrait-headshot-03,portrait-headshot,luma-uni-1,42.25601577758789,6.223731994628906,,,,4.5,img/portrait-headshot/portrait-headshot-03/luma-uni-1.webp
+portrait-headshot-03,portrait-headshot,recraftv4_1,37.90353012084961,5.842891693115234,,,,11.0,img/portrait-headshot/portrait-headshot-03/recraftv4_1.webp
+portrait-headshot-03,portrait-headshot,seedream-5.0-pro,40.85813903808594,6.600264549255371,,,,4.0,img/portrait-headshot/portrait-headshot-03/seedream-5.0-pro.webp
+portrait-headshot-03,portrait-headshot,flux-2-pro,39.03301239013672,6.61911678314209,,,,4.0,img/portrait-headshot/portrait-headshot-03/flux-2-pro.webp
+portrait-headshot-03,portrait-headshot,kling-3.0-image,37.269569396972656,6.107342720031738,,,,7.5,img/portrait-headshot/portrait-headshot-03/kling-3.0-image.webp
+portrait-headshot-03,portrait-headshot,gemini-2.5-flash-image,40.81599044799805,6.4349589347839355,,,,5.0,img/portrait-headshot/portrait-headshot-03/gemini-2.5-flash-image.webp
+portrait-headshot-04,portrait-headshot,gpt-image-2,44.94348907470703,5.971202850341797,,,,8.5,img/portrait-headshot/portrait-headshot-04/gpt-image-2.webp
+portrait-headshot-04,portrait-headshot,gemini-3-pro-image,44.93824005126953,5.682437896728516,,,,8.5,img/portrait-headshot/portrait-headshot-04/gemini-3-pro-image.webp
+portrait-headshot-04,portrait-headshot,hunyuan-v3,46.05589294433594,5.875494003295898,,,,1.5,img/portrait-headshot/portrait-headshot-04/hunyuan-v3.webp
+portrait-headshot-04,portrait-headshot,ideogram-4-5,46.82345962524414,5.716612339019775,,,,12.0,img/portrait-headshot/portrait-headshot-04/ideogram-4-5.webp
+portrait-headshot-04,portrait-headshot,gemini-3.1-flash-image,47.938026428222656,5.400753021240234,,,,10.5,img/portrait-headshot/portrait-headshot-04/gemini-3.1-flash-image.webp
+portrait-headshot-04,portrait-headshot,gpt-image-2.5-sunburst,44.12842559814453,5.636601448059082,,,,6.0,img/portrait-headshot/portrait-headshot-04/gpt-image-2.5-sunburst.webp
+portrait-headshot-04,portrait-headshot,luma-uni-1,47.211639404296875,5.8101301193237305,,,,5.0,img/portrait-headshot/portrait-headshot-04/luma-uni-1.webp
+portrait-headshot-04,portrait-headshot,recraftv4_1,46.99696731567383,5.699300765991211,,,,10.5,img/portrait-headshot/portrait-headshot-04/recraftv4_1.webp
+portrait-headshot-04,portrait-headshot,seedream-5.0-pro,45.108909606933594,5.9139580726623535,,,,5.0,img/portrait-headshot/portrait-headshot-04/seedream-5.0-pro.webp
+portrait-headshot-04,portrait-headshot,flux-2-pro,44.695037841796875,6.080898284912109,,,,2.5,img/portrait-headshot/portrait-headshot-04/flux-2-pro.webp
+portrait-headshot-04,portrait-headshot,kling-3.0-image,45.034908294677734,6.143129348754883,,,,4.0,img/portrait-headshot/portrait-headshot-04/kling-3.0-image.webp
+portrait-headshot-04,portrait-headshot,gemini-2.5-flash-image,46.481781005859375,6.041015148162842,,,,4.0,img/portrait-headshot/portrait-headshot-04/gemini-2.5-flash-image.webp
+portrait-headshot-05,portrait-headshot,gpt-image-2,41.97163391113281,5.780959129333496,,,,5.0,img/portrait-headshot/portrait-headshot-05/gpt-image-2.webp
+portrait-headshot-05,portrait-headshot,gemini-3-pro-image,38.1369514465332,5.408090591430664,,,,5.0,img/portrait-headshot/portrait-headshot-05/gemini-3-pro-image.webp
+portrait-headshot-05,portrait-headshot,hunyuan-v3,40.949440002441406,5.975640296936035,,,,8.5,img/portrait-headshot/portrait-headshot-05/hunyuan-v3.webp
+portrait-headshot-05,portrait-headshot,ideogram-4-5,38.70649337768555,5.707597732543945,,,,6.5,img/portrait-headshot/portrait-headshot-05/ideogram-4-5.webp
+portrait-headshot-05,portrait-headshot,gemini-3.1-flash-image,39.473480224609375,5.842774391174316,,,,10.5,img/portrait-headshot/portrait-headshot-05/gemini-3.1-flash-image.webp
+portrait-headshot-05,portrait-headshot,gpt-image-2.5-sunburst,39.277015686035156,5.622189044952393,,,,3.5,img/portrait-headshot/portrait-headshot-05/gpt-image-2.5-sunburst.webp
+portrait-headshot-05,portrait-headshot,luma-uni-1,33.625457763671875,5.864980220794678,,,,12.0,img/portrait-headshot/portrait-headshot-05/luma-uni-1.webp
+portrait-headshot-05,portrait-headshot,recraftv4_1,43.389564514160156,5.633394718170166,,,,6.5,img/portrait-headshot/portrait-headshot-05/recraftv4_1.webp
+portrait-headshot-05,portrait-headshot,seedream-5.0-pro,38.79812240600586,6.0205864906311035,,,,1.5,img/portrait-headshot/portrait-headshot-05/seedream-5.0-pro.webp
+portrait-headshot-05,portrait-headshot,flux-2-pro,41.08015441894531,5.79890775680542,,,,1.5,img/portrait-headshot/portrait-headshot-05/flux-2-pro.webp
+portrait-headshot-05,portrait-headshot,kling-3.0-image,35.98160171508789,5.574459075927734,,,,7.5,img/portrait-headshot/portrait-headshot-05/kling-3.0-image.webp
+portrait-headshot-05,portrait-headshot,gemini-2.5-flash-image,40.30961227416992,5.911275863647461,,,,10.0,img/portrait-headshot/portrait-headshot-05/gemini-2.5-flash-image.webp
+portrait-headshot-06,portrait-headshot,gpt-image-2,40.68111801147461,6.254950523376465,,,,2.0,img/portrait-headshot/portrait-headshot-06/gpt-image-2.webp
+portrait-headshot-06,portrait-headshot,gemini-3-pro-image,42.92000961303711,5.852270603179932,,,,3.5,img/portrait-headshot/portrait-headshot-06/gemini-3-pro-image.webp
+portrait-headshot-06,portrait-headshot,hunyuan-v3,43.437957763671875,6.054259777069092,,,,6.0,img/portrait-headshot/portrait-headshot-06/hunyuan-v3.webp
+portrait-headshot-06,portrait-headshot,ideogram-4-5,43.821407318115234,5.758210182189941,,,,9.5,img/portrait-headshot/portrait-headshot-06/ideogram-4-5.webp
+portrait-headshot-06,portrait-headshot,gemini-3.1-flash-image,36.75318908691406,5.712607383728027,,,,7.0,img/portrait-headshot/portrait-headshot-06/gemini-3.1-flash-image.webp
+portrait-headshot-06,portrait-headshot,gpt-image-2.5-sunburst,44.422752380371094,5.940402984619141,,,,3.0,img/portrait-headshot/portrait-headshot-06/gpt-image-2.5-sunburst.webp
+portrait-headshot-06,portrait-headshot,luma-uni-1,38.458683013916016,5.467831611633301,,,,12.0,img/portrait-headshot/portrait-headshot-06/luma-uni-1.webp
+portrait-headshot-06,portrait-headshot,recraftv4_1,46.42238235473633,6.189915657043457,,,,8.5,img/portrait-headshot/portrait-headshot-06/recraftv4_1.webp
+portrait-headshot-06,portrait-headshot,seedream-5.0-pro,41.0435905456543,6.086573600769043,,,,1.5,img/portrait-headshot/portrait-headshot-06/seedream-5.0-pro.webp
+portrait-headshot-06,portrait-headshot,flux-2-pro,41.45214080810547,6.491700172424316,,,,8.5,img/portrait-headshot/portrait-headshot-06/flux-2-pro.webp
+portrait-headshot-06,portrait-headshot,kling-3.0-image,38.956153869628906,5.992727279663086,,,,8.0,img/portrait-headshot/portrait-headshot-06/kling-3.0-image.webp
+portrait-headshot-06,portrait-headshot,gemini-2.5-flash-image,42.22167205810547,6.499217987060547,,,,8.5,img/portrait-headshot/portrait-headshot-06/gemini-2.5-flash-image.webp
+portrait-headshot-07,portrait-headshot,gpt-image-2,41.08977508544922,6.132330894470215,,,,7.0,img/portrait-headshot/portrait-headshot-07/gpt-image-2.webp
+portrait-headshot-07,portrait-headshot,gemini-3-pro-image,41.483219146728516,6.0266032218933105,,,,4.0,img/portrait-headshot/portrait-headshot-07/gemini-3-pro-image.webp
+portrait-headshot-07,portrait-headshot,hunyuan-v3,42.079917907714844,6.451907157897949,,,,3.5,img/portrait-headshot/portrait-headshot-07/hunyuan-v3.webp
+portrait-headshot-07,portrait-headshot,ideogram-4-5,34.77170944213867,6.188295841217041,,,,10.5,img/portrait-headshot/portrait-headshot-07/ideogram-4-5.webp
+portrait-headshot-07,portrait-headshot,gemini-3.1-flash-image,41.46482849121094,6.002919673919678,,,,2.0,img/portrait-headshot/portrait-headshot-07/gemini-3.1-flash-image.webp
+portrait-headshot-07,portrait-headshot,gpt-image-2.5-sunburst,39.798343658447266,6.120456695556641,,,,4.5,img/portrait-headshot/portrait-headshot-07/gpt-image-2.5-sunburst.webp
+portrait-headshot-07,portrait-headshot,luma-uni-1,41.58041763305664,6.330877304077148,,,,7.0,img/portrait-headshot/portrait-headshot-07/luma-uni-1.webp
+portrait-headshot-07,portrait-headshot,recraftv4_1,38.31339645385742,5.967072486877441,,,,11.5,img/portrait-headshot/portrait-headshot-07/recraftv4_1.webp
+portrait-headshot-07,portrait-headshot,seedream-5.0-pro,34.46956253051758,6.179288864135742,,,,9.0,img/portrait-headshot/portrait-headshot-07/seedream-5.0-pro.webp
+portrait-headshot-07,portrait-headshot,flux-2-pro,38.556068420410156,6.232171535491943,,,,5.5,img/portrait-headshot/portrait-headshot-07/flux-2-pro.webp
+portrait-headshot-07,portrait-headshot,kling-3.0-image,37.33205795288086,6.194265842437744,,,,5.0,img/portrait-headshot/portrait-headshot-07/kling-3.0-image.webp
+portrait-headshot-07,portrait-headshot,gemini-2.5-flash-image,41.39189910888672,6.308116912841797,,,,8.5,img/portrait-headshot/portrait-headshot-07/gemini-2.5-flash-image.webp
+portrait-headshot-08,portrait-headshot,gpt-image-2,36.61832046508789,6.444081783294678,,,,2.5,img/portrait-headshot/portrait-headshot-08/gpt-image-2.webp
+portrait-headshot-08,portrait-headshot,gemini-3-pro-image,33.205265045166016,6.159995079040527,,,,2.5,img/portrait-headshot/portrait-headshot-08/gemini-3-pro-image.webp
+portrait-headshot-08,portrait-headshot,hunyuan-v3,32.249324798583984,6.554496765136719,,,,6.5,img/portrait-headshot/portrait-headshot-08/hunyuan-v3.webp
+portrait-headshot-08,portrait-headshot,ideogram-4-5,31.278133392333984,5.67881441116333,,,,10.5,img/portrait-headshot/portrait-headshot-08/ideogram-4-5.webp
+portrait-headshot-08,portrait-headshot,gemini-3.1-flash-image,31.345457077026367,6.215457916259766,,,,10.0,img/portrait-headshot/portrait-headshot-08/gemini-3.1-flash-image.webp
+portrait-headshot-08,portrait-headshot,gpt-image-2.5-sunburst,32.65902328491211,6.069223880767822,,,,3.5,img/portrait-headshot/portrait-headshot-08/gpt-image-2.5-sunburst.webp
+portrait-headshot-08,portrait-headshot,luma-uni-1,36.762229919433594,6.1403913497924805,,,,9.0,img/portrait-headshot/portrait-headshot-08/luma-uni-1.webp
+portrait-headshot-08,portrait-headshot,recraftv4_1,38.129417419433594,6.470370769500732,,,,6.0,img/portrait-headshot/portrait-headshot-08/recraftv4_1.webp
+portrait-headshot-08,portrait-headshot,seedream-5.0-pro,36.28097152709961,6.209870338439941,,,,3.0,img/portrait-headshot/portrait-headshot-08/seedream-5.0-pro.webp
+portrait-headshot-08,portrait-headshot,flux-2-pro,35.319801330566406,6.287854194641113,,,,5.5,img/portrait-headshot/portrait-headshot-08/flux-2-pro.webp
+portrait-headshot-08,portrait-headshot,kling-3.0-image,33.96341323852539,6.307358741760254,,,,11.0,img/portrait-headshot/portrait-headshot-08/kling-3.0-image.webp
+portrait-headshot-08,portrait-headshot,gemini-2.5-flash-image,35.072017669677734,6.444671154022217,,,,8.0,img/portrait-headshot/portrait-headshot-08/gemini-2.5-flash-image.webp
+portrait-headshot-09,portrait-headshot,gpt-image-2,37.430606842041016,5.85855770111084,,,,2.5,img/portrait-headshot/portrait-headshot-09/gpt-image-2.webp
+portrait-headshot-09,portrait-headshot,gemini-3-pro-image,39.07326889038086,5.7414140701293945,,,,5.0,img/portrait-headshot/portrait-headshot-09/gemini-3-pro-image.webp
+portrait-headshot-09,portrait-headshot,hunyuan-v3,36.68199157714844,5.896106719970703,,,,8.5,img/portrait-headshot/portrait-headshot-09/hunyuan-v3.webp
+portrait-headshot-09,portrait-headshot,ideogram-4-5,37.738399505615234,5.037153720855713,,,,7.0,img/portrait-headshot/portrait-headshot-09/ideogram-4-5.webp
+portrait-headshot-09,portrait-headshot,gemini-3.1-flash-image,39.02254867553711,5.9220733642578125,,,,3.0,img/portrait-headshot/portrait-headshot-09/gemini-3.1-flash-image.webp
+portrait-headshot-09,portrait-headshot,gpt-image-2.5-sunburst,37.97633743286133,5.802905559539795,,,,2.0,img/portrait-headshot/portrait-headshot-09/gpt-image-2.5-sunburst.webp
+portrait-headshot-09,portrait-headshot,luma-uni-1,36.351810455322266,5.376516342163086,,,,12.0,img/portrait-headshot/portrait-headshot-09/luma-uni-1.webp
+portrait-headshot-09,portrait-headshot,recraftv4_1,36.4162712097168,5.469026565551758,,,,8.0,img/portrait-headshot/portrait-headshot-09/recraftv4_1.webp
+portrait-headshot-09,portrait-headshot,seedream-5.0-pro,36.626522064208984,6.214910507202148,,,,9.5,img/portrait-headshot/portrait-headshot-09/seedream-5.0-pro.webp
+portrait-headshot-09,portrait-headshot,flux-2-pro,33.9282112121582,6.2868971824646,,,,7.0,img/portrait-headshot/portrait-headshot-09/flux-2-pro.webp
+portrait-headshot-09,portrait-headshot,kling-3.0-image,31.040102005004883,6.226417541503906,,,,11.0,img/portrait-headshot/portrait-headshot-09/kling-3.0-image.webp
+portrait-headshot-09,portrait-headshot,gemini-2.5-flash-image,35.99406433105469,6.118231773376465,,,,2.5,img/portrait-headshot/portrait-headshot-09/gemini-2.5-flash-image.webp
+portrait-headshot-10,portrait-headshot,gpt-image-2,42.66973876953125,5.833240509033203,,,,6.0,img/portrait-headshot/portrait-headshot-10/gpt-image-2.webp
+portrait-headshot-10,portrait-headshot,gemini-3-pro-image,36.88589859008789,5.421698570251465,,,,9.5,img/portrait-headshot/portrait-headshot-10/gemini-3-pro-image.webp
+portrait-headshot-10,portrait-headshot,hunyuan-v3,35.230926513671875,6.101423740386963,,,,12.0,img/portrait-headshot/portrait-headshot-10/hunyuan-v3.webp
+portrait-headshot-10,portrait-headshot,ideogram-4-5,41.57830810546875,5.742663383483887,,,,8.5,img/portrait-headshot/portrait-headshot-10/ideogram-4-5.webp
+portrait-headshot-10,portrait-headshot,gemini-3.1-flash-image,39.22705078125,5.585140228271484,,,,1.5,img/portrait-headshot/portrait-headshot-10/gemini-3.1-flash-image.webp
+portrait-headshot-10,portrait-headshot,gpt-image-2.5-sunburst,39.4166259765625,5.774003028869629,,,,2.5,img/portrait-headshot/portrait-headshot-10/gpt-image-2.5-sunburst.webp
+portrait-headshot-10,portrait-headshot,luma-uni-1,42.97239685058594,5.8253936767578125,,,,10.5,img/portrait-headshot/portrait-headshot-10/luma-uni-1.webp
+portrait-headshot-10,portrait-headshot,recraftv4_1,39.499717712402344,5.884005546569824,,,,9.5,img/portrait-headshot/portrait-headshot-10/recraftv4_1.webp
+portrait-headshot-10,portrait-headshot,seedream-5.0-pro,37.783050537109375,6.260451316833496,,,,3.5,img/portrait-headshot/portrait-headshot-10/seedream-5.0-pro.webp
+portrait-headshot-10,portrait-headshot,flux-2-pro,42.61764907836914,6.094935894012451,,,,2.5,img/portrait-headshot/portrait-headshot-10/flux-2-pro.webp
+portrait-headshot-10,portrait-headshot,kling-3.0-image,43.433406829833984,6.1554718017578125,,,,6.0,img/portrait-headshot/portrait-headshot-10/kling-3.0-image.webp
+portrait-headshot-10,portrait-headshot,gemini-2.5-flash-image,38.12594985961914,5.754209518432617,,,,6.0,img/portrait-headshot/portrait-headshot-10/gemini-2.5-flash-image.webp
+anime-illustration-01,anime-illustration,gpt-image-2,41.1602783203125,7.273252487182617,,,,4.0,img/anime-illustration/anime-illustration-01/gpt-image-2.webp
+anime-illustration-01,anime-illustration,gemini-3-pro-image,40.46353530883789,6.788034439086914,,,,7.5,img/anime-illustration/anime-illustration-01/gemini-3-pro-image.webp
+anime-illustration-01,anime-illustration,hunyuan-v3,43.55644989013672,6.982573509216309,,,,3.0,img/anime-illustration/anime-illustration-01/hunyuan-v3.webp
+anime-illustration-01,anime-illustration,ideogram-4-5,40.51478958129883,6.953555107116699,,,,7.5,img/anime-illustration/anime-illustration-01/ideogram-4-5.webp
+anime-illustration-01,anime-illustration,gemini-3.1-flash-image,45.586673736572266,7.342500686645508,,,,2.5,img/anime-illustration/anime-illustration-01/gemini-3.1-flash-image.webp
+anime-illustration-01,anime-illustration,gpt-image-2.5-sunburst,43.448387145996094,6.967206954956055,,,,10.0,img/anime-illustration/anime-illustration-01/gpt-image-2.5-sunburst.webp
+anime-illustration-01,anime-illustration,luma-uni-1,45.39035415649414,6.704494476318359,,,,10.0,img/anime-illustration/anime-illustration-01/luma-uni-1.webp
+anime-illustration-01,anime-illustration,recraftv4_1,43.561195373535156,6.786137104034424,,,,11.5,img/anime-illustration/anime-illustration-01/recraftv4_1.webp
+anime-illustration-01,anime-illustration,seedream-5.0-pro,37.27528381347656,6.928967475891113,,,,5.5,img/anime-illustration/anime-illustration-01/seedream-5.0-pro.webp
+anime-illustration-01,anime-illustration,flux-2-pro,42.93893051147461,7.063680648803711,,,,6.5,img/anime-illustration/anime-illustration-01/flux-2-pro.webp
+anime-illustration-01,anime-illustration,kling-3.0-image,41.471458435058594,6.754547595977783,,,,6.0,img/anime-illustration/anime-illustration-01/kling-3.0-image.webp
+anime-illustration-01,anime-illustration,gemini-2.5-flash-image,40.62854766845703,6.977138519287109,,,,4.0,img/anime-illustration/anime-illustration-01/gemini-2.5-flash-image.webp
+anime-illustration-02,anime-illustration,gpt-image-2,41.58782958984375,6.220952987670898,,,,2.0,img/anime-illustration/anime-illustration-02/gpt-image-2.webp
+anime-illustration-02,anime-illustration,gemini-3-pro-image,42.57484436035156,6.118531227111816,,,,6.0,img/anime-illustration/anime-illustration-02/gemini-3-pro-image.webp
+anime-illustration-02,anime-illustration,hunyuan-v3,36.36919403076172,6.423405170440674,,,,11.0,img/anime-illustration/anime-illustration-02/hunyuan-v3.webp
+anime-illustration-02,anime-illustration,ideogram-4-5,39.36507797241211,6.28178071975708,,,,6.0,img/anime-illustration/anime-illustration-02/ideogram-4-5.webp
+anime-illustration-02,anime-illustration,gemini-3.1-flash-image,39.360511779785156,6.385354042053223,,,,4.5,img/anime-illustration/anime-illustration-02/gemini-3.1-flash-image.webp
+anime-illustration-02,anime-illustration,gpt-image-2.5-sunburst,40.13031768798828,6.20261287689209,,,,2.0,img/anime-illustration/anime-illustration-02/gpt-image-2.5-sunburst.webp
+anime-illustration-02,anime-illustration,luma-uni-1,41.2586669921875,5.994604110717773,,,,8.0,img/anime-illustration/anime-illustration-02/luma-uni-1.webp
+anime-illustration-02,anime-illustration,recraftv4_1,43.23046875,5.252202033996582,,,,10.0,img/anime-illustration/anime-illustration-02/recraftv4_1.webp
+anime-illustration-02,anime-illustration,seedream-5.0-pro,39.515167236328125,6.439290523529053,,,,8.5,img/anime-illustration/anime-illustration-02/seedream-5.0-pro.webp
+anime-illustration-02,anime-illustration,flux-2-pro,42.57354736328125,6.385744094848633,,,,2.0,img/anime-illustration/anime-illustration-02/flux-2-pro.webp
+anime-illustration-02,anime-illustration,kling-3.0-image,32.96964645385742,6.113341808319092,,,,12.0,img/anime-illustration/anime-illustration-02/kling-3.0-image.webp
+anime-illustration-02,anime-illustration,gemini-2.5-flash-image,39.532447814941406,6.476761817932129,,,,6.0,img/anime-illustration/anime-illustration-02/gemini-2.5-flash-image.webp
+anime-illustration-03,anime-illustration,gpt-image-2,33.905399322509766,7.801987648010254,,,,7.5,img/anime-illustration/anime-illustration-03/gpt-image-2.webp
+anime-illustration-03,anime-illustration,gemini-3-pro-image,40.71311950683594,7.367081642150879,,,,6.5,img/anime-illustration/anime-illustration-03/gemini-3-pro-image.webp
+anime-illustration-03,anime-illustration,hunyuan-v3,41.43650436401367,7.463596343994141,,,,3.0,img/anime-illustration/anime-illustration-03/hunyuan-v3.webp
+anime-illustration-03,anime-illustration,ideogram-4-5,40.882015228271484,7.346490859985352,,,,9.5,img/anime-illustration/anime-illustration-03/ideogram-4-5.webp
+anime-illustration-03,anime-illustration,gemini-3.1-flash-image,37.79585266113281,7.708991050720215,,,,1.0,img/anime-illustration/anime-illustration-03/gemini-3.1-flash-image.webp
+anime-illustration-03,anime-illustration,gpt-image-2.5-sunburst,37.4593391418457,7.729421615600586,,,,5.0,img/anime-illustration/anime-illustration-03/gpt-image-2.5-sunburst.webp
+anime-illustration-03,anime-illustration,luma-uni-1,36.50947952270508,7.405926704406738,,,,11.0,img/anime-illustration/anime-illustration-03/luma-uni-1.webp
+anime-illustration-03,anime-illustration,recraftv4_1,43.179656982421875,7.430813312530518,,,,11.0,img/anime-illustration/anime-illustration-03/recraftv4_1.webp
+anime-illustration-03,anime-illustration,seedream-5.0-pro,32.91014862060547,6.743077278137207,,,,3.0,img/anime-illustration/anime-illustration-03/seedream-5.0-pro.webp
+anime-illustration-03,anime-illustration,flux-2-pro,45.45906448364258,7.198859214782715,,,,3.0,img/anime-illustration/anime-illustration-03/flux-2-pro.webp
+anime-illustration-03,anime-illustration,kling-3.0-image,43.34601593017578,6.695256233215332,,,,9.5,img/anime-illustration/anime-illustration-03/kling-3.0-image.webp
+anime-illustration-03,anime-illustration,gemini-2.5-flash-image,47.11667251586914,7.075623512268066,,,,8.0,img/anime-illustration/anime-illustration-03/gemini-2.5-flash-image.webp
+anime-illustration-04,anime-illustration,gpt-image-2,42.6523551940918,6.112675666809082,,,,5.0,img/anime-illustration/anime-illustration-04/gpt-image-2.webp
+anime-illustration-04,anime-illustration,gemini-3-pro-image,36.82437515258789,6.345827102661133,,,,7.5,img/anime-illustration/anime-illustration-04/gemini-3-pro-image.webp
+anime-illustration-04,anime-illustration,hunyuan-v3,32.56337356567383,6.524105072021484,,,,10.0,img/anime-illustration/anime-illustration-04/hunyuan-v3.webp
+anime-illustration-04,anime-illustration,ideogram-4-5,34.62071228027344,6.885832786560059,,,,8.0,img/anime-illustration/anime-illustration-04/ideogram-4-5.webp
+anime-illustration-04,anime-illustration,gemini-3.1-flash-image,36.616371154785156,6.848075866699219,,,,2.0,img/anime-illustration/anime-illustration-04/gemini-3.1-flash-image.webp
+anime-illustration-04,anime-illustration,gpt-image-2.5-sunburst,40.756954193115234,6.514254093170166,,,,2.0,img/anime-illustration/anime-illustration-04/gpt-image-2.5-sunburst.webp
+anime-illustration-04,anime-illustration,luma-uni-1,37.682952880859375,6.140317916870117,,,,7.5,img/anime-illustration/anime-illustration-04/luma-uni-1.webp
+anime-illustration-04,anime-illustration,recraftv4_1,41.5991096496582,5.261068344116211,,,,11.5,img/anime-illustration/anime-illustration-04/recraftv4_1.webp
+anime-illustration-04,anime-illustration,seedream-5.0-pro,37.14319610595703,6.419699668884277,,,,6.0,img/anime-illustration/anime-illustration-04/seedream-5.0-pro.webp
+anime-illustration-04,anime-illustration,flux-2-pro,40.324806213378906,6.169041633605957,,,,4.5,img/anime-illustration/anime-illustration-04/flux-2-pro.webp
+anime-illustration-04,anime-illustration,kling-3.0-image,36.3934326171875,6.252878665924072,,,,11.5,img/anime-illustration/anime-illustration-04/kling-3.0-image.webp
+anime-illustration-04,anime-illustration,gemini-2.5-flash-image,39.90388488769531,6.873017311096191,,,,2.5,img/anime-illustration/anime-illustration-04/gemini-2.5-flash-image.webp
+anime-illustration-05,anime-illustration,gpt-image-2,39.58679962158203,6.606596946716309,,,,3.5,img/anime-illustration/anime-illustration-05/gpt-image-2.webp
+anime-illustration-05,anime-illustration,gemini-3-pro-image,40.708805084228516,6.506722450256348,,,,5.5,img/anime-illustration/anime-illustration-05/gemini-3-pro-image.webp
+anime-illustration-05,anime-illustration,hunyuan-v3,36.680938720703125,6.7994914054870605,,,,4.0,img/anime-illustration/anime-illustration-05/hunyuan-v3.webp
+anime-illustration-05,anime-illustration,ideogram-4-5,37.79254150390625,6.626717567443848,,,,8.5,img/anime-illustration/anime-illustration-05/ideogram-4-5.webp
+anime-illustration-05,anime-illustration,gemini-3.1-flash-image,36.354820251464844,6.732220649719238,,,,4.0,img/anime-illustration/anime-illustration-05/gemini-3.1-flash-image.webp
+anime-illustration-05,anime-illustration,gpt-image-2.5-sunburst,38.757057189941406,6.784171104431152,,,,2.0,img/anime-illustration/anime-illustration-05/gpt-image-2.5-sunburst.webp
+anime-illustration-05,anime-illustration,luma-uni-1,31.36993980407715,6.013331413269043,,,,8.5,img/anime-illustration/anime-illustration-05/luma-uni-1.webp
+anime-illustration-05,anime-illustration,recraftv4_1,41.13546371459961,6.206223487854004,,,,7.0,img/anime-illustration/anime-illustration-05/recraftv4_1.webp
+anime-illustration-05,anime-illustration,seedream-5.0-pro,39.05467224121094,6.534404277801514,,,,10.5,img/anime-illustration/anime-illustration-05/seedream-5.0-pro.webp
+anime-illustration-05,anime-illustration,flux-2-pro,41.55385971069336,6.6701459884643555,,,,8.0,img/anime-illustration/anime-illustration-05/flux-2-pro.webp
+anime-illustration-05,anime-illustration,kling-3.0-image,39.84943771362305,6.400155067443848,,,,5.0,img/anime-illustration/anime-illustration-05/kling-3.0-image.webp
+anime-illustration-05,anime-illustration,gemini-2.5-flash-image,38.506813049316406,6.59308385848999,,,,11.5,img/anime-illustration/anime-illustration-05/gemini-2.5-flash-image.webp
+anime-illustration-06,anime-illustration,gpt-image-2,40.136985778808594,5.531425476074219,,,,3.0,img/anime-illustration/anime-illustration-06/gpt-image-2.webp
+anime-illustration-06,anime-illustration,gemini-3-pro-image,39.24766159057617,5.196633338928223,,,,6.5,img/anime-illustration/anime-illustration-06/gemini-3-pro-image.webp
+anime-illustration-06,anime-illustration,hunyuan-v3,33.620506286621094,5.150487899780273,,,,12.0,img/anime-illustration/anime-illustration-06/hunyuan-v3.webp
+anime-illustration-06,anime-illustration,ideogram-4-5,41.28721237182617,5.220391273498535,,,,7.0,img/anime-illustration/anime-illustration-06/ideogram-4-5.webp
+anime-illustration-06,anime-illustration,gemini-3.1-flash-image,41.856021881103516,5.3264923095703125,,,,2.5,img/anime-illustration/anime-illustration-06/gemini-3.1-flash-image.webp
+anime-illustration-06,anime-illustration,gpt-image-2.5-sunburst,39.20149230957031,5.404358386993408,,,,4.5,img/anime-illustration/anime-illustration-06/gpt-image-2.5-sunburst.webp
+anime-illustration-06,anime-illustration,luma-uni-1,39.7763671875,5.3008904457092285,,,,9.5,img/anime-illustration/anime-illustration-06/luma-uni-1.webp
+anime-illustration-06,anime-illustration,recraftv4_1,42.233394622802734,5.236468315124512,,,,9.0,img/anime-illustration/anime-illustration-06/recraftv4_1.webp
+anime-illustration-06,anime-illustration,seedream-5.0-pro,37.671485900878906,5.569244384765625,,,,6.5,img/anime-illustration/anime-illustration-06/seedream-5.0-pro.webp
+anime-illustration-06,anime-illustration,flux-2-pro,42.2482795715332,5.464422702789307,,,,3.0,img/anime-illustration/anime-illustration-06/flux-2-pro.webp
+anime-illustration-06,anime-illustration,kling-3.0-image,37.279869079589844,5.3522419929504395,,,,7.0,img/anime-illustration/anime-illustration-06/kling-3.0-image.webp
+anime-illustration-06,anime-illustration,gemini-2.5-flash-image,39.47148132324219,5.566287040710449,,,,7.5,img/anime-illustration/anime-illustration-06/gemini-2.5-flash-image.webp
+anime-illustration-07,anime-illustration,gpt-image-2,39.19683074951172,6.061182022094727,,,,8.0,img/anime-illustration/anime-illustration-07/gpt-image-2.webp
+anime-illustration-07,anime-illustration,gemini-3-pro-image,39.997867584228516,6.134256839752197,,,,7.0,img/anime-illustration/anime-illustration-07/gemini-3-pro-image.webp
+anime-illustration-07,anime-illustration,hunyuan-v3,39.02577209472656,6.303483963012695,,,,1.5,img/anime-illustration/anime-illustration-07/hunyuan-v3.webp
+anime-illustration-07,anime-illustration,ideogram-4-5,39.732017517089844,6.092110633850098,,,,1.5,img/anime-illustration/anime-illustration-07/ideogram-4-5.webp
+anime-illustration-07,anime-illustration,gemini-3.1-flash-image,40.840087890625,6.168184280395508,,,,8.5,img/anime-illustration/anime-illustration-07/gemini-3.1-flash-image.webp
+anime-illustration-07,anime-illustration,gpt-image-2.5-sunburst,39.051292419433594,6.528244972229004,,,,4.5,img/anime-illustration/anime-illustration-07/gpt-image-2.5-sunburst.webp
+anime-illustration-07,anime-illustration,luma-uni-1,42.537010192871094,6.256329536437988,,,,8.5,img/anime-illustration/anime-illustration-07/luma-uni-1.webp
+anime-illustration-07,anime-illustration,recraftv4_1,38.89955139160156,6.3014326095581055,,,,11.5,img/anime-illustration/anime-illustration-07/recraftv4_1.webp
+anime-illustration-07,anime-illustration,seedream-5.0-pro,38.88901138305664,6.30364990234375,,,,7.0,img/anime-illustration/anime-illustration-07/seedream-5.0-pro.webp
+anime-illustration-07,anime-illustration,flux-2-pro,40.017234802246094,6.040945053100586,,,,8.0,img/anime-illustration/anime-illustration-07/flux-2-pro.webp
+anime-illustration-07,anime-illustration,kling-3.0-image,39.224998474121094,6.078900337219238,,,,4.0,img/anime-illustration/anime-illustration-07/kling-3.0-image.webp
+anime-illustration-07,anime-illustration,gemini-2.5-flash-image,41.899627685546875,6.021507740020752,,,,8.0,img/anime-illustration/anime-illustration-07/gemini-2.5-flash-image.webp
+anime-illustration-08,anime-illustration,gpt-image-2,37.05010223388672,7.20285177230835,,,,8.0,img/anime-illustration/anime-illustration-08/gpt-image-2.webp
+anime-illustration-08,anime-illustration,gemini-3-pro-image,30.334556579589844,6.28172492980957,,,,10.0,img/anime-illustration/anime-illustration-08/gemini-3-pro-image.webp
+anime-illustration-08,anime-illustration,hunyuan-v3,31.32079315185547,7.25655460357666,,,,6.5,img/anime-illustration/anime-illustration-08/hunyuan-v3.webp
+anime-illustration-08,anime-illustration,ideogram-4-5,40.607643127441406,6.911787033081055,,,,6.0,img/anime-illustration/anime-illustration-08/ideogram-4-5.webp
+anime-illustration-08,anime-illustration,gemini-3.1-flash-image,29.633251190185547,6.997456073760986,,,,7.0,img/anime-illustration/anime-illustration-08/gemini-3.1-flash-image.webp
+anime-illustration-08,anime-illustration,gpt-image-2.5-sunburst,38.10343933105469,6.982680797576904,,,,2.0,img/anime-illustration/anime-illustration-08/gpt-image-2.5-sunburst.webp
+anime-illustration-08,anime-illustration,luma-uni-1,27.01357650756836,6.789121627807617,,,,5.5,img/anime-illustration/anime-illustration-08/luma-uni-1.webp
+anime-illustration-08,anime-illustration,recraftv4_1,37.327415466308594,7.033904552459717,,,,7.0,img/anime-illustration/anime-illustration-08/recraftv4_1.webp
+anime-illustration-08,anime-illustration,seedream-5.0-pro,40.24564743041992,7.257018089294434,,,,6.5,img/anime-illustration/anime-illustration-08/seedream-5.0-pro.webp
+anime-illustration-08,anime-illustration,flux-2-pro,42.417232513427734,7.132221698760986,,,,2.5,img/anime-illustration/anime-illustration-08/flux-2-pro.webp
+anime-illustration-08,anime-illustration,kling-3.0-image,37.30206298828125,6.340442180633545,,,,9.0,img/anime-illustration/anime-illustration-08/kling-3.0-image.webp
+anime-illustration-08,anime-illustration,gemini-2.5-flash-image,36.052860260009766,7.019569396972656,,,,8.0,img/anime-illustration/anime-illustration-08/gemini-2.5-flash-image.webp
+anime-illustration-09,anime-illustration,gpt-image-2,34.80769729614258,6.407830238342285,,,,9.5,img/anime-illustration/anime-illustration-09/gpt-image-2.webp
+anime-illustration-09,anime-illustration,gemini-3-pro-image,39.956398010253906,6.314085483551025,,,,1.5,img/anime-illustration/anime-illustration-09/gemini-3-pro-image.webp
+anime-illustration-09,anime-illustration,hunyuan-v3,34.50705337524414,6.472919464111328,,,,4.5,img/anime-illustration/anime-illustration-09/hunyuan-v3.webp
+anime-illustration-09,anime-illustration,ideogram-4-5,34.71729278564453,6.187797546386719,,,,11.0,img/anime-illustration/anime-illustration-09/ideogram-4-5.webp
+anime-illustration-09,anime-illustration,gemini-3.1-flash-image,34.00231170654297,6.920797824859619,,,,2.5,img/anime-illustration/anime-illustration-09/gemini-3.1-flash-image.webp
+anime-illustration-09,anime-illustration,gpt-image-2.5-sunburst,35.80214309692383,6.847904205322266,,,,7.5,img/anime-illustration/anime-illustration-09/gpt-image-2.5-sunburst.webp
+anime-illustration-09,anime-illustration,luma-uni-1,35.2261848449707,6.285735130310059,,,,7.0,img/anime-illustration/anime-illustration-09/luma-uni-1.webp
+anime-illustration-09,anime-illustration,recraftv4_1,40.0172233581543,6.27946662902832,,,,9.5,img/anime-illustration/anime-illustration-09/recraftv4_1.webp
+anime-illustration-09,anime-illustration,seedream-5.0-pro,35.30216979980469,6.439776420593262,,,,5.5,img/anime-illustration/anime-illustration-09/seedream-5.0-pro.webp
+anime-illustration-09,anime-illustration,flux-2-pro,39.81581497192383,6.36234188079834,,,,9.0,img/anime-illustration/anime-illustration-09/flux-2-pro.webp
+anime-illustration-09,anime-illustration,kling-3.0-image,39.14751052856445,6.497742652893066,,,,7.5,img/anime-illustration/anime-illustration-09/kling-3.0-image.webp
+anime-illustration-09,anime-illustration,gemini-2.5-flash-image,33.037994384765625,6.675320148468018,,,,3.0,img/anime-illustration/anime-illustration-09/gemini-2.5-flash-image.webp
+anime-illustration-10,anime-illustration,gpt-image-2,37.24591827392578,5.679588317871094,,,,3.5,img/anime-illustration/anime-illustration-10/gpt-image-2.webp
+anime-illustration-10,anime-illustration,gemini-3-pro-image,42.31154251098633,6.591310501098633,,,,3.5,img/anime-illustration/anime-illustration-10/gemini-3-pro-image.webp
+anime-illustration-10,anime-illustration,hunyuan-v3,45.61136245727539,6.740994930267334,,,,8.5,img/anime-illustration/anime-illustration-10/hunyuan-v3.webp
+anime-illustration-10,anime-illustration,ideogram-4-5,43.42035675048828,6.993836879730225,,,,11.5,img/anime-illustration/anime-illustration-10/ideogram-4-5.webp
+anime-illustration-10,anime-illustration,gemini-3.1-flash-image,36.4370002746582,6.376025676727295,,,,9.0,img/anime-illustration/anime-illustration-10/gemini-3.1-flash-image.webp
+anime-illustration-10,anime-illustration,gpt-image-2.5-sunburst,37.68204879760742,5.640083312988281,,,,2.5,img/anime-illustration/anime-illustration-10/gpt-image-2.5-sunburst.webp
+anime-illustration-10,anime-illustration,luma-uni-1,47.29132080078125,6.161154270172119,,,,11.5,img/anime-illustration/anime-illustration-10/luma-uni-1.webp
+anime-illustration-10,anime-illustration,recraftv4_1,40.09507369995117,6.558845043182373,,,,3.5,img/anime-illustration/anime-illustration-10/recraftv4_1.webp
+anime-illustration-10,anime-illustration,seedream-5.0-pro,42.00986099243164,6.505918979644775,,,,2.0,img/anime-illustration/anime-illustration-10/seedream-5.0-pro.webp
+anime-illustration-10,anime-illustration,flux-2-pro,39.08559799194336,6.586817741394043,,,,6.0,img/anime-illustration/anime-illustration-10/flux-2-pro.webp
+anime-illustration-10,anime-illustration,kling-3.0-image,38.4747314453125,6.623030662536621,,,,9.0,img/anime-illustration/anime-illustration-10/kling-3.0-image.webp
+anime-illustration-10,anime-illustration,gemini-2.5-flash-image,43.971954345703125,6.298239231109619,,,,7.5,img/anime-illustration/anime-illustration-10/gemini-2.5-flash-image.webp
+interior-design-01,interior-design,gpt-image-2,37.50543975830078,5.800698280334473,,,,3.0,img/interior-design/interior-design-01/gpt-image-2.webp
+interior-design-01,interior-design,gemini-3-pro-image,34.69480895996094,5.504443168640137,,,,7.0,img/interior-design/interior-design-01/gemini-3-pro-image.webp
+interior-design-01,interior-design,hunyuan-v3,39.44863510131836,5.997684478759766,,,,7.0,img/interior-design/interior-design-01/hunyuan-v3.webp
+interior-design-01,interior-design,ideogram-4-5,31.89598846435547,5.612237930297852,,,,7.5,img/interior-design/interior-design-01/ideogram-4-5.webp
+interior-design-01,interior-design,gemini-3.1-flash-image,35.10559844970703,5.7868146896362305,,,,2.0,img/interior-design/interior-design-01/gemini-3.1-flash-image.webp
+interior-design-01,interior-design,gpt-image-2.5-sunburst,36.08516311645508,5.944045543670654,,,,3.0,img/interior-design/interior-design-01/gpt-image-2.5-sunburst.webp
+interior-design-01,interior-design,luma-uni-1,35.84986877441406,5.735788345336914,,,,9.0,img/interior-design/interior-design-01/luma-uni-1.webp
+interior-design-01,interior-design,recraftv4_1,33.477638244628906,5.669891357421875,,,,10.0,img/interior-design/interior-design-01/recraftv4_1.webp
+interior-design-01,interior-design,seedream-5.0-pro,37.9619255065918,5.745537757873535,,,,3.5,img/interior-design/interior-design-01/seedream-5.0-pro.webp
+interior-design-01,interior-design,flux-2-pro,35.881744384765625,5.7188520431518555,,,,10.5,img/interior-design/interior-design-01/flux-2-pro.webp
+interior-design-01,interior-design,kling-3.0-image,28.350502014160156,5.659221172332764,,,,12.0,img/interior-design/interior-design-01/kling-3.0-image.webp
+interior-design-01,interior-design,gemini-2.5-flash-image,37.06275177001953,5.756156921386719,,,,3.5,img/interior-design/interior-design-01/gemini-2.5-flash-image.webp
+interior-design-02,interior-design,gpt-image-2,33.620147705078125,5.964725017547607,,,,4.0,img/interior-design/interior-design-02/gpt-image-2.webp
+interior-design-02,interior-design,gemini-3-pro-image,33.06144332885742,5.740135192871094,,,,6.0,img/interior-design/interior-design-02/gemini-3-pro-image.webp
+interior-design-02,interior-design,hunyuan-v3,39.61685562133789,5.676355361938477,,,,6.5,img/interior-design/interior-design-02/hunyuan-v3.webp
+interior-design-02,interior-design,ideogram-4-5,35.54281997680664,6.0495781898498535,,,,11.5,img/interior-design/interior-design-02/ideogram-4-5.webp
+interior-design-02,interior-design,gemini-3.1-flash-image,34.81892395019531,5.851352691650391,,,,6.5,img/interior-design/interior-design-02/gemini-3.1-flash-image.webp
+interior-design-02,interior-design,gpt-image-2.5-sunburst,33.36147689819336,5.9951629638671875,,,,3.5,img/interior-design/interior-design-02/gpt-image-2.5-sunburst.webp
+interior-design-02,interior-design,luma-uni-1,38.31877899169922,5.725673675537109,,,,2.0,img/interior-design/interior-design-02/luma-uni-1.webp
+interior-design-02,interior-design,recraftv4_1,37.41802978515625,6.03150749206543,,,,9.5,img/interior-design/interior-design-02/recraftv4_1.webp
+interior-design-02,interior-design,seedream-5.0-pro,32.082862854003906,6.001720428466797,,,,11.0,img/interior-design/interior-design-02/seedream-5.0-pro.webp
+interior-design-02,interior-design,flux-2-pro,35.95979309082031,5.9329328536987305,,,,3.5,img/interior-design/interior-design-02/flux-2-pro.webp
+interior-design-02,interior-design,kling-3.0-image,28.638086318969727,5.984796524047852,,,,8.5,img/interior-design/interior-design-02/kling-3.0-image.webp
+interior-design-02,interior-design,gemini-2.5-flash-image,35.92625045776367,6.06893253326416,,,,5.5,img/interior-design/interior-design-02/gemini-2.5-flash-image.webp
+interior-design-03,interior-design,gpt-image-2,39.15830993652344,6.466621398925781,,,,4.0,img/interior-design/interior-design-03/gpt-image-2.webp
+interior-design-03,interior-design,gemini-3-pro-image,39.705867767333984,6.10991907119751,,,,2.0,img/interior-design/interior-design-03/gemini-3-pro-image.webp
+interior-design-03,interior-design,hunyuan-v3,40.33671569824219,6.434464454650879,,,,1.5,img/interior-design/interior-design-03/hunyuan-v3.webp
+interior-design-03,interior-design,ideogram-4-5,37.32079315185547,6.209042549133301,,,,5.5,img/interior-design/interior-design-03/ideogram-4-5.webp
+interior-design-03,interior-design,gemini-3.1-flash-image,36.983314514160156,5.698126792907715,,,,11.0,img/interior-design/interior-design-03/gemini-3.1-flash-image.webp
+interior-design-03,interior-design,gpt-image-2.5-sunburst,41.173736572265625,6.439474105834961,,,,4.0,img/interior-design/interior-design-03/gpt-image-2.5-sunburst.webp
+interior-design-03,interior-design,luma-uni-1,39.286643981933594,6.2018561363220215,,,,7.5,img/interior-design/interior-design-03/luma-uni-1.webp
+interior-design-03,interior-design,recraftv4_1,38.129512786865234,6.126780986785889,,,,12.0,img/interior-design/interior-design-03/recraftv4_1.webp
+interior-design-03,interior-design,seedream-5.0-pro,39.28137969970703,5.930294036865234,,,,6.5,img/interior-design/interior-design-03/seedream-5.0-pro.webp
+interior-design-03,interior-design,flux-2-pro,37.23041915893555,6.295260429382324,,,,8.5,img/interior-design/interior-design-03/flux-2-pro.webp
+interior-design-03,interior-design,kling-3.0-image,38.8277587890625,6.013911247253418,,,,8.5,img/interior-design/interior-design-03/kling-3.0-image.webp
+interior-design-03,interior-design,gemini-2.5-flash-image,38.702999114990234,6.462786674499512,,,,7.0,img/interior-design/interior-design-03/gemini-2.5-flash-image.webp
+interior-design-04,interior-design,gpt-image-2,38.48301696777344,5.512882709503174,,,,7.5,img/interior-design/interior-design-04/gpt-image-2.webp
+interior-design-04,interior-design,gemini-3-pro-image,38.847110748291016,5.489450454711914,,,,3.5,img/interior-design/interior-design-04/gemini-3-pro-image.webp
+interior-design-04,interior-design,hunyuan-v3,38.60651397705078,5.34470272064209,,,,1.5,img/interior-design/interior-design-04/hunyuan-v3.webp
+interior-design-04,interior-design,ideogram-4-5,39.20026397705078,5.113153457641602,,,,5.0,img/interior-design/interior-design-04/ideogram-4-5.webp
+interior-design-04,interior-design,gemini-3.1-flash-image,41.32476806640625,5.408673286437988,,,,4.0,img/interior-design/interior-design-04/gemini-3.1-flash-image.webp
+interior-design-04,interior-design,gpt-image-2.5-sunburst,37.31084442138672,5.312201499938965,,,,6.0,img/interior-design/interior-design-04/gpt-image-2.5-sunburst.webp
+interior-design-04,interior-design,luma-uni-1,35.480655670166016,5.445065021514893,,,,7.0,img/interior-design/interior-design-04/luma-uni-1.webp
+interior-design-04,interior-design,recraftv4_1,37.176090240478516,5.364205360412598,,,,10.5,img/interior-design/interior-design-04/recraftv4_1.webp
+interior-design-04,interior-design,seedream-5.0-pro,38.61502456665039,5.508829116821289,,,,5.5,img/interior-design/interior-design-04/seedream-5.0-pro.webp
+interior-design-04,interior-design,flux-2-pro,36.642677307128906,5.531563758850098,,,,5.0,img/interior-design/interior-design-04/flux-2-pro.webp
+interior-design-04,interior-design,kling-3.0-image,38.23921203613281,5.5705718994140625,,,,10.5,img/interior-design/interior-design-04/kling-3.0-image.webp
+interior-design-04,interior-design,gemini-2.5-flash-image,35.649295806884766,5.40394926071167,,,,12.0,img/interior-design/interior-design-04/gemini-2.5-flash-image.webp
+interior-design-05,interior-design,gpt-image-2,43.30855178833008,6.589021682739258,,,,5.5,img/interior-design/interior-design-05/gpt-image-2.webp
+interior-design-05,interior-design,gemini-3-pro-image,40.93073654174805,5.748316764831543,,,,8.5,img/interior-design/interior-design-05/gemini-3-pro-image.webp
+interior-design-05,interior-design,hunyuan-v3,40.79429244995117,6.419737339019775,,,,1.0,img/interior-design/interior-design-05/hunyuan-v3.webp
+interior-design-05,interior-design,ideogram-4-5,43.13444519042969,6.478013038635254,,,,7.0,img/interior-design/interior-design-05/ideogram-4-5.webp
+interior-design-05,interior-design,gemini-3.1-flash-image,34.61030578613281,5.999448776245117,,,,6.0,img/interior-design/interior-design-05/gemini-3.1-flash-image.webp
+interior-design-05,interior-design,gpt-image-2.5-sunburst,42.59705352783203,6.312705039978027,,,,3.0,img/interior-design/interior-design-05/gpt-image-2.5-sunburst.webp
+interior-design-05,interior-design,luma-uni-1,43.123802185058594,6.0241265296936035,,,,9.0,img/interior-design/interior-design-05/luma-uni-1.webp
+interior-design-05,interior-design,recraftv4_1,42.818546295166016,5.755147457122803,,,,12.0,img/interior-design/interior-design-05/recraftv4_1.webp
+interior-design-05,interior-design,seedream-5.0-pro,42.8858757019043,6.121145725250244,,,,2.0,img/interior-design/interior-design-05/seedream-5.0-pro.webp
+interior-design-05,interior-design,flux-2-pro,40.92002868652344,5.959262847900391,,,,8.0,img/interior-design/interior-design-05/flux-2-pro.webp
+interior-design-05,interior-design,kling-3.0-image,43.01229476928711,5.801043510437012,,,,8.5,img/interior-design/interior-design-05/kling-3.0-image.webp
+interior-design-05,interior-design,gemini-2.5-flash-image,39.45174026489258,6.304244041442871,,,,7.5,img/interior-design/interior-design-05/gemini-2.5-flash-image.webp
+interior-design-06,interior-design,gpt-image-2,38.2713508605957,6.121192455291748,,,,5.0,img/interior-design/interior-design-06/gpt-image-2.webp
+interior-design-06,interior-design,gemini-3-pro-image,37.49448776245117,5.790637493133545,,,,10.0,img/interior-design/interior-design-06/gemini-3-pro-image.webp
+interior-design-06,interior-design,hunyuan-v3,42.212379455566406,5.7621588706970215,,,,1.5,img/interior-design/interior-design-06/hunyuan-v3.webp
+interior-design-06,interior-design,ideogram-4-5,40.722511291503906,5.841701030731201,,,,10.0,img/interior-design/interior-design-06/ideogram-4-5.webp
+interior-design-06,interior-design,gemini-3.1-flash-image,39.892417907714844,5.604983806610107,,,,11.5,img/interior-design/interior-design-06/gemini-3.1-flash-image.webp
+interior-design-06,interior-design,gpt-image-2.5-sunburst,40.565616607666016,5.765132427215576,,,,4.0,img/interior-design/interior-design-06/gpt-image-2.5-sunburst.webp
+interior-design-06,interior-design,luma-uni-1,40.82097625732422,5.643119812011719,,,,10.5,img/interior-design/interior-design-06/luma-uni-1.webp
+interior-design-06,interior-design,recraftv4_1,42.69908905029297,5.672510147094727,,,,7.5,img/interior-design/interior-design-06/recraftv4_1.webp
+interior-design-06,interior-design,seedream-5.0-pro,37.58570098876953,5.953341484069824,,,,4.0,img/interior-design/interior-design-06/seedream-5.0-pro.webp
+interior-design-06,interior-design,flux-2-pro,41.34025955200195,5.776032447814941,,,,2.5,img/interior-design/interior-design-06/flux-2-pro.webp
+interior-design-06,interior-design,kling-3.0-image,40.87005615234375,5.712522506713867,,,,4.0,img/interior-design/interior-design-06/kling-3.0-image.webp
+interior-design-06,interior-design,gemini-2.5-flash-image,40.826900482177734,6.140621185302734,,,,7.5,img/interior-design/interior-design-06/gemini-2.5-flash-image.webp
+interior-design-07,interior-design,gpt-image-2,35.77908706665039,6.441051483154297,,,,6.0,img/interior-design/interior-design-07/gpt-image-2.webp
+interior-design-07,interior-design,gemini-3-pro-image,35.91956329345703,5.89020299911499,,,,10.0,img/interior-design/interior-design-07/gemini-3-pro-image.webp
+interior-design-07,interior-design,hunyuan-v3,36.86461639404297,6.246772766113281,,,,1.0,img/interior-design/interior-design-07/hunyuan-v3.webp
+interior-design-07,interior-design,ideogram-4-5,37.25694274902344,5.697290420532227,,,,4.5,img/interior-design/interior-design-07/ideogram-4-5.webp
+interior-design-07,interior-design,gemini-3.1-flash-image,36.3832893371582,5.990283966064453,,,,2.5,img/interior-design/interior-design-07/gemini-3.1-flash-image.webp
+interior-design-07,interior-design,gpt-image-2.5-sunburst,36.03622817993164,6.261348247528076,,,,4.0,img/interior-design/interior-design-07/gpt-image-2.5-sunburst.webp
+interior-design-07,interior-design,luma-uni-1,36.352901458740234,5.651902198791504,,,,10.5,img/interior-design/interior-design-07/luma-uni-1.webp
+interior-design-07,interior-design,recraftv4_1,39.657108306884766,6.090147972106934,,,,9.0,img/interior-design/interior-design-07/recraftv4_1.webp
+interior-design-07,interior-design,seedream-5.0-pro,33.060611724853516,6.063000679016113,,,,3.5,img/interior-design/interior-design-07/seedream-5.0-pro.webp
+interior-design-07,interior-design,flux-2-pro,37.38294982910156,6.2459282875061035,,,,7.0,img/interior-design/interior-design-07/flux-2-pro.webp
+interior-design-07,interior-design,kling-3.0-image,37.496192932128906,6.030045509338379,,,,8.5,img/interior-design/interior-design-07/kling-3.0-image.webp
+interior-design-07,interior-design,gemini-2.5-flash-image,38.0871696472168,5.799118995666504,,,,11.5,img/interior-design/interior-design-07/gemini-2.5-flash-image.webp
+interior-design-08,interior-design,gpt-image-2,39.34611129760742,6.490448951721191,,,,6.0,img/interior-design/interior-design-08/gpt-image-2.webp
+interior-design-08,interior-design,gemini-3-pro-image,39.93595504760742,6.209985733032227,,,,6.5,img/interior-design/interior-design-08/gemini-3-pro-image.webp
+interior-design-08,interior-design,hunyuan-v3,41.52305221557617,6.265901565551758,,,,3.0,img/interior-design/interior-design-08/hunyuan-v3.webp
+interior-design-08,interior-design,ideogram-4-5,42.68947982788086,5.9813618659973145,,,,8.0,img/interior-design/interior-design-08/ideogram-4-5.webp
+interior-design-08,interior-design,gemini-3.1-flash-image,35.97841262817383,6.622183322906494,,,,3.0,img/interior-design/interior-design-08/gemini-3.1-flash-image.webp
+interior-design-08,interior-design,gpt-image-2.5-sunburst,38.99321746826172,6.400959014892578,,,,4.0,img/interior-design/interior-design-08/gpt-image-2.5-sunburst.webp
+interior-design-08,interior-design,luma-uni-1,42.23478317260742,6.3780341148376465,,,,7.0,img/interior-design/interior-design-08/luma-uni-1.webp
+interior-design-08,interior-design,recraftv4_1,39.56135559082031,6.331991195678711,,,,11.0,img/interior-design/interior-design-08/recraftv4_1.webp
+interior-design-08,interior-design,seedream-5.0-pro,37.69643783569336,6.206477642059326,,,,2.0,img/interior-design/interior-design-08/seedream-5.0-pro.webp
+interior-design-08,interior-design,flux-2-pro,39.868743896484375,6.314414024353027,,,,9.5,img/interior-design/interior-design-08/flux-2-pro.webp
+interior-design-08,interior-design,kling-3.0-image,40.56914138793945,6.083635330200195,,,,6.0,img/interior-design/interior-design-08/kling-3.0-image.webp
+interior-design-08,interior-design,gemini-2.5-flash-image,36.68608093261719,6.9062700271606445,,,,12.0,img/interior-design/interior-design-08/gemini-2.5-flash-image.webp
+interior-design-09,interior-design,gpt-image-2,40.05880355834961,6.434863090515137,,,,4.0,img/interior-design/interior-design-09/gpt-image-2.webp
+interior-design-09,interior-design,gemini-3-pro-image,44.78681182861328,5.674348831176758,,,,11.0,img/interior-design/interior-design-09/gemini-3-pro-image.webp
+interior-design-09,interior-design,hunyuan-v3,40.61079788208008,6.266572952270508,,,,1.5,img/interior-design/interior-design-09/hunyuan-v3.webp
+interior-design-09,interior-design,ideogram-4-5,37.30103302001953,6.222197532653809,,,,7.0,img/interior-design/interior-design-09/ideogram-4-5.webp
+interior-design-09,interior-design,gemini-3.1-flash-image,39.29658508300781,5.722847938537598,,,,7.5,img/interior-design/interior-design-09/gemini-3.1-flash-image.webp
+interior-design-09,interior-design,gpt-image-2.5-sunburst,40.30977249145508,6.082285404205322,,,,8.0,img/interior-design/interior-design-09/gpt-image-2.5-sunburst.webp
+interior-design-09,interior-design,luma-uni-1,38.451473236083984,6.201278209686279,,,,6.5,img/interior-design/interior-design-09/luma-uni-1.webp
+interior-design-09,interior-design,recraftv4_1,35.069923400878906,5.930655002593994,,,,11.5,img/interior-design/interior-design-09/recraftv4_1.webp
+interior-design-09,interior-design,seedream-5.0-pro,37.212181091308594,5.8083271980285645,,,,9.0,img/interior-design/interior-design-09/seedream-5.0-pro.webp
+interior-design-09,interior-design,flux-2-pro,42.39944076538086,6.609832763671875,,,,3.5,img/interior-design/interior-design-09/flux-2-pro.webp
+interior-design-09,interior-design,kling-3.0-image,36.26918029785156,6.090506553649902,,,,4.5,img/interior-design/interior-design-09/kling-3.0-image.webp
+interior-design-09,interior-design,gemini-2.5-flash-image,33.146751403808594,6.695655345916748,,,,4.0,img/interior-design/interior-design-09/gemini-2.5-flash-image.webp
+interior-design-10,interior-design,gpt-image-2,42.70383071899414,6.284994602203369,,,,6.0,img/interior-design/interior-design-10/gpt-image-2.webp
+interior-design-10,interior-design,gemini-3-pro-image,36.664154052734375,5.945315361022949,,,,7.5,img/interior-design/interior-design-10/gemini-3-pro-image.webp
+interior-design-10,interior-design,hunyuan-v3,37.467533111572266,6.120028972625732,,,,2.5,img/interior-design/interior-design-10/hunyuan-v3.webp
+interior-design-10,interior-design,ideogram-4-5,41.40460968017578,5.8535847663879395,,,,9.0,img/interior-design/interior-design-10/ideogram-4-5.webp
+interior-design-10,interior-design,gemini-3.1-flash-image,37.41616439819336,5.936957359313965,,,,1.5,img/interior-design/interior-design-10/gemini-3.1-flash-image.webp
+interior-design-10,interior-design,gpt-image-2.5-sunburst,39.74601745605469,6.201479434967041,,,,8.5,img/interior-design/interior-design-10/gpt-image-2.5-sunburst.webp
+interior-design-10,interior-design,luma-uni-1,43.948848724365234,5.782174587249756,,,,5.5,img/interior-design/interior-design-10/luma-uni-1.webp
+interior-design-10,interior-design,recraftv4_1,42.79476547241211,6.16300106048584,,,,11.5,img/interior-design/interior-design-10/recraftv4_1.webp
+interior-design-10,interior-design,seedream-5.0-pro,35.4876708984375,5.86350679397583,,,,2.0,img/interior-design/interior-design-10/seedream-5.0-pro.webp
+interior-design-10,interior-design,flux-2-pro,42.60065841674805,5.747854232788086,,,,7.5,img/interior-design/interior-design-10/flux-2-pro.webp
+interior-design-10,interior-design,kling-3.0-image,40.9390869140625,5.696972846984863,,,,11.5,img/interior-design/interior-design-10/kling-3.0-image.webp
+interior-design-10,interior-design,gemini-2.5-flash-image,41.778297424316406,6.167419910430908,,,,5.0,img/interior-design/interior-design-10/gemini-2.5-flash-image.webp
+fantasy-concept-art-01,fantasy-concept-art,gpt-image-2,40.96189880371094,6.736385345458984,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-01/gpt-image-2.webp
+fantasy-concept-art-01,fantasy-concept-art,gemini-3-pro-image,38.300750732421875,7.053915977478027,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-01/gemini-3-pro-image.webp
+fantasy-concept-art-01,fantasy-concept-art,hunyuan-v3,38.23457717895508,6.901617050170898,,,,4.5,img/fantasy-concept-art/fantasy-concept-art-01/hunyuan-v3.webp
+fantasy-concept-art-01,fantasy-concept-art,ideogram-4-5,41.16791915893555,6.763294696807861,,,,4.5,img/fantasy-concept-art/fantasy-concept-art-01/ideogram-4-5.webp
+fantasy-concept-art-01,fantasy-concept-art,gemini-3.1-flash-image,39.807979583740234,7.140344619750977,,,,4.0,img/fantasy-concept-art/fantasy-concept-art-01/gemini-3.1-flash-image.webp
+fantasy-concept-art-01,fantasy-concept-art,gpt-image-2.5-sunburst,32.89741134643555,6.716879844665527,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-01/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-01,fantasy-concept-art,luma-uni-1,39.57330322265625,6.775561809539795,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-01/luma-uni-1.webp
+fantasy-concept-art-01,fantasy-concept-art,recraftv4_1,38.77710723876953,7.03626012802124,,,,5.5,img/fantasy-concept-art/fantasy-concept-art-01/recraftv4_1.webp
+fantasy-concept-art-01,fantasy-concept-art,seedream-5.0-pro,34.763336181640625,7.209441184997559,,,,12.0,img/fantasy-concept-art/fantasy-concept-art-01/seedream-5.0-pro.webp
+fantasy-concept-art-01,fantasy-concept-art,flux-2-pro,41.72428894042969,7.160901069641113,,,,8.5,img/fantasy-concept-art/fantasy-concept-art-01/flux-2-pro.webp
+fantasy-concept-art-01,fantasy-concept-art,kling-3.0-image,41.52190399169922,6.659488677978516,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-01/kling-3.0-image.webp
+fantasy-concept-art-01,fantasy-concept-art,gemini-2.5-flash-image,37.735782623291016,7.021346092224121,,,,9.5,img/fantasy-concept-art/fantasy-concept-art-01/gemini-2.5-flash-image.webp
+fantasy-concept-art-02,fantasy-concept-art,gpt-image-2,42.85538101196289,6.719066619873047,,,,4.5,img/fantasy-concept-art/fantasy-concept-art-02/gpt-image-2.webp
+fantasy-concept-art-02,fantasy-concept-art,gemini-3-pro-image,43.627113342285156,6.645512580871582,,,,10.5,img/fantasy-concept-art/fantasy-concept-art-02/gemini-3-pro-image.webp
+fantasy-concept-art-02,fantasy-concept-art,hunyuan-v3,42.20425796508789,6.690135955810547,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-02/hunyuan-v3.webp
+fantasy-concept-art-02,fantasy-concept-art,ideogram-4-5,42.03717803955078,6.851553916931152,,,,9.0,img/fantasy-concept-art/fantasy-concept-art-02/ideogram-4-5.webp
+fantasy-concept-art-02,fantasy-concept-art,gemini-3.1-flash-image,43.996368408203125,7.266853332519531,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-02/gemini-3.1-flash-image.webp
+fantasy-concept-art-02,fantasy-concept-art,gpt-image-2.5-sunburst,43.667938232421875,6.758988857269287,,,,5.5,img/fantasy-concept-art/fantasy-concept-art-02/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-02,fantasy-concept-art,luma-uni-1,46.17658996582031,6.522177696228027,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-02/luma-uni-1.webp
+fantasy-concept-art-02,fantasy-concept-art,recraftv4_1,39.001991271972656,6.968771934509277,,,,11.5,img/fantasy-concept-art/fantasy-concept-art-02/recraftv4_1.webp
+fantasy-concept-art-02,fantasy-concept-art,seedream-5.0-pro,41.723663330078125,6.694999694824219,,,,7.5,img/fantasy-concept-art/fantasy-concept-art-02/seedream-5.0-pro.webp
+fantasy-concept-art-02,fantasy-concept-art,flux-2-pro,45.17489242553711,7.02596378326416,,,,7.5,img/fantasy-concept-art/fantasy-concept-art-02/flux-2-pro.webp
+fantasy-concept-art-02,fantasy-concept-art,kling-3.0-image,44.433284759521484,6.584665298461914,,,,9.5,img/fantasy-concept-art/fantasy-concept-art-02/kling-3.0-image.webp
+fantasy-concept-art-02,fantasy-concept-art,gemini-2.5-flash-image,44.93587112426758,7.076994895935059,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-02/gemini-2.5-flash-image.webp
+fantasy-concept-art-03,fantasy-concept-art,gpt-image-2,36.25567626953125,7.152096748352051,,,,9.5,img/fantasy-concept-art/fantasy-concept-art-03/gpt-image-2.webp
+fantasy-concept-art-03,fantasy-concept-art,gemini-3-pro-image,35.607452392578125,7.059933662414551,,,,3.0,img/fantasy-concept-art/fantasy-concept-art-03/gemini-3-pro-image.webp
+fantasy-concept-art-03,fantasy-concept-art,hunyuan-v3,35.41288375854492,7.190087795257568,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-03/hunyuan-v3.webp
+fantasy-concept-art-03,fantasy-concept-art,ideogram-4-5,37.09089279174805,6.8486738204956055,,,,9.0,img/fantasy-concept-art/fantasy-concept-art-03/ideogram-4-5.webp
+fantasy-concept-art-03,fantasy-concept-art,gemini-3.1-flash-image,36.223758697509766,7.027700424194336,,,,1.0,img/fantasy-concept-art/fantasy-concept-art-03/gemini-3.1-flash-image.webp
+fantasy-concept-art-03,fantasy-concept-art,gpt-image-2.5-sunburst,38.6437873840332,7.004566192626953,,,,5.0,img/fantasy-concept-art/fantasy-concept-art-03/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-03,fantasy-concept-art,luma-uni-1,41.60103225708008,6.600553035736084,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-03/luma-uni-1.webp
+fantasy-concept-art-03,fantasy-concept-art,recraftv4_1,39.19749450683594,6.845300674438477,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-03/recraftv4_1.webp
+fantasy-concept-art-03,fantasy-concept-art,seedream-5.0-pro,36.889495849609375,7.135307312011719,,,,5.0,img/fantasy-concept-art/fantasy-concept-art-03/seedream-5.0-pro.webp
+fantasy-concept-art-03,fantasy-concept-art,flux-2-pro,37.741939544677734,7.170509338378906,,,,3.5,img/fantasy-concept-art/fantasy-concept-art-03/flux-2-pro.webp
+fantasy-concept-art-03,fantasy-concept-art,kling-3.0-image,42.57390594482422,7.133923530578613,,,,3.5,img/fantasy-concept-art/fantasy-concept-art-03/kling-3.0-image.webp
+fantasy-concept-art-03,fantasy-concept-art,gemini-2.5-flash-image,34.32004928588867,6.957871437072754,,,,11.5,img/fantasy-concept-art/fantasy-concept-art-03/gemini-2.5-flash-image.webp
+fantasy-concept-art-04,fantasy-concept-art,gpt-image-2,42.46670150756836,6.5449419021606445,,,,2.5,img/fantasy-concept-art/fantasy-concept-art-04/gpt-image-2.webp
+fantasy-concept-art-04,fantasy-concept-art,gemini-3-pro-image,46.24268341064453,6.547904968261719,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-04/gemini-3-pro-image.webp
+fantasy-concept-art-04,fantasy-concept-art,hunyuan-v3,43.33357238769531,6.791847229003906,,,,12.0,img/fantasy-concept-art/fantasy-concept-art-04/hunyuan-v3.webp
+fantasy-concept-art-04,fantasy-concept-art,ideogram-4-5,37.27281951904297,6.444831848144531,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-04/ideogram-4-5.webp
+fantasy-concept-art-04,fantasy-concept-art,gemini-3.1-flash-image,46.84131622314453,6.724789142608643,,,,1.5,img/fantasy-concept-art/fantasy-concept-art-04/gemini-3.1-flash-image.webp
+fantasy-concept-art-04,fantasy-concept-art,gpt-image-2.5-sunburst,43.067081451416016,6.395563125610352,,,,4.0,img/fantasy-concept-art/fantasy-concept-art-04/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-04,fantasy-concept-art,luma-uni-1,44.000240325927734,6.633829593658447,,,,6.0,img/fantasy-concept-art/fantasy-concept-art-04/luma-uni-1.webp
+fantasy-concept-art-04,fantasy-concept-art,recraftv4_1,46.71879959106445,5.708782196044922,,,,9.0,img/fantasy-concept-art/fantasy-concept-art-04/recraftv4_1.webp
+fantasy-concept-art-04,fantasy-concept-art,seedream-5.0-pro,39.40789794921875,6.372493743896484,,,,2.5,img/fantasy-concept-art/fantasy-concept-art-04/seedream-5.0-pro.webp
+fantasy-concept-art-04,fantasy-concept-art,flux-2-pro,38.02302932739258,6.606330871582031,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-04/flux-2-pro.webp
+fantasy-concept-art-04,fantasy-concept-art,kling-3.0-image,38.83510971069336,6.940024375915527,,,,11.0,img/fantasy-concept-art/fantasy-concept-art-04/kling-3.0-image.webp
+fantasy-concept-art-04,fantasy-concept-art,gemini-2.5-flash-image,40.60993957519531,6.609439373016357,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-04/gemini-2.5-flash-image.webp
+fantasy-concept-art-05,fantasy-concept-art,gpt-image-2,41.68997573852539,6.969992637634277,,,,6.0,img/fantasy-concept-art/fantasy-concept-art-05/gpt-image-2.webp
+fantasy-concept-art-05,fantasy-concept-art,gemini-3-pro-image,36.9373893737793,7.061137676239014,,,,3.5,img/fantasy-concept-art/fantasy-concept-art-05/gemini-3-pro-image.webp
+fantasy-concept-art-05,fantasy-concept-art,hunyuan-v3,43.94651412963867,6.85390567779541,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-05/hunyuan-v3.webp
+fantasy-concept-art-05,fantasy-concept-art,ideogram-4-5,36.84310531616211,6.311365604400635,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-05/ideogram-4-5.webp
+fantasy-concept-art-05,fantasy-concept-art,gemini-3.1-flash-image,37.14356231689453,7.120168685913086,,,,1.0,img/fantasy-concept-art/fantasy-concept-art-05/gemini-3.1-flash-image.webp
+fantasy-concept-art-05,fantasy-concept-art,gpt-image-2.5-sunburst,38.37269592285156,6.807580947875977,,,,3.5,img/fantasy-concept-art/fantasy-concept-art-05/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-05,fantasy-concept-art,luma-uni-1,42.39445877075195,7.056761264801025,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-05/luma-uni-1.webp
+fantasy-concept-art-05,fantasy-concept-art,recraftv4_1,37.75856018066406,7.123025894165039,,,,10.5,img/fantasy-concept-art/fantasy-concept-art-05/recraftv4_1.webp
+fantasy-concept-art-05,fantasy-concept-art,seedream-5.0-pro,37.82778549194336,6.913665771484375,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-05/seedream-5.0-pro.webp
+fantasy-concept-art-05,fantasy-concept-art,flux-2-pro,38.923309326171875,6.761203765869141,,,,8.0,img/fantasy-concept-art/fantasy-concept-art-05/flux-2-pro.webp
+fantasy-concept-art-05,fantasy-concept-art,kling-3.0-image,38.4223518371582,6.950283527374268,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-05/kling-3.0-image.webp
+fantasy-concept-art-05,fantasy-concept-art,gemini-2.5-flash-image,37.10562515258789,7.042008876800537,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-05/gemini-2.5-flash-image.webp
+fantasy-concept-art-06,fantasy-concept-art,gpt-image-2,44.620479583740234,6.8178887367248535,,,,9.5,img/fantasy-concept-art/fantasy-concept-art-06/gpt-image-2.webp
+fantasy-concept-art-06,fantasy-concept-art,gemini-3-pro-image,44.018863677978516,6.852072715759277,,,,4.5,img/fantasy-concept-art/fantasy-concept-art-06/gemini-3-pro-image.webp
+fantasy-concept-art-06,fantasy-concept-art,hunyuan-v3,46.834632873535156,6.609057426452637,,,,4.0,img/fantasy-concept-art/fantasy-concept-art-06/hunyuan-v3.webp
+fantasy-concept-art-06,fantasy-concept-art,ideogram-4-5,43.37998962402344,6.365755081176758,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-06/ideogram-4-5.webp
+fantasy-concept-art-06,fantasy-concept-art,gemini-3.1-flash-image,45.65937042236328,6.674151420593262,,,,5.0,img/fantasy-concept-art/fantasy-concept-art-06/gemini-3.1-flash-image.webp
+fantasy-concept-art-06,fantasy-concept-art,gpt-image-2.5-sunburst,46.153743743896484,6.185184001922607,,,,3.5,img/fantasy-concept-art/fantasy-concept-art-06/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-06,fantasy-concept-art,luma-uni-1,45.20795440673828,6.672095775604248,,,,1.0,img/fantasy-concept-art/fantasy-concept-art-06/luma-uni-1.webp
+fantasy-concept-art-06,fantasy-concept-art,recraftv4_1,43.76927185058594,6.370450496673584,,,,11.0,img/fantasy-concept-art/fantasy-concept-art-06/recraftv4_1.webp
+fantasy-concept-art-06,fantasy-concept-art,seedream-5.0-pro,43.389549255371094,6.306382656097412,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-06/seedream-5.0-pro.webp
+fantasy-concept-art-06,fantasy-concept-art,flux-2-pro,45.62678909301758,6.605669021606445,,,,5.0,img/fantasy-concept-art/fantasy-concept-art-06/flux-2-pro.webp
+fantasy-concept-art-06,fantasy-concept-art,kling-3.0-image,40.423316955566406,6.004064083099365,,,,11.0,img/fantasy-concept-art/fantasy-concept-art-06/kling-3.0-image.webp
+fantasy-concept-art-06,fantasy-concept-art,gemini-2.5-flash-image,46.206443786621094,6.641756057739258,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-06/gemini-2.5-flash-image.webp
+fantasy-concept-art-07,fantasy-concept-art,gpt-image-2,41.48552322387695,6.3639678955078125,,,,9.5,img/fantasy-concept-art/fantasy-concept-art-07/gpt-image-2.webp
+fantasy-concept-art-07,fantasy-concept-art,gemini-3-pro-image,35.78434753417969,6.571261882781982,,,,5.5,img/fantasy-concept-art/fantasy-concept-art-07/gemini-3-pro-image.webp
+fantasy-concept-art-07,fantasy-concept-art,hunyuan-v3,41.51225280761719,6.523611068725586,,,,11.5,img/fantasy-concept-art/fantasy-concept-art-07/hunyuan-v3.webp
+fantasy-concept-art-07,fantasy-concept-art,ideogram-4-5,37.932647705078125,6.532190799713135,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-07/ideogram-4-5.webp
+fantasy-concept-art-07,fantasy-concept-art,gemini-3.1-flash-image,39.71332931518555,6.859260559082031,,,,1.5,img/fantasy-concept-art/fantasy-concept-art-07/gemini-3.1-flash-image.webp
+fantasy-concept-art-07,fantasy-concept-art,gpt-image-2.5-sunburst,39.736568450927734,6.728759288787842,,,,6.0,img/fantasy-concept-art/fantasy-concept-art-07/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-07,fantasy-concept-art,luma-uni-1,36.284423828125,6.153776168823242,,,,8.5,img/fantasy-concept-art/fantasy-concept-art-07/luma-uni-1.webp
+fantasy-concept-art-07,fantasy-concept-art,recraftv4_1,37.84309005737305,5.971758842468262,,,,6.0,img/fantasy-concept-art/fantasy-concept-art-07/recraftv4_1.webp
+fantasy-concept-art-07,fantasy-concept-art,seedream-5.0-pro,36.31149673461914,6.250472068786621,,,,1.5,img/fantasy-concept-art/fantasy-concept-art-07/seedream-5.0-pro.webp
+fantasy-concept-art-07,fantasy-concept-art,flux-2-pro,38.14086151123047,6.918561935424805,,,,4.5,img/fantasy-concept-art/fantasy-concept-art-07/flux-2-pro.webp
+fantasy-concept-art-07,fantasy-concept-art,kling-3.0-image,37.65553665161133,6.286479473114014,,,,11.5,img/fantasy-concept-art/fantasy-concept-art-07/kling-3.0-image.webp
+fantasy-concept-art-07,fantasy-concept-art,gemini-2.5-flash-image,38.83656311035156,6.817434787750244,,,,5.5,img/fantasy-concept-art/fantasy-concept-art-07/gemini-2.5-flash-image.webp
+fantasy-concept-art-08,fantasy-concept-art,gpt-image-2,40.54357147216797,6.861551284790039,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-08/gpt-image-2.webp
+fantasy-concept-art-08,fantasy-concept-art,gemini-3-pro-image,44.46656799316406,6.6085357666015625,,,,9.5,img/fantasy-concept-art/fantasy-concept-art-08/gemini-3-pro-image.webp
+fantasy-concept-art-08,fantasy-concept-art,hunyuan-v3,42.97174072265625,6.422384262084961,,,,1.0,img/fantasy-concept-art/fantasy-concept-art-08/hunyuan-v3.webp
+fantasy-concept-art-08,fantasy-concept-art,ideogram-4-5,40.7861442565918,6.783105850219727,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-08/ideogram-4-5.webp
+fantasy-concept-art-08,fantasy-concept-art,gemini-3.1-flash-image,39.26504135131836,6.7346649169921875,,,,4.0,img/fantasy-concept-art/fantasy-concept-art-08/gemini-3.1-flash-image.webp
+fantasy-concept-art-08,fantasy-concept-art,gpt-image-2.5-sunburst,41.6949348449707,6.845464706420898,,,,3.0,img/fantasy-concept-art/fantasy-concept-art-08/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-08,fantasy-concept-art,luma-uni-1,40.2387809753418,6.629352569580078,,,,5.5,img/fantasy-concept-art/fantasy-concept-art-08/luma-uni-1.webp
+fantasy-concept-art-08,fantasy-concept-art,recraftv4_1,38.16300964355469,7.023104667663574,,,,7.5,img/fantasy-concept-art/fantasy-concept-art-08/recraftv4_1.webp
+fantasy-concept-art-08,fantasy-concept-art,seedream-5.0-pro,40.28750228881836,7.09890079498291,,,,4.0,img/fantasy-concept-art/fantasy-concept-art-08/seedream-5.0-pro.webp
+fantasy-concept-art-08,fantasy-concept-art,flux-2-pro,41.7480583190918,6.788402557373047,,,,7.5,img/fantasy-concept-art/fantasy-concept-art-08/flux-2-pro.webp
+fantasy-concept-art-08,fantasy-concept-art,kling-3.0-image,43.739044189453125,6.104282855987549,,,,12.0,img/fantasy-concept-art/fantasy-concept-art-08/kling-3.0-image.webp
+fantasy-concept-art-08,fantasy-concept-art,gemini-2.5-flash-image,42.362571716308594,7.1934356689453125,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-08/gemini-2.5-flash-image.webp
+fantasy-concept-art-09,fantasy-concept-art,gpt-image-2,42.869422912597656,6.931510925292969,,,,10.0,img/fantasy-concept-art/fantasy-concept-art-09/gpt-image-2.webp
+fantasy-concept-art-09,fantasy-concept-art,gemini-3-pro-image,43.336666107177734,6.983363628387451,,,,3.0,img/fantasy-concept-art/fantasy-concept-art-09/gemini-3-pro-image.webp
+fantasy-concept-art-09,fantasy-concept-art,hunyuan-v3,44.637550354003906,6.70223331451416,,,,11.0,img/fantasy-concept-art/fantasy-concept-art-09/hunyuan-v3.webp
+fantasy-concept-art-09,fantasy-concept-art,ideogram-4-5,42.50736999511719,7.058051109313965,,,,9.0,img/fantasy-concept-art/fantasy-concept-art-09/ideogram-4-5.webp
+fantasy-concept-art-09,fantasy-concept-art,gemini-3.1-flash-image,44.25022506713867,6.76536226272583,,,,3.5,img/fantasy-concept-art/fantasy-concept-art-09/gemini-3.1-flash-image.webp
+fantasy-concept-art-09,fantasy-concept-art,gpt-image-2.5-sunburst,44.067222595214844,6.6640472412109375,,,,7.5,img/fantasy-concept-art/fantasy-concept-art-09/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-09,fantasy-concept-art,luma-uni-1,43.55324935913086,6.642205238342285,,,,3.0,img/fantasy-concept-art/fantasy-concept-art-09/luma-uni-1.webp
+fantasy-concept-art-09,fantasy-concept-art,recraftv4_1,40.79670715332031,6.691458225250244,,,,2.5,img/fantasy-concept-art/fantasy-concept-art-09/recraftv4_1.webp
+fantasy-concept-art-09,fantasy-concept-art,seedream-5.0-pro,41.59027862548828,6.496018409729004,,,,6.0,img/fantasy-concept-art/fantasy-concept-art-09/seedream-5.0-pro.webp
+fantasy-concept-art-09,fantasy-concept-art,flux-2-pro,43.94614791870117,7.1231913566589355,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-09/flux-2-pro.webp
+fantasy-concept-art-09,fantasy-concept-art,kling-3.0-image,40.80390930175781,6.520452976226807,,,,12.0,img/fantasy-concept-art/fantasy-concept-art-09/kling-3.0-image.webp
+fantasy-concept-art-09,fantasy-concept-art,gemini-2.5-flash-image,42.553836822509766,6.919996738433838,,,,4.0,img/fantasy-concept-art/fantasy-concept-art-09/gemini-2.5-flash-image.webp
+fantasy-concept-art-10,fantasy-concept-art,gpt-image-2,48.139129638671875,6.4727253913879395,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-10/gpt-image-2.webp
+fantasy-concept-art-10,fantasy-concept-art,gemini-3-pro-image,46.115379333496094,6.4972076416015625,,,,6.5,img/fantasy-concept-art/fantasy-concept-art-10/gemini-3-pro-image.webp
+fantasy-concept-art-10,fantasy-concept-art,hunyuan-v3,45.83344268798828,6.312154293060303,,,,10.5,img/fantasy-concept-art/fantasy-concept-art-10/hunyuan-v3.webp
+fantasy-concept-art-10,fantasy-concept-art,ideogram-4-5,42.720062255859375,6.059879302978516,,,,7.0,img/fantasy-concept-art/fantasy-concept-art-10/ideogram-4-5.webp
+fantasy-concept-art-10,fantasy-concept-art,gemini-3.1-flash-image,45.09477233886719,6.665371894836426,,,,5.0,img/fantasy-concept-art/fantasy-concept-art-10/gemini-3.1-flash-image.webp
+fantasy-concept-art-10,fantasy-concept-art,gpt-image-2.5-sunburst,48.59208297729492,6.527806758880615,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-10/gpt-image-2.5-sunburst.webp
+fantasy-concept-art-10,fantasy-concept-art,luma-uni-1,45.94004821777344,6.074124336242676,,,,5.5,img/fantasy-concept-art/fantasy-concept-art-10/luma-uni-1.webp
+fantasy-concept-art-10,fantasy-concept-art,recraftv4_1,41.75072479248047,5.740332126617432,,,,12.0,img/fantasy-concept-art/fantasy-concept-art-10/recraftv4_1.webp
+fantasy-concept-art-10,fantasy-concept-art,seedream-5.0-pro,41.45382308959961,5.8728485107421875,,,,2.0,img/fantasy-concept-art/fantasy-concept-art-10/seedream-5.0-pro.webp
+fantasy-concept-art-10,fantasy-concept-art,flux-2-pro,43.41838455200195,6.101049423217773,,,,10.5,img/fantasy-concept-art/fantasy-concept-art-10/flux-2-pro.webp
+fantasy-concept-art-10,fantasy-concept-art,kling-3.0-image,44.678218841552734,6.478786945343018,,,,6.0,img/fantasy-concept-art/fantasy-concept-art-10/kling-3.0-image.webp
+fantasy-concept-art-10,fantasy-concept-art,gemini-2.5-flash-image,43.414268493652344,5.972085952758789,,,,9.0,img/fantasy-concept-art/fantasy-concept-art-10/gemini-2.5-flash-image.webp
+sticker-icon-01,sticker-icon,gpt-image-2,43.2258415222168,5.005730628967285,,,,2.5,img/sticker-icon/sticker-icon-01/gpt-image-2.webp
+sticker-icon-01,sticker-icon,gemini-3-pro-image,43.15760803222656,4.969074726104736,,,,6.5,img/sticker-icon/sticker-icon-01/gemini-3-pro-image.webp
+sticker-icon-01,sticker-icon,hunyuan-v3,44.06239700317383,5.137282371520996,,,,11.0,img/sticker-icon/sticker-icon-01/hunyuan-v3.webp
+sticker-icon-01,sticker-icon,ideogram-4-5,43.490516662597656,4.890222549438477,,,,10.0,img/sticker-icon/sticker-icon-01/ideogram-4-5.webp
+sticker-icon-01,sticker-icon,gemini-3.1-flash-image,43.72642135620117,5.357669830322266,,,,9.5,img/sticker-icon/sticker-icon-01/gemini-3.1-flash-image.webp
+sticker-icon-01,sticker-icon,gpt-image-2.5-sunburst,43.590641021728516,5.220673084259033,,,,3.5,img/sticker-icon/sticker-icon-01/gpt-image-2.5-sunburst.webp
+sticker-icon-01,sticker-icon,luma-uni-1,45.84413146972656,5.1024556159973145,,,,3.0,img/sticker-icon/sticker-icon-01/luma-uni-1.webp
+sticker-icon-01,sticker-icon,recraftv4_1,42.7971076965332,4.921742916107178,,,,11.0,img/sticker-icon/sticker-icon-01/recraftv4_1.webp
+sticker-icon-01,sticker-icon,seedream-5.0-pro,42.43254852294922,5.1514763832092285,,,,7.5,img/sticker-icon/sticker-icon-01/seedream-5.0-pro.webp
+sticker-icon-01,sticker-icon,flux-2-pro,44.96354675292969,4.9990434646606445,,,,1.0,img/sticker-icon/sticker-icon-01/flux-2-pro.webp
+sticker-icon-01,sticker-icon,kling-3.0-image,44.94905471801758,5.26317024230957,,,,5.5,img/sticker-icon/sticker-icon-01/kling-3.0-image.webp
+sticker-icon-01,sticker-icon,gemini-2.5-flash-image,44.219390869140625,5.124213218688965,,,,7.0,img/sticker-icon/sticker-icon-01/gemini-2.5-flash-image.webp
+sticker-icon-02,sticker-icon,gpt-image-2,46.006446838378906,5.652894496917725,,,,2.0,img/sticker-icon/sticker-icon-02/gpt-image-2.webp
+sticker-icon-02,sticker-icon,gemini-3-pro-image,44.231689453125,5.223182678222656,,,,3.5,img/sticker-icon/sticker-icon-02/gemini-3-pro-image.webp
+sticker-icon-02,sticker-icon,hunyuan-v3,42.61249542236328,5.122037887573242,,,,9.5,img/sticker-icon/sticker-icon-02/hunyuan-v3.webp
+sticker-icon-02,sticker-icon,ideogram-4-5,34.11195373535156,4.734753608703613,,,,12.0,img/sticker-icon/sticker-icon-02/ideogram-4-5.webp
+sticker-icon-02,sticker-icon,gemini-3.1-flash-image,44.2144889831543,5.427101135253906,,,,7.5,img/sticker-icon/sticker-icon-02/gemini-3.1-flash-image.webp
+sticker-icon-02,sticker-icon,gpt-image-2.5-sunburst,45.6878662109375,5.678712844848633,,,,3.5,img/sticker-icon/sticker-icon-02/gpt-image-2.5-sunburst.webp
+sticker-icon-02,sticker-icon,luma-uni-1,40.040367126464844,5.191885471343994,,,,7.5,img/sticker-icon/sticker-icon-02/luma-uni-1.webp
+sticker-icon-02,sticker-icon,recraftv4_1,42.31138229370117,5.025384426116943,,,,11.0,img/sticker-icon/sticker-icon-02/recraftv4_1.webp
+sticker-icon-02,sticker-icon,seedream-5.0-pro,41.32887268066406,5.38093376159668,,,,7.5,img/sticker-icon/sticker-icon-02/seedream-5.0-pro.webp
+sticker-icon-02,sticker-icon,flux-2-pro,44.821815490722656,5.044951438903809,,,,7.5,img/sticker-icon/sticker-icon-02/flux-2-pro.webp
+sticker-icon-02,sticker-icon,kling-3.0-image,45.58036804199219,5.387409210205078,,,,1.0,img/sticker-icon/sticker-icon-02/kling-3.0-image.webp
+sticker-icon-02,sticker-icon,gemini-2.5-flash-image,44.81737518310547,5.274877071380615,,,,5.5,img/sticker-icon/sticker-icon-02/gemini-2.5-flash-image.webp
+sticker-icon-03,sticker-icon,gpt-image-2,39.47445297241211,5.098998069763184,,,,3.0,img/sticker-icon/sticker-icon-03/gpt-image-2.webp
+sticker-icon-03,sticker-icon,gemini-3-pro-image,40.36600112915039,4.581028938293457,,,,3.0,img/sticker-icon/sticker-icon-03/gemini-3-pro-image.webp
+sticker-icon-03,sticker-icon,hunyuan-v3,39.92897415161133,4.496070861816406,,,,12.0,img/sticker-icon/sticker-icon-03/hunyuan-v3.webp
+sticker-icon-03,sticker-icon,ideogram-4-5,41.09250259399414,4.540558338165283,,,,5.0,img/sticker-icon/sticker-icon-03/ideogram-4-5.webp
+sticker-icon-03,sticker-icon,gemini-3.1-flash-image,39.713584899902344,5.037772178649902,,,,11.0,img/sticker-icon/sticker-icon-03/gemini-3.1-flash-image.webp
+sticker-icon-03,sticker-icon,gpt-image-2.5-sunburst,39.34276580810547,4.950949192047119,,,,1.0,img/sticker-icon/sticker-icon-03/gpt-image-2.5-sunburst.webp
+sticker-icon-03,sticker-icon,luma-uni-1,39.99654006958008,4.739629745483398,,,,7.5,img/sticker-icon/sticker-icon-03/luma-uni-1.webp
+sticker-icon-03,sticker-icon,recraftv4_1,39.75286865234375,4.586267471313477,,,,8.0,img/sticker-icon/sticker-icon-03/recraftv4_1.webp
+sticker-icon-03,sticker-icon,seedream-5.0-pro,39.6430549621582,4.671541213989258,,,,10.0,img/sticker-icon/sticker-icon-03/seedream-5.0-pro.webp
+sticker-icon-03,sticker-icon,flux-2-pro,41.3619499206543,4.959644317626953,,,,7.0,img/sticker-icon/sticker-icon-03/flux-2-pro.webp
+sticker-icon-03,sticker-icon,kling-3.0-image,41.4499626159668,4.645365238189697,,,,7.5,img/sticker-icon/sticker-icon-03/kling-3.0-image.webp
+sticker-icon-03,sticker-icon,gemini-2.5-flash-image,40.256710052490234,4.847314357757568,,,,3.0,img/sticker-icon/sticker-icon-03/gemini-2.5-flash-image.webp
+sticker-icon-04,sticker-icon,gpt-image-2,36.55146026611328,5.292245864868164,,,,3.0,img/sticker-icon/sticker-icon-04/gpt-image-2.webp
+sticker-icon-04,sticker-icon,gemini-3-pro-image,37.266910552978516,4.848283767700195,,,,5.5,img/sticker-icon/sticker-icon-04/gemini-3-pro-image.webp
+sticker-icon-04,sticker-icon,hunyuan-v3,33.25294876098633,5.2102155685424805,,,,10.0,img/sticker-icon/sticker-icon-04/hunyuan-v3.webp
+sticker-icon-04,sticker-icon,ideogram-4-5,35.38907241821289,4.982934474945068,,,,8.0,img/sticker-icon/sticker-icon-04/ideogram-4-5.webp
+sticker-icon-04,sticker-icon,gemini-3.1-flash-image,37.8851318359375,4.875372409820557,,,,1.5,img/sticker-icon/sticker-icon-04/gemini-3.1-flash-image.webp
+sticker-icon-04,sticker-icon,gpt-image-2.5-sunburst,36.29982376098633,5.564181804656982,,,,3.0,img/sticker-icon/sticker-icon-04/gpt-image-2.5-sunburst.webp
+sticker-icon-04,sticker-icon,luma-uni-1,34.8204231262207,5.137021541595459,,,,3.0,img/sticker-icon/sticker-icon-04/luma-uni-1.webp
+sticker-icon-04,sticker-icon,recraftv4_1,37.75052261352539,4.765479564666748,,,,11.5,img/sticker-icon/sticker-icon-04/recraftv4_1.webp
+sticker-icon-04,sticker-icon,seedream-5.0-pro,35.004703521728516,4.7249836921691895,,,,5.5,img/sticker-icon/sticker-icon-04/seedream-5.0-pro.webp
+sticker-icon-04,sticker-icon,flux-2-pro,38.88446807861328,4.843751907348633,,,,6.5,img/sticker-icon/sticker-icon-04/flux-2-pro.webp
+sticker-icon-04,sticker-icon,kling-3.0-image,34.242576599121094,5.386013031005859,,,,10.0,img/sticker-icon/sticker-icon-04/kling-3.0-image.webp
+sticker-icon-04,sticker-icon,gemini-2.5-flash-image,37.04086685180664,5.2395477294921875,,,,10.5,img/sticker-icon/sticker-icon-04/gemini-2.5-flash-image.webp
+sticker-icon-05,sticker-icon,gpt-image-2,44.55940246582031,6.318902969360352,,,,2.0,img/sticker-icon/sticker-icon-05/gpt-image-2.webp
+sticker-icon-05,sticker-icon,gemini-3-pro-image,39.381622314453125,5.59943962097168,,,,9.5,img/sticker-icon/sticker-icon-05/gemini-3-pro-image.webp
+sticker-icon-05,sticker-icon,hunyuan-v3,41.374046325683594,4.938896179199219,,,,12.0,img/sticker-icon/sticker-icon-05/hunyuan-v3.webp
+sticker-icon-05,sticker-icon,ideogram-4-5,44.74769973754883,6.352280616760254,,,,5.0,img/sticker-icon/sticker-icon-05/ideogram-4-5.webp
+sticker-icon-05,sticker-icon,gemini-3.1-flash-image,41.460445404052734,6.342446327209473,,,,4.5,img/sticker-icon/sticker-icon-05/gemini-3.1-flash-image.webp
+sticker-icon-05,sticker-icon,gpt-image-2.5-sunburst,44.721107482910156,6.170000076293945,,,,1.5,img/sticker-icon/sticker-icon-05/gpt-image-2.5-sunburst.webp
+sticker-icon-05,sticker-icon,luma-uni-1,41.20615005493164,5.808348655700684,,,,5.0,img/sticker-icon/sticker-icon-05/luma-uni-1.webp
+sticker-icon-05,sticker-icon,recraftv4_1,38.00616455078125,6.257747650146484,,,,9.0,img/sticker-icon/sticker-icon-05/recraftv4_1.webp
+sticker-icon-05,sticker-icon,seedream-5.0-pro,41.82129669189453,6.193089485168457,,,,8.5,img/sticker-icon/sticker-icon-05/seedream-5.0-pro.webp
+sticker-icon-05,sticker-icon,flux-2-pro,41.5461311340332,6.073680877685547,,,,7.0,img/sticker-icon/sticker-icon-05/flux-2-pro.webp
+sticker-icon-05,sticker-icon,kling-3.0-image,36.9447021484375,6.270867347717285,,,,11.0,img/sticker-icon/sticker-icon-05/kling-3.0-image.webp
+sticker-icon-05,sticker-icon,gemini-2.5-flash-image,43.68498229980469,6.033105850219727,,,,3.0,img/sticker-icon/sticker-icon-05/gemini-2.5-flash-image.webp
+sticker-icon-06,sticker-icon,gpt-image-2,41.308589935302734,5.281712532043457,,,,5.0,img/sticker-icon/sticker-icon-06/gpt-image-2.webp
+sticker-icon-06,sticker-icon,gemini-3-pro-image,43.46090316772461,5.273035526275635,,,,4.0,img/sticker-icon/sticker-icon-06/gemini-3-pro-image.webp
+sticker-icon-06,sticker-icon,hunyuan-v3,41.16497802734375,5.430912971496582,,,,10.5,img/sticker-icon/sticker-icon-06/hunyuan-v3.webp
+sticker-icon-06,sticker-icon,ideogram-4-5,42.61638641357422,5.501564025878906,,,,7.5,img/sticker-icon/sticker-icon-06/ideogram-4-5.webp
+sticker-icon-06,sticker-icon,gemini-3.1-flash-image,43.728878021240234,5.271568775177002,,,,7.0,img/sticker-icon/sticker-icon-06/gemini-3.1-flash-image.webp
+sticker-icon-06,sticker-icon,gpt-image-2.5-sunburst,39.1274299621582,4.735030651092529,,,,7.0,img/sticker-icon/sticker-icon-06/gpt-image-2.5-sunburst.webp
+sticker-icon-06,sticker-icon,luma-uni-1,38.3161735534668,5.328403472900391,,,,6.0,img/sticker-icon/sticker-icon-06/luma-uni-1.webp
+sticker-icon-06,sticker-icon,recraftv4_1,41.75365447998047,4.774595737457275,,,,12.0,img/sticker-icon/sticker-icon-06/recraftv4_1.webp
+sticker-icon-06,sticker-icon,seedream-5.0-pro,34.03630828857422,6.145111083984375,,,,8.5,img/sticker-icon/sticker-icon-06/seedream-5.0-pro.webp
+sticker-icon-06,sticker-icon,flux-2-pro,41.11720275878906,5.281329154968262,,,,2.0,img/sticker-icon/sticker-icon-06/flux-2-pro.webp
+sticker-icon-06,sticker-icon,kling-3.0-image,39.03864669799805,5.80542516708374,,,,1.5,img/sticker-icon/sticker-icon-06/kling-3.0-image.webp
+sticker-icon-06,sticker-icon,gemini-2.5-flash-image,42.06234359741211,5.263704299926758,,,,7.0,img/sticker-icon/sticker-icon-06/gemini-2.5-flash-image.webp
+sticker-icon-07,sticker-icon,gpt-image-2,40.75494384765625,5.071308135986328,,,,5.5,img/sticker-icon/sticker-icon-07/gpt-image-2.webp
+sticker-icon-07,sticker-icon,gemini-3-pro-image,41.79933547973633,4.485741138458252,,,,3.0,img/sticker-icon/sticker-icon-07/gemini-3-pro-image.webp
+sticker-icon-07,sticker-icon,hunyuan-v3,43.03810119628906,5.469952583312988,,,,11.5,img/sticker-icon/sticker-icon-07/hunyuan-v3.webp
+sticker-icon-07,sticker-icon,ideogram-4-5,40.58512878417969,4.937149524688721,,,,3.0,img/sticker-icon/sticker-icon-07/ideogram-4-5.webp
+sticker-icon-07,sticker-icon,gemini-3.1-flash-image,41.886199951171875,5.194174766540527,,,,7.5,img/sticker-icon/sticker-icon-07/gemini-3.1-flash-image.webp
+sticker-icon-07,sticker-icon,gpt-image-2.5-sunburst,41.38035202026367,4.636925220489502,,,,5.0,img/sticker-icon/sticker-icon-07/gpt-image-2.5-sunburst.webp
+sticker-icon-07,sticker-icon,luma-uni-1,41.42936706542969,4.909762859344482,,,,9.0,img/sticker-icon/sticker-icon-07/luma-uni-1.webp
+sticker-icon-07,sticker-icon,recraftv4_1,41.68706130981445,4.5190558433532715,,,,9.5,img/sticker-icon/sticker-icon-07/recraftv4_1.webp
+sticker-icon-07,sticker-icon,seedream-5.0-pro,44.70488357543945,4.747005462646484,,,,1.0,img/sticker-icon/sticker-icon-07/seedream-5.0-pro.webp
+sticker-icon-07,sticker-icon,flux-2-pro,41.84334182739258,4.755305290222168,,,,6.0,img/sticker-icon/sticker-icon-07/flux-2-pro.webp
+sticker-icon-07,sticker-icon,kling-3.0-image,39.025672912597656,5.156192779541016,,,,11.5,img/sticker-icon/sticker-icon-07/kling-3.0-image.webp
+sticker-icon-07,sticker-icon,gemini-2.5-flash-image,42.173866271972656,4.792695045471191,,,,5.5,img/sticker-icon/sticker-icon-07/gemini-2.5-flash-image.webp
+sticker-icon-08,sticker-icon,gpt-image-2,40.97810363769531,4.862082004547119,,,,2.0,img/sticker-icon/sticker-icon-08/gpt-image-2.webp
+sticker-icon-08,sticker-icon,gemini-3-pro-image,42.693817138671875,4.571857929229736,,,,11.5,img/sticker-icon/sticker-icon-08/gemini-3-pro-image.webp
+sticker-icon-08,sticker-icon,hunyuan-v3,43.00020980834961,5.2105488777160645,,,,2.5,img/sticker-icon/sticker-icon-08/hunyuan-v3.webp
+sticker-icon-08,sticker-icon,ideogram-4-5,37.534446716308594,4.66452169418335,,,,10.5,img/sticker-icon/sticker-icon-08/ideogram-4-5.webp
+sticker-icon-08,sticker-icon,gemini-3.1-flash-image,37.797428131103516,4.502384662628174,,,,1.5,img/sticker-icon/sticker-icon-08/gemini-3.1-flash-image.webp
+sticker-icon-08,sticker-icon,gpt-image-2.5-sunburst,40.87527847290039,4.909538745880127,,,,7.0,img/sticker-icon/sticker-icon-08/gpt-image-2.5-sunburst.webp
+sticker-icon-08,sticker-icon,luma-uni-1,39.95199966430664,4.9340925216674805,,,,7.0,img/sticker-icon/sticker-icon-08/luma-uni-1.webp
+sticker-icon-08,sticker-icon,recraftv4_1,38.10828399658203,5.202732086181641,,,,6.0,img/sticker-icon/sticker-icon-08/recraftv4_1.webp
+sticker-icon-08,sticker-icon,seedream-5.0-pro,37.61699295043945,4.755085468292236,,,,8.0,img/sticker-icon/sticker-icon-08/seedream-5.0-pro.webp
+sticker-icon-08,sticker-icon,flux-2-pro,41.78609085083008,4.577831745147705,,,,7.0,img/sticker-icon/sticker-icon-08/flux-2-pro.webp
+sticker-icon-08,sticker-icon,kling-3.0-image,42.25114440917969,5.206270217895508,,,,5.0,img/sticker-icon/sticker-icon-08/kling-3.0-image.webp
+sticker-icon-08,sticker-icon,gemini-2.5-flash-image,36.72164535522461,4.87345027923584,,,,10.0,img/sticker-icon/sticker-icon-08/gemini-2.5-flash-image.webp
+sticker-icon-09,sticker-icon,gpt-image-2,39.63224792480469,4.632437229156494,,,,2.5,img/sticker-icon/sticker-icon-09/gpt-image-2.webp
+sticker-icon-09,sticker-icon,gemini-3-pro-image,39.78306198120117,4.780590534210205,,,,2.5,img/sticker-icon/sticker-icon-09/gemini-3-pro-image.webp
+sticker-icon-09,sticker-icon,hunyuan-v3,39.37128829956055,4.750738620758057,,,,10.5,img/sticker-icon/sticker-icon-09/hunyuan-v3.webp
+sticker-icon-09,sticker-icon,ideogram-4-5,39.71826934814453,4.873981475830078,,,,5.0,img/sticker-icon/sticker-icon-09/ideogram-4-5.webp
+sticker-icon-09,sticker-icon,gemini-3.1-flash-image,39.06233596801758,4.838726043701172,,,,2.5,img/sticker-icon/sticker-icon-09/gemini-3.1-flash-image.webp
+sticker-icon-09,sticker-icon,gpt-image-2.5-sunburst,37.45399856567383,4.829798698425293,,,,6.5,img/sticker-icon/sticker-icon-09/gpt-image-2.5-sunburst.webp
+sticker-icon-09,sticker-icon,luma-uni-1,38.1297721862793,4.646544456481934,,,,7.0,img/sticker-icon/sticker-icon-09/luma-uni-1.webp
+sticker-icon-09,sticker-icon,recraftv4_1,40.59645462036133,4.7238850593566895,,,,10.5,img/sticker-icon/sticker-icon-09/recraftv4_1.webp
+sticker-icon-09,sticker-icon,seedream-5.0-pro,36.722938537597656,4.57584810256958,,,,11.5,img/sticker-icon/sticker-icon-09/seedream-5.0-pro.webp
+sticker-icon-09,sticker-icon,flux-2-pro,42.26742935180664,4.898096084594727,,,,8.0,img/sticker-icon/sticker-icon-09/flux-2-pro.webp
+sticker-icon-09,sticker-icon,kling-3.0-image,42.123443603515625,5.090810775756836,,,,9.0,img/sticker-icon/sticker-icon-09/kling-3.0-image.webp
+sticker-icon-09,sticker-icon,gemini-2.5-flash-image,40.29451370239258,4.5992889404296875,,,,2.5,img/sticker-icon/sticker-icon-09/gemini-2.5-flash-image.webp
+sticker-icon-10,sticker-icon,gpt-image-2,44.63624954223633,5.998730659484863,,,,1.5,img/sticker-icon/sticker-icon-10/gpt-image-2.webp
+sticker-icon-10,sticker-icon,gemini-3-pro-image,46.348976135253906,6.212004661560059,,,,7.5,img/sticker-icon/sticker-icon-10/gemini-3-pro-image.webp
+sticker-icon-10,sticker-icon,hunyuan-v3,45.87858200073242,6.42134952545166,,,,8.0,img/sticker-icon/sticker-icon-10/hunyuan-v3.webp
+sticker-icon-10,sticker-icon,ideogram-4-5,44.419212341308594,6.017359733581543,,,,6.0,img/sticker-icon/sticker-icon-10/ideogram-4-5.webp
+sticker-icon-10,sticker-icon,gemini-3.1-flash-image,44.75682067871094,5.991106033325195,,,,3.5,img/sticker-icon/sticker-icon-10/gemini-3.1-flash-image.webp
+sticker-icon-10,sticker-icon,gpt-image-2.5-sunburst,44.206119537353516,6.252788066864014,,,,1.5,img/sticker-icon/sticker-icon-10/gpt-image-2.5-sunburst.webp
+sticker-icon-10,sticker-icon,luma-uni-1,43.7497444152832,6.097681999206543,,,,3.5,img/sticker-icon/sticker-icon-10/luma-uni-1.webp
+sticker-icon-10,sticker-icon,recraftv4_1,46.41468048095703,5.8589911460876465,,,,12.0,img/sticker-icon/sticker-icon-10/recraftv4_1.webp
+sticker-icon-10,sticker-icon,seedream-5.0-pro,42.40523147583008,6.744453430175781,,,,6.5,img/sticker-icon/sticker-icon-10/seedream-5.0-pro.webp
+sticker-icon-10,sticker-icon,flux-2-pro,45.522159576416016,5.7934675216674805,,,,10.5,img/sticker-icon/sticker-icon-10/flux-2-pro.webp
+sticker-icon-10,sticker-icon,kling-3.0-image,42.90378189086914,6.649489402770996,,,,9.5,img/sticker-icon/sticker-icon-10/kling-3.0-image.webp
+sticker-icon-10,sticker-icon,gemini-2.5-flash-image,46.768375396728516,6.063448905944824,,,,8.0,img/sticker-icon/sticker-icon-10/gemini-2.5-flash-image.webp

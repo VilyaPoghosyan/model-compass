@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en" data-base="/model-compass">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare every Picsart AI model on the same request</title>
+<meta name="description" content="The same request sent to 12 Picsart AI models: see every output at full size, the judge's order and the scores, and slide two images against each other. 80 tested requests.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/compare/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Model Compass">
+<meta property="og:title" content="Compare every Picsart AI model on the same request">
+<meta property="og:description" content="The same request sent to 12 Picsart AI models: see every output at full size, the judge's order and the scores, and slide two images against each other. 80 tested requests.">
+<meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/compare/">
+<meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef1f4">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1419">
+<link rel="icon" href="/model-compass/assets/img/rose.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/model-compass/assets/css/site.css">
+<link rel="stylesheet" href="/model-compass/assets/css/pages-task.css">
+</head>
+<body class="page-compare" data-utm='{&#34;source&#34;:&#34;model-compass&#34;,&#34;medium&#34;:&#34;referral&#34;,&#34;campaign&#34;:&#34;open-doors&#34;}'>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap site-head__row">
+    <a class="brand" href="/model-compass/" aria-label="Model Compass home">
+      <svg class="brand__rose" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><use href="/model-compass/assets/img/rose.svg#rose"/></svg>
+      <span class="brand__name">Model Compass</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/model-compass/#tasks">Tasks</a>
+      <a href="/model-compass/compare/" aria-current="page">Compare</a>
+      <a href="/model-compass/method/">Method</a>
+      <a href="/model-compass/data/">Data</a>
+      <a href="/model-compass/about/">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/model-compass/">Model Compass</a></li>
+    <li aria-current="page">Compare</li>
+  </ol>
+</nav>
+
+<header class="compare-head">
+  <p class="compare-head__eyebrow" id="cmp-task"><span class="compare-head__eyebrow-text">Same request, every model</span></p>
+  <h1 class="compare-head__title" id="cmp-title">Compare every model on one request</h1>
+  <blockquote class="compare-head__prompt" id="cmp-prompt">
+    <noscript>Pick a request from the list below. Turn on JavaScript to see the outputs side by side.</noscript>
+  </blockquote>
+  <p class="compare-head__meta" id="cmp-meta"></p>
+  <p class="compare-head__notice" id="cmp-notice" hidden role="status"></p>
+  <form class="compare-nav" id="cmp-nav" aria-label="Choose a request" hidden>
+    <button class="btn btn--quiet compare-nav__btn" type="button" id="cmp-prev" aria-label="Previous request">Previous</button>
+    <label class="compare-nav__select">
+      <span class="visually-hidden">Request</span>
+      <select id="cmp-select"></select>
+    </label>
+    <button class="btn btn--quiet compare-nav__btn" type="button" id="cmp-next" aria-label="Next request">Next</button>
+  </form>
+</header>
+
+<section class="slider-section" id="slider-section" hidden aria-labelledby="slider-title">
+  <div class="section-head">
+    <h2 id="slider-title">Slide two models against each other</h2>
+    <p>Drag the handle, or use the arrow keys with the handle focused. Pick any two models.</p>
+  </div>
+  <div class="slider-controls">
+    <label class="slider-pick slider-pick--a"><span>A</span><select id="pick-a"></select></label>
+    <button class="btn btn--quiet" type="button" id="pick-swap" aria-label="Swap A and B">Swap</button>
+    <label class="slider-pick slider-pick--b"><span>B</span><select id="pick-b"></select></label>
+  </div>
+  <div class="slider" id="slider" style="--split:50%">
+    <img class="slider__img slider__img--b" id="slider-b" alt="">
+    <img class="slider__img slider__img--a" id="slider-a" alt="">
+    <span class="slider__label slider__label--a" id="slider-label-a" aria-hidden="true"></span>
+    <span class="slider__label slider__label--b" id="slider-label-b" aria-hidden="true"></span>
+    <span class="slider__handle" aria-hidden="true"><span class="slider__grip"></span></span>
+    <input class="slider__range" id="slider-range" type="range" min="0" max="100" value="50" step="0.5" aria-label="Reveal: left shows model A, right shows model B">
+  </div>
+</section>
+
+<section class="compare-grid-section" id="grid-section" hidden aria-labelledby="grid-title">
+  <div class="section-head">
+    <h2 id="grid-title">Every output, in the judge's order</h2>
+    <p id="grid-intro"></p>
+  </div>
+  <ul class="compare-grid" id="cmp-grid"></ul>
+</section>
+
+<section class="all-requests" aria-labelledby="all-title">
+  <h2 id="all-title">All 80 tested requests</h2>
+  <details class="all-requests__group" open>
+    <summary><span class="all-requests__task">Product photo</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/product-photos/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=product-photo-01" data-prompt="product-photo-01">Studio shot of a frosted glass serum bottle with a gold dropper cap on a wet slate surface, soft diffused light, pale green botanical shadows</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-02" data-prompt="product-photo-02">white running shoe floating mid air, clean grey background, product photo for a shop listing</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-03" data-prompt="product-photo-03">A can of sparkling lemon water covered in condensation, ice cubes and a lemon slice splashing beside it, bright high-key lighting, crisp commercial look</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-04" data-prompt="product-photo-04">Premium product photo of matte black wireless earbuds in an open charging case on a dark brushed-metal surface, single soft key light, subtle reflections</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-05" data-prompt="product-photo-05">kraft paper coffee bag with a simple blank label on a wooden counter next to scattered coffee beans, morning light from the side</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-06" data-prompt="product-photo-06">Lifestyle shot of a handmade ceramic bowl of granola with berries and a linen napkin, overhead view, soft natural light, muted earthy tones</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-07" data-prompt="product-photo-07">Macro product photo of a thin gold ring with a small emerald on a white marble block, shallow depth of field, soft shadow, luxury catalogue style</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-08" data-prompt="product-photo-08">mustard velvet armchair, studio catalog shot</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-09" data-prompt="product-photo-09">A scented soy candle in an amber glass jar with a wooden lid, lit, on a stack of folded linen with eucalyptus sprigs, cosy warm ambience, soft focus background</a></li>
+      <li><a href="/model-compass/compare/?prompt=product-photo-10" data-prompt="product-photo-10">Hero banner image for an online outdoor store: a brushed stainless steel water bottle lying on wet rocks beside a mountain stream, early morning mist, pine trees out of focus behind, cool tones, wide composition with empty space on the left for a headline</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Logo with text</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/logos/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=logo-01" data-prompt="logo-01">Minimal logo for a bakery called &#34;Golden Crumb&#34;, a wheat ear woven into the letters, warm brown and cream, flat vector style on a white background</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-02" data-prompt="logo-02">logo for my coffee roastery &#34;Ember Roast&#34; pls, something modern</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-03" data-prompt="logo-03">Design a clean geometric logo for a yoga studio named &#34;Still Lotus&#34;. A single-line lotus above the name, sage green on off-white, lots of negative space.</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-04" data-prompt="logo-04">Tech startup logo, the word &#34;Nexora&#34; in a bold custom sans-serif with a subtle circuit motif in the letter o, electric blue gradient, dark background</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-05" data-prompt="logo-05">Vintage barbershop badge logo with crossed scissors and the text &#34;Iron Comb&#34;, black and gold, circular emblem</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-06" data-prompt="logo-06">Playful logo for a dog grooming salon called &#34;Happy Paws&#34;, a smiling dog silhouette, rounded friendly letters, teal and coral</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-07" data-prompt="logo-07">I need a logo for a landscaping company, text &#34;Verdant Yard&#34;, a leaf shape, two greens, simple enough to print on the side of a truck</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-08" data-prompt="logo-08">Elegant monogram-style logo for a bookshop, the name &#34;Quiet Pages&#34; in a classic serif under a small open-book icon, navy on cream</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-09" data-prompt="logo-09">surf school logo, wave + sun, says &#34;Salt Line Surf&#34;, retro 70s colours</a></li>
+      <li><a href="/model-compass/compare/?prompt=logo-10" data-prompt="logo-10">A trustworthy, modern logo for a dental clinic named &#34;Brightwell Dental&#34;, a soft tooth shape merged with a smile curve, light blue and white, flat design</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Poster and flyer</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/posters-and-flyers/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-01" data-prompt="poster-flyer-01">Concert poster for an indie folk night, big headline &#34;Autumn Sessions&#34; in hand-lettered type, a lone guitar silhouette against a warm sunset, textured paper look</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-02" data-prompt="poster-flyer-02">farmers market flyer with the words &#34;Fresh Saturdays&#34;, baskets of vegetables, bright and cheerful</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-03" data-prompt="poster-flyer-03">Minimal quote card, the phrase &#34;Begin Again&#34; centred in a thin serif on a soft gradient of dusty pink and peach, nothing else</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-04" data-prompt="poster-flyer-04">Movie-style poster for a sci-fi thriller titled &#34;Orbital Drift&#34;: an astronaut floating above a blue planet, dramatic rim light, bold metallic title at the bottom</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-05" data-prompt="poster-flyer-05">Promo flyer for a shoe store sale, headline &#34;Midnight Deals&#34; in huge neon letters on a dark background, sneakers floating around the text</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-06" data-prompt="poster-flyer-06">Charity run poster, text &#34;Harbor Dash&#34;, runners on a seaside road at dawn, clean modern layout</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-07" data-prompt="poster-flyer-07">A gallery exhibition poster with the title &#34;Shapes Of Silence&#34; in a large Swiss-style grotesque font, abstract overlapping colour blocks in ochre, navy and white, lots of whitespace</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-08" data-prompt="poster-flyer-08">tech meetup flyer, headline &#34;Build Night&#34;, dark mode vibe, glowing geometric shapes, leave room at the bottom for the details</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-09" data-prompt="poster-flyer-09">Retro summer camp poster saying &#34;Pine Ridge Camp&#34;, pine trees around a lake, a canoe, 1960s travel poster style, limited palette of green, mustard and cream</a></li>
+      <li><a href="/model-compass/compare/?prompt=poster-flyer-10" data-prompt="poster-flyer-10">Open mic night flyer, the words &#34;Loud Whispers&#34; in bold brush lettering, a vintage microphone under a spotlight, deep red and black</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Portrait and headshot</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/portraits-and-headshots/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-01" data-prompt="portrait-headshot-01">Professional corporate headshot of a woman in her forties with short curly grey hair, navy blazer, neutral grey studio background, soft even lighting, genuine smile</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-02" data-prompt="portrait-headshot-02">profile photo, young man with a short beard, white shirt, blurred office</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-03" data-prompt="portrait-headshot-03">Editorial black and white portrait of an elderly fisherman with deep wrinkles and a wool cap, dramatic side light, dark background, fine film grain</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-04" data-prompt="portrait-headshot-04">Natural light portrait of a woman with freckles and red hair in a yellow raincoat, laughing, rainy city street softly out of focus behind her</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-05" data-prompt="portrait-headshot-05">headshot for a startup team page, man in his thirties, East Asian, round glasses, dark green sweater, light background, warm smile</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-06" data-prompt="portrait-headshot-06">Close-up beauty portrait of a dark-skinned woman with a shaved head and gold hoop earrings, glowing skin, soft pink studio backdrop, ring light catchlights</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-07" data-prompt="portrait-headshot-07">candid lifestyle photo, a father in his fifties with his adult daughter sitting on a park bench in autumn, golden hour, both looking at the camera</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-08" data-prompt="portrait-headshot-08">Portrait of a chef in a white jacket standing in a kitchen doorway, arms crossed, confident look, shallow depth of field, warm tungsten light from inside</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-09" data-prompt="portrait-headshot-09">Actor headshot, young woman with long dark braids, plain black top, teal background, three-quarter angle, sharp eyes, slight smile</a></li>
+      <li><a href="/model-compass/compare/?prompt=portrait-headshot-10" data-prompt="portrait-headshot-10">Full-length vertical portrait of a ceramic artist in a clay-stained apron holding a bowl in a sunlit studio, tall composition for a phone screen</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Anime and illustration</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/anime-and-illustration/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-01" data-prompt="anime-illustration-01">Anime girl with silver hair and a red scarf standing on a train platform at sunset, cherry petals in the wind, cel shading, soft glow</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-02" data-prompt="anime-illustration-02">cute chibi cat wizard, pastel, simple background</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-03" data-prompt="anime-illustration-03">Hand-painted anime film background: a quiet hillside town with laundry lines, a bakery with a striped awning and big cumulus clouds, warm afternoon light, no people</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-04" data-prompt="anime-illustration-04">Manga-style illustration of two friends sharing an umbrella in the rain, black ink lines with screentone shading, one spot of colour on the umbrella</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-05" data-prompt="anime-illustration-05">Children&#39;s book illustration of a shy fox reading a book under a big mushroom, soft watercolour texture, friendly rounded shapes</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-06" data-prompt="anime-illustration-06">cartoon mascot of a happy avocado wearing sunglasses and sneakers, bold outlines, flat colours, white background</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-07" data-prompt="anime-illustration-07">Flat vector illustration of a woman working on a laptop in a plant-filled home office, limited palette of mustard, teal and coral, clean geometric shapes</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-08" data-prompt="anime-illustration-08">Dynamic anime action shot of a young martial artist mid-leap above a bamboo forest, motion lines, dramatic low angle, vibrant colours</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-09" data-prompt="anime-illustration-09">anime phone wallpaper, a lonely lighthouse on a cliff at night, huge starry sky, tiny warm window light, vertical</a></li>
+      <li><a href="/model-compass/compare/?prompt=anime-illustration-10" data-prompt="anime-illustration-10">Retro 90s anime style portrait of a boy with headphones and a baggy jacket in a neon-lit arcade, VHS grain, slightly faded colours</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Interior and architecture</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/interior-design/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=interior-design-01" data-prompt="interior-design-01">Scandinavian living room with a light oak floor, a pale grey sofa, a wool rug, a large window with sheer curtains, a few green plants, bright overcast daylight, photorealistic</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-02" data-prompt="interior-design-02">japandi bedroom, low platform bed, linen bedding, paper lantern, real estate photo</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-03" data-prompt="interior-design-03">Industrial loft kitchen with exposed brick, black steel shelving, a concrete island with bar stools and pendant bulbs, late afternoon sun through tall factory windows</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-04" data-prompt="interior-design-04">Small modern bathroom with a speckled terrazzo floor, a walk-in shower behind fluted glass, a floating walnut vanity with a round stone basin, brushed brass fixtures, a tall arched mirror, a single eucalyptus stem in a vase, soft diffused daylight, interior magazine photo</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-05" data-prompt="interior-design-05">cozy home office in an attic with slanted ceilings, built in bookshelves, a leather chair, a desk by a round window, evening lamp light</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-06" data-prompt="interior-design-06">Mediterranean restaurant interior with white plaster arches, terracotta tiles, olive trees in large pots, rattan chairs and linen tablecloths, golden hour light through the arches, wide-angle shot</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-07" data-prompt="interior-design-07">Modern two-storey house exterior at dusk with large glass windows, warm interior lights, a cedar wood facade, a gravel path and a few birch trees, architectural photograph</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-08" data-prompt="interior-design-08">boho balcony makeover, string lights, rattan hanging chair, lots of plants, patterned cushions, city view at sunset</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-09" data-prompt="interior-design-09">Art deco hotel lobby with a black and white marble floor, brass detailing, a curved emerald velvet sofa and a dramatic geometric chandelier, cinematic lighting</a></li>
+      <li><a href="/model-compass/compare/?prompt=interior-design-10" data-prompt="interior-design-10">Minimalist kids bedroom with a house-shaped bed frame, sage green walls, a reading nook with cushions, wooden toys, soft morning light, photorealistic render</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Fantasy and concept art</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/fantasy-and-concept-art/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-01" data-prompt="fantasy-concept-art-01">Concept art of an elven ranger with braided copper hair and a mossy green cloak standing at the edge of a misty ancient forest, longbow on her back, painterly style, soft morning rays</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-02" data-prompt="fantasy-concept-art-02">a friendly moss covered dragon curled around a lighthouse, fantasy illustration, detailed scales</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-03" data-prompt="fantasy-concept-art-03">Epic wide establishing shot of floating islands chained together above an endless sea of clouds, waterfalls spilling into the void, tiny airships, golden hour, matte painting style</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-04" data-prompt="fantasy-concept-art-04">Character sheet style concept art of a desert nomad merchant with layered indigo robes, brass goggles and a pack lizard, neutral background, front view, detailed costume design</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-05" data-prompt="fantasy-concept-art-05">Underwater city carved into a coral reef, glowing bioluminescent streets, schools of fish between the towers, shafts of sunlight from above, highly detailed digital painting</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-06" data-prompt="fantasy-concept-art-06">cozy fantasy tavern interior, dwarves and gnomes laughing by a huge fireplace, hanging herbs, warm candlelight, game art style</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-07" data-prompt="fantasy-concept-art-07">Forest spirit creature design: a deer-like being with antlers made of birch branches and glowing blue eyes, surrounded by fireflies in a dark forest, ethereal, game concept art</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-08" data-prompt="fantasy-concept-art-08">steampunk airship with brass propellers and patched canvas balloons flying through a canyon at sunset, concept art, cinematic</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-09" data-prompt="fantasy-concept-art-09">An ancient ice temple hollowed out inside a glacier, frozen staircases spiralling up to a glowing crystal altar, columns of translucent blue ice, a lone pilgrim in a red cloak for scale, cool palette with one warm light source, environment concept art</a></li>
+      <li><a href="/model-compass/compare/?prompt=fantasy-concept-art-10" data-prompt="fantasy-concept-art-10">Game asset concept: a set of three enchanted potion bottles with glowing liquids, ornate corks and tiny blank labels, on a plain dark background, isometric view, stylised hand-painted look</a></li>
+    </ol>
+  </details>
+  <details class="all-requests__group">
+    <summary><span class="all-requests__task">Stickers and icons</span> <span class="all-requests__count">10 requests</span> <a class="all-requests__page" href="/model-compass/best-ai-model-for/stickers-and-icons/">Ranking</a></summary>
+    <ol class="all-requests__list">
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-01" data-prompt="sticker-icon-01">Die-cut sticker of a smiling cup of boba tea with a chunky white border, kawaii style, pastel purple, white background</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-02" data-prompt="sticker-icon-02">flat app icon for a meditation app, a simple lotus inside a rounded square, gradient from lavender to teal, no text</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-03" data-prompt="sticker-icon-03">Set of six minimal line icons for a travel app: suitcase, airplane, map pin, camera, passport, sun; consistent thin strokes, black on white, arranged in a grid</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-04" data-prompt="sticker-icon-04">emoji style sticker of a cute ghost waving, glossy, thick outline, plain white background</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-05" data-prompt="sticker-icon-05">Vintage-style round badge sticker of a mountain with pine trees and a sunrise, distressed texture, three colours, no text</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-06" data-prompt="sticker-icon-06">cute sticker pack vibe, a sleepy sloth hugging a coffee mug, pastel, bold outline</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-07" data-prompt="sticker-icon-07">Weather icon set in a soft 3D clay style: sun, rain cloud, snowflake, lightning, rainbow, moon; pastel colours, white background, arranged in two rows</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-08" data-prompt="sticker-icon-08">Holographic-looking sticker of a retro cassette tape with rainbow gradient edges, bold black outline, white background</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-09" data-prompt="sticker-icon-09">A single flat icon of a shopping cart for an e-commerce app, two-tone orange, rounded corners, centred on a plain white background, clean and simple</a></li>
+      <li><a href="/model-compass/compare/?prompt=sticker-icon-10" data-prompt="sticker-icon-10">sticker of a corgi astronaut floating with a tiny planet, thick white die-cut border, vibrant colours, cartoon style</a></li>
+    </ol>
+  </details>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap site-foot__grid">
+    <div class="site-foot__disclosure">
+      <p>Built by Vilya Poghosyan, who works at Picsart. This is a personal project, not an official Picsart page. Every image here was made with Picsart models through Picsart's AI Playground and carries the Picsart AI label.</p>
+      <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Last updated 2026-10-07.</p>
+    </div>
+    <div class="site-foot__links">
+      <a href="/model-compass/method/">How we measure</a>
+      <a href="/model-compass/data/">Download the data</a>
+      <a href="/model-compass/about/">About and contact</a>
+      <span class="built-with"><span class="built-with__dot" aria-hidden="true"></span>built with Picsart models</span>
+    </div>
+  </div>
+</footer>
+<script src="/model-compass/assets/js/site.js" defer></script>
+<script>
+(function () {
+  "use strict";
+  var base = document.documentElement.dataset.base || "";
+  var url = function (p) { return base + "/" + String(p).replace(/^\/+/, ""); };
+  var $ = function (id) { return document.getElementById(id); };
+  var utm = JSON.parse(document.body.dataset.utm || "{}");
+  var FIRST = "product-photo-01";
+  var TIER_ORDER = {"premium":0,"standard":1,"fast":2};
+  var data = null, order = [], byId = {}, models = {}, tasks = {}, current = null;
+
+  function outbound(model, taskId) {
+    var q = new URLSearchParams({
+      utm_source: utm.source || "model-compass", utm_medium: utm.medium || "referral",
+      utm_campaign: utm.campaign || "open-doors", utm_content: taskId + "-" + model.id
+    });
+    return model.deep_link + (model.deep_link.indexOf("?") >= 0 ? "&" : "?") + q.toString();
+  }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function ratio(p) {
+    var m = /^(\d+):(\d+)$/.exec(p.aspect_ratio || "1:1");
+    return m ? (Number(m[1]) / Number(m[2])) : 1;
+  }
+  // Judge order; ties are broken explicitly (premium tier first, then name) so the demo never
+  // depends on file order.
+  function sortedOutputs(p) {
+    return p.outputs.map(function (o, i) { return Object.assign({ _i: i }, o); }).sort(function (a, b) {
+      var ra = a.judge_rank_mean == null ? 1e9 : a.judge_rank_mean;
+      var rb = b.judge_rank_mean == null ? 1e9 : b.judge_rank_mean;
+      if (ra !== rb) return ra - rb;
+      var ma = models[a.model] || {}, mb = models[b.model] || {};
+      var ta = TIER_ORDER[ma.tier] == null ? 9 : TIER_ORDER[ma.tier];
+      var tb = TIER_ORDER[mb.tier] == null ? 9 : TIER_ORDER[mb.tier];
+      if (ta !== tb) return ta - tb;
+      var na = (ma.name || a.model), nb = (mb.name || b.model);
+      return na < nb ? -1 : na > nb ? 1 : a._i - b._i;
+    });
+  }
+  function tiedAtTop(outputs) {
+    return outputs.length > 1 && outputs[0].judge_rank_mean != null && outputs[0].judge_rank_mean === outputs[1].judge_rank_mean;
+  }
+  function fmt(x, d) { return x == null ? "" : Number(x).toFixed(d); }
+
+  function fillSelect(select, outputs, chosen) {
+    select.innerHTML = "";
+    outputs.forEach(function (o) {
+      var m = models[o.model] || { name: o.model };
+      var opt = el("option", null, m.name + (o.judge_rank_mean != null ? "  (judge " + fmt(o.judge_rank_mean, 1) + ")" : ""));
+      opt.value = o.model;
+      if (o.model === chosen) opt.selected = true;
+      select.appendChild(opt);
+    });
+  }
+
+  function updateSlider(p, outputs) {
+    var a = $("pick-a").value, b = $("pick-b").value;
+    var oa = outputs.filter(function (o) { return o.model === a; })[0];
+    var ob = outputs.filter(function (o) { return o.model === b; })[0];
+    if (!oa || !ob) return;
+    var ma = models[a] || { name: a }, mb = models[b] || { name: b };
+    var ia = $("slider-a"), ib = $("slider-b");
+    ia.src = url(oa.full); ia.alt = ma.name + ": " + p.text;
+    ib.src = url(ob.full); ib.alt = mb.name + ": " + p.text;
+    $("slider-label-a").textContent = "A  " + ma.name;
+    $("slider-label-b").textContent = "B  " + mb.name;
+    $("slider").style.aspectRatio = String(ratio(p));
+  }
+
+  function renderGrid(p, outputs) {
+    var grid = $("cmp-grid");
+    grid.innerHTML = "";
+    var tied = tiedAtTop(outputs);
+    var topRank = outputs.length ? outputs[0].judge_rank_mean : null;
+    outputs.forEach(function (o, idx) {
+      var m = models[o.model] || { id: o.model, name: o.model, provider: "", tier: "standard", deep_link: "#" };
+      var isPick = topRank != null && o.judge_rank_mean === topRank;
+      var li = el("li", "cmp-card" + (isPick ? " is-best" : ""));
+      li.id = "model-" + o.model;
+      var fig = el("figure", "cmp-card__fig");
+      // the grid shows the 512 px thumb (cards render at ~350 px); the slider and the
+      // "Full size" link use the 1024 px file
+      var full = el("a", "cmp-card__full-link");
+      full.href = url(o.full); full.target = "_blank"; full.rel = "noopener";
+      full.setAttribute("aria-label", "Open " + m.name + " output at full size");
+      var img = el("img", "cmp-card__img");
+      img.loading = idx < 4 ? "eager" : "lazy"; img.decoding = "async";
+      img.width = 512; img.height = Math.round(512 / ratio(p));
+      img.src = url(o.thumb); img.alt = m.name + ": " + p.text;
+      img.style.aspectRatio = String(ratio(p));
+      full.appendChild(img);
+      fig.appendChild(full);
+      if (isPick) fig.appendChild(el("span", "cmp-card__flag", tied ? "Judge's pick (tied)" : "Judge's pick"));
+      fig.appendChild(el("span", "cmp-card__size", "Full size"));
+      li.appendChild(fig);
+      var head = el("div", "cmp-card__head");
+      var name = el("h3", "cmp-card__name", m.name);
+      var tier = el("span", "tier tier--" + m.tier, m.tier);
+      head.appendChild(name); head.appendChild(tier);
+      li.appendChild(head);
+      if (m.provider) li.appendChild(el("p", "cmp-card__provider", m.provider));
+      var stats = el("dl", "cmp-card__stats");
+      var add = function (k, v) { if (v === "" || v == null) return; var d = el("div"); d.appendChild(el("dt", null, k)); d.appendChild(el("dd", null, v)); stats.appendChild(d); };
+      add("Judge", o.judge_rank_mean != null ? fmt(o.judge_rank_mean, 1) : "");
+      add("Prompt match", fmt(o.clip_score, 1));
+      add("Looks", fmt(o.aesthetic, 2));
+      if (p.needs_text && o.ocr_exact != null) add("Text", o.ocr_exact ? "exact" : "off");
+      li.appendChild(stats);
+      var go = el("a", "btn btn--quiet cmp-card__go", "Make it in Picsart with " + m.name);
+      go.href = outbound(m, p.task); go.target = "_blank"; go.rel = "noopener";
+      go.dataset.out = p.task + "/" + m.id;
+      li.appendChild(go);
+      grid.appendChild(li);
+    });
+  }
+
+  function show(id, push) {
+    var p = byId[id];
+    if (!p) return;
+    current = id;
+    var task = tasks[p.task] || { name: p.task, slug: p.task };
+    var outputs = sortedOutputs(p);
+    var eyebrow = $("cmp-task");
+    eyebrow.innerHTML = "";
+    var link = el("a", "compare-head__eyebrow-text", task.name);
+    link.href = url("best-ai-model-for/" + task.slug + "/");
+    eyebrow.appendChild(link);
+    eyebrow.appendChild(document.createTextNode(" request " + (order.indexOf(id) + 1) + " of " + order.length));
+    $("cmp-title").textContent = outputs.length + " models, one request";
+    $("cmp-prompt").textContent = p.text;
+    var meta = [];
+    if (p.expected_text) meta.push("Must read “" + p.expected_text + "”");
+    if (p.aspect_ratio) meta.push("Aspect " + p.aspect_ratio);
+    $("cmp-meta").textContent = meta.join(". ") + (meta.length ? "." : "");
+    document.title = task.name + ": " + outputs.length + " models compared | Model Compass";
+    $("cmp-select").value = id;
+    $("cmp-prev").disabled = order.indexOf(id) === 0;
+    $("cmp-next").disabled = order.indexOf(id) === order.length - 1;
+
+    if (outputs.length) {
+      $("grid-intro").textContent = outputs[0].judge_rank_mean != null
+        ? "Mean judge position over two shuffled runs (1 is best). Prompt match is CLIP similarity, looks is the aesthetic predictor" + (p.needs_text ? ", text says whether OCR read the requested words exactly." : ".")
+        : "No judge rankings for this request yet; models are shown premium-first.";
+      renderGrid(p, outputs);
+      $("grid-section").hidden = false;
+      if (outputs.length >= 2) {
+        fillSelect($("pick-a"), outputs, outputs[0].model);
+        fillSelect($("pick-b"), outputs, outputs[1].model);
+        updateSlider(p, outputs);
+        $("slider-section").hidden = false;
+      } else {
+        $("slider-section").hidden = true;
+      }
+    } else {
+      $("grid-section").hidden = true; $("slider-section").hidden = true;
+    }
+    if (push) {
+      var u = new URL(location.href);
+      u.searchParams.set("prompt", id);
+      history.replaceState(null, "", u.pathname + u.search);
+    }
+    if (location.hash && document.querySelector(location.hash)) {
+      document.querySelector(location.hash).scrollIntoView({ block: "start" });
+    }
+  }
+
+  function init(compass) {
+    data = compass;
+    compass.models.forEach(function (m) { models[m.id] = m; });
+    compass.tasks.forEach(function (t) { tasks[t.id] = t; });
+    compass.prompts.forEach(function (p) { byId[p.id] = p; order.push(p.id); });
+    var select = $("cmp-select");
+    compass.tasks.forEach(function (t) {
+      var ps = compass.prompts.filter(function (p) { return p.task === t.id; });
+      if (!ps.length) return;
+      var g = el("optgroup"); g.label = t.name;
+      ps.forEach(function (p) {
+        var o = el("option", null, p.text.length > 90 ? p.text.slice(0, 88) + "…" : p.text);
+        o.value = p.id; g.appendChild(o);
+      });
+      select.appendChild(g);
+    });
+    select.addEventListener("change", function () { show(select.value, true); });
+    $("cmp-prev").addEventListener("click", function () { var i = order.indexOf(current); if (i > 0) show(order[i - 1], true); });
+    $("cmp-next").addEventListener("click", function () { var i = order.indexOf(current); if (i < order.length - 1) show(order[i + 1], true); });
+    $("cmp-nav").hidden = false;
+
+    var range = $("slider-range"), slider = $("slider");
+    var setSplit = function () { slider.style.setProperty("--split", range.value + "%"); };
+    range.addEventListener("input", setSplit);
+    setSplit();
+    // pointer drag anywhere on the image (mouse, touch, pen); the range input keeps keyboard access
+    var dragging = false;
+    var splitFromX = function (clientX) {
+      var r = slider.getBoundingClientRect();
+      var pct = Math.max(0, Math.min(100, (clientX - r.left) / r.width * 100));
+      range.value = pct.toFixed(1); setSplit();
+    };
+    slider.addEventListener("pointerdown", function (ev) {
+      if (ev.button !== undefined && ev.button !== 0) return;
+      dragging = true; slider.classList.add("is-dragging");
+      if (slider.setPointerCapture) { try { slider.setPointerCapture(ev.pointerId); } catch (e) { /* ignore */ } }
+      splitFromX(ev.clientX); ev.preventDefault();
+    });
+    slider.addEventListener("pointermove", function (ev) { if (dragging) splitFromX(ev.clientX); });
+    var stop = function () { dragging = false; slider.classList.remove("is-dragging"); };
+    slider.addEventListener("pointerup", stop);
+    slider.addEventListener("pointercancel", stop);
+    slider.addEventListener("lostpointercapture", stop);
+    $("pick-a").addEventListener("change", function () { updateSlider(byId[current], sortedOutputs(byId[current])); });
+    $("pick-b").addEventListener("change", function () { updateSlider(byId[current], sortedOutputs(byId[current])); });
+    $("pick-swap").addEventListener("click", function () {
+      var a = $("pick-a").value; $("pick-a").value = $("pick-b").value; $("pick-b").value = a;
+      updateSlider(byId[current], sortedOutputs(byId[current]));
+    });
+    document.querySelectorAll("a[data-prompt]").forEach(function (a) {
+      a.addEventListener("click", function (ev) {
+        ev.preventDefault(); show(a.dataset.prompt, true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    var wanted = new URLSearchParams(location.search).get("prompt");
+    var notice = $("cmp-notice");
+    if (wanted && !byId[wanted]) {
+      notice.textContent = "No tested request has the id “" + wanted + "”. Showing the first request instead; pick another below.";
+      notice.hidden = false;
+    }
+    var start = (wanted && byId[wanted]) ? wanted : (byId[FIRST] ? FIRST : order[0]);
+    if (start) show(start, !!wanted && !byId[wanted]);
+    else { $("cmp-prompt").textContent = "No tested requests are published yet."; }
+  }
+
+  fetch(url("data/compass.json")).then(function (r) { return r.json(); }).then(init).catch(function (err) {
+    console.error(err);
+    var n = $("cmp-notice");
+    n.textContent = "Compare could not load its data. Reload the page or open a request from the list below.";
+    n.hidden = false;
+  });
+})();
+</script>
+<script data-goatcounter="https://vilya.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
