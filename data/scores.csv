@@ -1001,8 +1001,9 @@ cinematic-scene-04,cinematic-scene,wan-2.7-t2v,38.42365646362305,5.6100886662801
 cinematic-scene-04,cinematic-scene,veo-3.1-fast,33.9094123840332,5.591892560323079,,,,5.0,img/cinematic-scene/cinematic-scene-04/veo-3.1-fast.webp
 character-animation-01,character-animation,veo-3.1,34.056880950927734,4.862785180409749,,,,1.0,img/character-animation/character-animation-01/veo-3.1.webp
 character-animation-01,character-animation,seedance-2.5,32.14361317952474,5.501014232635498,,,,4.0,img/character-animation/character-animation-01/seedance-2.5.webp
-character-animation-01,character-animation,kling-v3,36.29489771525065,5.382775942484538,,,,3.0,img/character-animation/character-animation-01/kling-v3.webp
-character-animation-01,character-animation,veo-3.1-fast,34.87588755289713,5.202031930287679,,,,2.0,img/character-animation/character-animation-01/veo-3.1-fast.webp
+character-animation-01,character-animation,kling-v3,36.29489771525065,5.382775942484538,,,,5.0,img/character-animation/character-animation-01/kling-v3.webp
+character-animation-01,character-animation,wan-2.7-t2v,33.031768798828125,5.322836081186931,,,,2.0,img/character-animation/character-animation-01/wan-2.7-t2v.webp
+character-animation-01,character-animation,veo-3.1-fast,34.87588755289713,5.202031930287679,,,,3.0,img/character-animation/character-animation-01/veo-3.1-fast.webp
 character-animation-02,character-animation,veo-3.1,40.993326822916664,6.60931921005249,,,,5.0,img/character-animation/character-animation-02/veo-3.1.webp
 character-animation-02,character-animation,seedance-2.5,39.60540771484375,6.560627619425456,,,,3.5,img/character-animation/character-animation-02/seedance-2.5.webp
 character-animation-02,character-animation,kling-v3,38.87514623006185,5.957642078399658,,,,2.0,img/character-animation/character-animation-02/kling-v3.webp
