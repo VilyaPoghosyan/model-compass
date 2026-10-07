@@ -165,6 +165,10 @@ p { margin: 0 0 1em; }
 .verdict__actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 20px 0 12px; }
 .verdict__more { font-weight: 500; font-size: .95rem; }
 .verdict__confidence { color: var(--ink-2); font-size: .9rem; margin: 12px 0 0; }
+/* under the quality gate (4 prompts per video task): home verdict card and task pages */
+.early-note { background: var(--surface-2); border: 1.5px solid var(--magenta); border-radius: var(--r-s); padding: 10px 14px; font-size: .95rem; max-width: 72ch; margin: 0 0 16px; }
+.early-note a { font-weight: 500; }
+.verdict__early { margin: 12px 0 4px; }
 .verdict__confidence:empty { display: none; }
 .verdict__proof { border-top: 1px solid var(--line-2); padding: 20px 22px 22px; background: var(--surface-2); }
 .verdict__proof-title { font-size: .9rem; font-weight: 500; color: var(--ink-2); margin: 0 0 12px; }

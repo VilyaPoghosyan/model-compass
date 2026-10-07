@@ -4,12 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download the Model Compass benchmark data</title>
-<meta name="description" content="Open data behind Model Compass: 17 Picsart AI models, 96 prompts, 960 scored images, 80 clips and per-task ratings with error bars, as CSV and JSON under CC BY 4.0.">
-<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/data/">
-<meta property="og:type" content="website">
+<meta name="description" content="Open data behind Model Compass: 17 Picsart AI models, 96 prompts, 960 scored images and 80 clips, ratings with error bars. CSV and JSON, CC BY 4.0.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/data/"><meta property="og:type" content="website">
 <meta property="og:site_name" content="Model Compass">
 <meta property="og:title" content="Download the Model Compass benchmark data">
-<meta property="og:description" content="Open data behind Model Compass: 17 Picsart AI models, 96 prompts, 960 scored images, 80 clips and per-task ratings with error bars, as CSV and JSON under CC BY 4.0.">
+<meta property="og:description" content="Open data behind Model Compass: 17 Picsart AI models, 96 prompts, 960 scored images and 80 clips, ratings with error bars. CSV and JSON, CC BY 4.0.">
 <meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/data/">
 <meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -44,7 +43,7 @@
 <header class="text-hero">
   <h1>The data behind every claim</h1>
   <span class="rule" aria-hidden="true"></span>
-  <p class="lede">Every number on this site comes from these files: prompts, models and settings, every image's scores and judge rank, and the per-task ratings with intervals.</p>
+  <p class="lede">Every number on this site comes from these files: prompts, models and settings, every output's scores and judge rank, and the per-task ratings with intervals.</p>
   <ul class="stat-row" aria-label="Dataset size">
     <li class="stat"><span class="stat__value">96</span><span class="stat__label">prompts</span></li>
     <li class="stat"><span class="stat__value">17</span><span class="stat__label">models</span></li>
@@ -93,19 +92,19 @@
         </li>
         <li class="file">
           <a class="file__name" href="/model-compass/data/ratings.csv" download>ratings.csv</a>
-          <p class="file__meta">116 rows, 10 KB</p>
-          <p class="file__desc">One row per task and model: Plackett–Luce strength, interval, rank, win probability.</p>
+          <p class="file__meta">121 rows, 10 KB</p>
+          <p class="file__desc">One row per task and model (plus the pooled all-video ranking, task video-overall): Plackett–Luce strength, interval, rank, win probability.</p>
           <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/ratings.csv" download>Download</a></p>
         </li>
         <li class="file">
           <a class="file__name" href="/model-compass/data/compass.json" download>compass.json</a>
-          <p class="file__meta">96 prompts, 353 KB</p>
+          <p class="file__meta">96 prompts, 358 KB</p>
           <p class="file__desc">Everything the site shows in one file: models, tasks with rankings and recommendations, prompts with image paths.</p>
           <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/compass.json" download>Download</a></p>
         </li>
         <li class="file">
           <a class="file__name" href="/model-compass/data/router.json" download>router.json</a>
-          <p class="file__meta">96 embeddings, 301 KB</p>
+          <p class="file__meta">185 embeddings, 560 KB</p>
           <p class="file__desc">What the browser router loads: 384-number embeddings of every prompt, per-task recommendation, keyword fallback, evaluation.</p>
           <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/router.json" download>Download</a></p>
         </li>
@@ -136,6 +135,7 @@
           <tr><td><code>scores.csv</code></td><td><code>ocr_exact / ocr_similarity / ocr_text</code></td><td>Text tasks only: every letter right (true/false), 1 minus normalised edit distance, and what the reader saw. Empty for other tasks.</td></tr>
           <tr><td><code>scores.csv</code></td><td><code>judge_rank_mean</code></td><td>Mean position of this image across the judge&#39;s two shuffled runs (1 = best).</td></tr>
           <tr><td><code>scores.csv</code></td><td><code>image</code></td><td>Path of the 1024 px image on this site.</td></tr>
+          <tr><td><code>ratings.csv</code></td><td><code>task</code></td><td>Task id. `video-overall` is the ranking over every video prompt pooled (each video task alone has 4 prompts, an early result).</td></tr>
           <tr><td><code>ratings.csv</code></td><td><code>strength</code></td><td>Plackett–Luce log-strength, centred on 0 within the task.</td></tr>
           <tr><td><code>ratings.csv</code></td><td><code>ci_low / ci_high</code></td><td>95% bootstrap interval over prompts.</td></tr>
           <tr><td><code>ratings.csv</code></td><td><code>rank</code></td><td>Position by strength, 1 = best.</td></tr>
@@ -147,6 +147,7 @@
       </div>
       <p>Task ids and their public names: <code>product-photo</code> (Product photo), <code>logo</code> (Logo with text), <code>poster-flyer</code> (Poster and flyer), <code>portrait-headshot</code> (Portrait and headshot), <code>anime-illustration</code> (Anime and illustration), <code>interior-design</code> (Interior and architecture), <code>fantasy-concept-art</code> (Fantasy and concept art), <code>sticker-icon</code> (Stickers and icons), <code>product-video</code> (Product video), <code>cinematic-scene</code> (Cinematic scene), <code>character-animation</code> (Animated character), <code>people-in-motion</code> (People in motion).</p>
       <p>Empty cells mean "not measured" (for example OCR columns on tasks without text), never zero.</p>
+      <p><code>credits_per_image</code> in <code>models.csv</code> is credits per output: per image for the image models and per clip for the video models, at the benchmark settings.</p>
     </section>
 
     <section id="how">
@@ -164,11 +165,11 @@
 
     <section id="licence">
       <h2>Licence and attribution</h2>
-      <p>All files on this page are released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Copy, share, adapt and build on them, commercially too, as long as you credit the source. A line like this is enough:</p>
+      <p>The CSV and JSON files on this page are released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Copy, share, adapt and build on them, commercially too, as long as you credit the source. A line like this is enough:</p>
       <div class="callout callout--quiet">
         <p><code id="attribution">Model Compass benchmark data by Vilya Poghosyan, https://vilyapoghosyan.github.io/model-compass/, licensed under CC BY 4.0.</code></p>
       </div>
-      <p class="small muted">The images were generated with Picsart AI models and carry the Picsart AI label; they are shown as evidence for the scores. Model names belong to their makers. Nothing here is an official Picsart publication.</p>
+      <p class="small muted">The images and clips are not part of that release; they were generated in Picsart's AI Playground and are shown under Picsart's terms, as evidence for the scores, with the Picsart AI label. Model names belong to their makers. Nothing here is an official Picsart publication.</p>
     </section>
   </article>
 </div>

@@ -60,12 +60,14 @@
   }
   function copyText(text) {
     var fallback = function () {
+      var prev = document.activeElement;  // ta.select() moves focus; give it back afterwards
       var ta = document.createElement("textarea");
       ta.value = text; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;top:0;opacity:0";
       document.body.appendChild(ta); ta.select();
       var ok = false;
       try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
       ta.remove();
+      if (prev && typeof prev.focus === "function") prev.focus();
       return ok ? Promise.resolve() : Promise.reject(new Error("copy failed"));
     };
     if (navigator.clipboard && root.isSecureContext) return navigator.clipboard.writeText(text).catch(fallback);

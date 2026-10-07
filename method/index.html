@@ -4,12 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How we measure: the Model Compass method</title>
-<meta name="description" content="How Model Compass ranks 17 Picsart AI models on 96 prompts across 12 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
-<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/method/">
-<meta property="og:type" content="website">
+<meta name="description" content="How Model Compass ranks 17 Picsart AI models on 96 prompts: automatic scores, a shuffled AI judge, Plackett–Luce error bars, a tested router, and the limits.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/method/"><meta property="og:type" content="website">
 <meta property="og:site_name" content="Model Compass">
 <meta property="og:title" content="How we measure: the Model Compass method">
-<meta property="og:description" content="How Model Compass ranks 17 Picsart AI models on 96 prompts across 12 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
+<meta property="og:description" content="How Model Compass ranks 17 Picsart AI models on 96 prompts: automatic scores, a shuffled AI judge, Plackett–Luce error bars, a tested router, and the limits.">
 <meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/method/">
 <meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +48,7 @@
     <li class="stat"><span class="stat__value">17</span><span class="stat__label">image and video models you can pick in Picsart</span></li>
     <li class="stat"><span class="stat__value">96</span><span class="stat__label">prompts in 12 tasks</span></li>
     <li class="stat"><span class="stat__value">0.59</span><span class="stat__label">judge agreement between two shuffled runs (Kendall tau)</span></li>
-    <li class="stat"><span class="stat__value">72%</span><span class="stat__label">router picks the right task, leave-one-out</span></li>
+    <li class="stat"><span class="stat__value">80%</span><span class="stat__label">router picks the right task, leave-one-out</span></li>
   </ul>
   <div class="callout callout--short" role="note">
     <p>In short</p>
@@ -409,13 +408,15 @@
       <p>Your exact sentence has no result, so the router answers a smaller question: which of our 12 tasks is it closest to? A small sentence model (22 million parameters, 23 MB, running in your browser) turns your text into 384 numbers.</p>
       <p>We compare them with every benchmark prompt's numbers, keep the 5 most similar, and let those vote for their task, weighted by similarity. The recommendation is that task's best model; the neighbours are shown as proof, so you can see when the router guessed wrong.</p>
       <h3>When it stays quiet</h3>
-      <p>Two gates guard the answer. The nearest benchmark prompt must be at least 0.35 cosine-similar to your request, and the winning task must hold at least 40% of the vote. Below either line it says it is not sure and shows the two closest tasks instead. 82% of the benchmark prompts clear that gate when held out.</p>
-      <p>Requests it cannot serve at all (video, photo editing, upscaling, writing) are told so before the model even loads. Nothing you type leaves your browser. If the model fails to download, a plain keyword list per task takes over.</p>
+      <p>Two gates guard the answer. The nearest benchmark prompt must be at least 0.40 cosine-similar to your request, and the winning task must hold at least 60% of the vote. Below either line it says it is not sure and shows the two closest tasks instead. 62% of the benchmark prompts clear that gate when held out.</p>
+      <p>Requests it cannot serve at all (GIFs, photo editing, upscaling, writing) are told so before the model even loads; video requests are routed only among the video tasks, and image requests only among the image tasks. Nothing you type leaves your browser. If the model fails to download, a plain keyword list per task takes over.</p>
       <h3>How well it routes</h3>
       <p>There is no separate test set, so we make one. Take one prompt out, route it with the other 95, check the answer, repeat for all 96. This is <strong>leave-one-out accuracy</strong>.</p>
-      <p>The router puts a held-out prompt in the right task <strong>72%</strong> of the time (guessing at random would score 8%). The harder question: is the recommended model the one the judge preferred for that exact prompt? That changes from prompt to prompt inside one task:</p>
+      <p>The router puts a held-out prompt in the right task <strong>80%</strong> of the time (guessing at random would score 8%). Split by kind: <strong>82%</strong> on the 80 image prompts, <strong>69%</strong> on the 16 video prompts.</p>
+      <p>The video number is pessimistic by construction. With 4 prompts per video task, a held-out video prompt has only 3 same-task neighbours left among the other 15 video prompts, against 5 votes, so one or two close prompts from a neighbouring video task can outvote them. A real request is routed with all 4 prompts of every video task in place; more video prompts per task would make the test, and the router, stronger.</p>
+      <p>The harder question: is the recommended model the one the judge preferred for that exact prompt? That changes from prompt to prompt inside one task:</p>
       <ul class="bars" aria-label="Recommended model equals the judge's winner">
-        <li class="is-router"><span class="bars__label"><strong>Compass router (leave-one-out)</strong></span><span class="bars__track"><span class="bars__fill" style="width:31.2%"></span></span><span class="bars__value">31%</span></li>
+        <li class="is-router"><span class="bars__label"><strong>Compass router (leave-one-out)</strong></span><span class="bars__track"><span class="bars__fill" style="width:33.3%"></span></span><span class="bars__value">33%</span></li>
         <li class=""><span class="bars__label"><strong>Always the most common winner</strong></span><span class="bars__track"><span class="bars__fill" style="width:24.0%"></span></span><span class="bars__value">24%</span></li>
         <li class=""><span class="bars__label"><strong>Always the most expensive model</strong></span><span class="bars__track"><span class="bars__fill" style="width:18.8%"></span></span><span class="bars__value">19%</span></li>
         <li class="is-oracle"><span class="bars__label"><strong>Oracle: knows the true task</strong></span><span class="bars__track"><span class="bars__fill" style="width:35.4%"></span></span><span class="bars__value">35%</span></li>
@@ -435,7 +436,7 @@
         <li>top three for the task;</li>
         <li>at least half the winner's chance of ranking first;</li>
         <li>an error bar that overlaps the winner's;</li>
-        <li>fewer credits per image.</li>
+        <li>fewer credits per image or clip.</li>
       </ul>
       <p>If no model clears all four, there is no alternative to show.</p>
     </section>

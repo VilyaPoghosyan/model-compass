@@ -4,12 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compare every Picsart AI model on the same request</title>
-<meta name="description" content="The same request sent to every Picsart AI model of its kind (12 image, 5 video models): see every output at full size, the judge's order and the scores, and slide two images against each other. 96 tested requests.">
-<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/compare/">
-<meta property="og:type" content="website">
+<meta name="description" content="One request, every Picsart AI model of its kind (12 image, 5 video): every output full size, the judge's order, and an A/B slider for image requests.">
+<link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/compare/"><meta property="og:type" content="website">
 <meta property="og:site_name" content="Model Compass">
 <meta property="og:title" content="Compare every Picsart AI model on the same request">
-<meta property="og:description" content="The same request sent to every Picsart AI model of its kind (12 image, 5 video models): see every output at full size, the judge's order and the scores, and slide two images against each other. 96 tested requests.">
+<meta property="og:description" content="One request, every Picsart AI model of its kind (12 image, 5 video): every output full size, the judge's order, and an A/B slider for image requests.">
 <meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/compare/">
 <meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -289,6 +288,7 @@
   var url = function (p) { return base + "/" + String(p).replace(/^\/+/, ""); };
   var $ = function (id) { return document.getElementById(id); };
   var utm = JSON.parse(document.body.dataset.utm || "{}");
+  var SURFACE = "compare";  // out/<surface>/<task>/<model> events and utm_term, like compass.js
   var FIRST = "product-photo-01";
   var TIER_ORDER = {"premium":0,"standard":1,"fast":2};
   var data = null, order = [], byId = {}, models = {}, tasks = {}, current = null;
@@ -296,7 +296,8 @@
   function outbound(model, taskId) {
     var q = new URLSearchParams({
       utm_source: utm.source || "model-compass", utm_medium: utm.medium || "referral",
-      utm_campaign: utm.campaign || "open-doors", utm_content: taskId + "-" + model.id
+      utm_campaign: utm.campaign || "open-doors", utm_content: taskId + "-" + model.id,
+      utm_term: SURFACE
     });
     return model.deep_link + (model.deep_link.indexOf("?") >= 0 ? "&" : "?") + q.toString();
   }
@@ -419,7 +420,7 @@
       li.appendChild(stats);
       var go = el("a", "btn btn--quiet cmp-card__go", "Make it in Picsart with " + m.name);
       go.href = outbound(m, p.task); go.target = "_blank"; go.rel = "noopener";
-      go.dataset.out = p.task + "/" + m.id;
+      go.dataset.out = SURFACE + "/" + p.task + "/" + m.id;
       li.appendChild(go);
       grid.appendChild(li);
     });

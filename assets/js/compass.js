@@ -4,8 +4,8 @@ const TRANSFORMERS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers
 const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
 const LOAD_TIMEOUT_MS = 45000;
 // Confidence gate defaults; the real floors come from router.json eval (exported by Python).
-const DEFAULT_MIN_SIM = 0.35;
-const DEFAULT_MIN_SHARE = 0.4;
+const DEFAULT_MIN_SIM = 0.40;
+const DEFAULT_MIN_SHARE = 0.6;
 // Out of scope (Compass covers images and videos generated from text); checked before the model loads.
 const OUT_OF_SCOPE = [
   "gif",
@@ -15,6 +15,9 @@ const OUT_OF_SCOPE = [
   "poem", "essay", "lyrics", "song", "write me", "write a", "text only", "caption for",
   "music", "audio", "voice", "voiceover", "translate",
 ];
+
+// Clicks from the home result card: first segment of the out/ event path and utm_term.
+const SURFACE = "home";
 
 const base = document.documentElement.dataset.base || "";
 const url = (p) => `${base}/${String(p).replace(/^\/+/, "")}`;
@@ -107,6 +110,7 @@ export function outOfScope(query) {
   const words = query.toLowerCase().match(/[a-z0-9][a-z0-9'+-]*/g) ?? [];
   const q = " " + words.join(" ") + " ";
   const qWords = new Set(words);
+  if (q.includes(" music video ")) qWords.delete("music");  // a music video is a video request
   return OUT_OF_SCOPE.some((kw) => (kw.includes(" ") ? q.includes(" " + kw + " ") : qWords.has(kw)));
 }
 
@@ -116,13 +120,25 @@ const VIDEO_WORDS = [
   "video", "videos", "clip", "clips", "animate", "animated", "animation", "reel", "reels",
   "footage", "b-roll", "timelapse", "time-lapse", "slow motion", "slow-mo", "slowmo", "cinemagraph",
 ];
+// "animated"/"animation" describe a style as often as a medium ("animated sticker of a cat"):
+// they only mean video when no image-only noun is in the request.
+const SOFT_VIDEO_WORDS = ["animated", "animation"];
+const IMAGE_NOUNS = /\b(sticker|illustration|logo|poster|cover|icon|print|image|photo|picture|wallpaper|portrait|avatar|drawing|painting|emoji)s?\b/;
 
 export function wantsVideo(query) {
   const words = query.toLowerCase().match(/[a-z0-9][a-z0-9'+-]*/g) ?? [];
   const q = " " + words.join(" ") + " ";
   const qWords = new Set(words);
   if (q.includes(" clip art ")) qWords.delete("clip");  // clip art is an image
+  if (IMAGE_NOUNS.test(q)) SOFT_VIDEO_WORDS.forEach((w) => qWords.delete(w));
   return VIDEO_WORDS.some((kw) => (kw.includes(" ") ? q.includes(" " + kw + " ") : qWords.has(kw)));
+}
+
+/* Under the quality gate (fewer than compass.min_prompts requests): shown with the early label. */
+export function isEarly(task, minPrompts = 8) {
+  if (!task) return false;
+  if (typeof task.early === "boolean") return task.early;
+  return (task.n_prompts || 0) < minPrompts;
 }
 
 const mediaOf = (x) => (x && x.media) || "image";
@@ -139,15 +155,18 @@ export function closeRace(ranking) {
   return a.ci_high >= b.ci_low && a.ci_low <= b.ci_high;
 }
 
+/* Same query as export.outbound_link(): utm_content = <task>-<model>, utm_term = the surface. */
 function outbound(model, taskId) {
   const q = new URLSearchParams({
     utm_source: utm.source || "model-compass",
     utm_medium: utm.medium || "referral",
     utm_campaign: utm.campaign || "open-doors",
     utm_content: `${taskId}-${model.id}`,
+    utm_term: SURFACE,
   });
   return model.deep_link + (model.deep_link.includes("?") ? "&" : "?") + q.toString();
 }
+const outPath = (taskId, modelId) => `${SURFACE}/${taskId}/${modelId}`;
 
 function setStatus(text) { status.textContent = text || ""; }
 
@@ -195,13 +214,15 @@ export function promptWins(prompts, modelId) {
   return wins;
 }
 
-/* Share text for a routed request (the URL is appended by share.js). */
-export function resultShareText(request, modelName, taskName, nModels, quote = (t) => t) {
-  return `Asked Model Compass "${quote(request)}" → best AI model: ${modelName} (${taskName}). ${nModels} models tested side by side:`;
+/* Share text for a routed request (the URL is appended by share.js). nPrompts is given only for
+   an early result (under the quality gate) and adds the caveat to the shared text. */
+export function resultShareText(request, modelName, taskName, nModels, quote = (t) => t, nPrompts = 0) {
+  const early = nPrompts ? ` Early result, ${nPrompts} tested requests.` : "";
+  return `Asked Model Compass "${quote(request)}" → best AI model: ${modelName} (${taskName}).${early} ${nModels} models tested side by side:`;
 }
 
 /* Point the result card's share control at the task page, carrying the request as ?q=. */
-function setShare(task, best, nModels, request) {
+function setShare(task, best, nModels, request, early = false) {
   const box = document.querySelector("#verdict [data-share]");
   if (!box) return;
   const sh = window.compassShare;
@@ -209,7 +230,7 @@ function setShare(task, best, nModels, request) {
   // Task pages carry a task-specific preview image; fall back to home ?q= when a task has no results page yet.
   box.dataset.sharePath = task.recommendation ? `best-ai-model-for/${task.slug}/` : "";
   box.dataset.shareQ = sh ? sh.clean(request) : request.slice(0, 200);
-  box.dataset.shareText = resultShareText(request, best.name, task.name, nModels, sh ? sh.quote : (t) => t.slice(0, 80));
+  box.dataset.shareText = resultShareText(request, best.name, task.name, nModels, sh ? sh.quote : (t) => t.slice(0, 80), early ? task.n_prompts : 0);
   box.querySelector(".share__panel").hidden = true;
   box.querySelector("[data-share-toggle]").setAttribute("aria-expanded", "false");
 }
@@ -236,15 +257,23 @@ function videoTile(o, link, alt, name) {
   return wrap;
 }
 
-function render({ compass, router }, taskId, neighbors, mode, scores, request = "") {
-  const task = compass.tasks.find((t) => t.id === taskId);
+/* general = { closest: [{name, share}] }: no task matched closely, so taskId is a pooled
+   all-image / all-video entry and the card says it is the all-round pick. */
+function render({ compass, router }, taskId, neighbors, mode, scores, request = "", general = null) {
+  const overall = [compass.image_overall, compass.video_overall].filter(Boolean);
+  const task = compass.tasks.find((t) => t.id === taskId) || overall.find((t) => t.id === taskId);
   const rec = (task && task.recommendation) || router.task_recommendation[taskId];
   if (!task || !rec || !rec.best) { showPickTask(mediaOf(task) === "video" ? "video" : "unknown"); return; }
+  const media = mediaOf(task);
+  const unit = media === "video" ? "clip" : "image";
+  const early = !general && isEarly(task, compass.min_prompts);
   const models = Object.fromEntries(compass.models.map((m) => [m.id, m]));
   const best = models[rec.best] || { id: rec.best, name: rec.best, provider: "", tier: "standard", deep_link: "#" };
-  const taskUrl = url(`best-ai-model-for/${task.slug}/`);
+  const taskUrl = task.id === "image-overall" ? url("#tasks") : url(`best-ai-model-for/${task.slug}/`);
 
-  $("verdict-task").textContent = `Best for ${headlineNoun(task)}`;
+  $("verdict-task").textContent = general
+    ? `Best all-round ${mediaOf(task)} model`
+    : `Best for ${headlineNoun(task)}`;
   $("verdict-title").textContent = best.name;
   $("verdict-provider").textContent = best.provider;
   const tier = $("verdict-tier");
@@ -253,7 +282,8 @@ function render({ compass, router }, taskId, neighbors, mode, scores, request = 
   const ranking = task.ranking || [];
   const top = ranking.find((r) => r.model === best.id) || ranking[0];
   const runnerModel = rec.runner_up && models[rec.runner_up];
-  const taskPrompts = compass.prompts.filter((p) => p.task === task.id);
+  const inTask = (p) => (general ? mediaOf(compass.tasks.find((t) => t.id === p.task)) === mediaOf(task) : p.task === task.id);
+  const taskPrompts = compass.prompts.filter(inTask);
   const statsEl = $("verdict-stats");
   if (statsEl) {
     statsEl.replaceChildren(...verdictStats(task, top, runnerModel).map((st) => {
@@ -269,39 +299,64 @@ function render({ compass, router }, taskId, neighbors, mode, scores, request = 
   const go = $("verdict-go");
   go.textContent = `Make it in Picsart with ${best.name}`;
   go.href = outbound(best, task.id);
-  go.dataset.out = `${task.id}/${best.id}`;
+  go.dataset.out = outPath(task.id, best.id);
   const alt = $("verdict-alt");
   const runner = rec.runner_up && models[rec.runner_up];
   if (alt) {
     if (close && runner && runner.id !== best.id) {
       alt.textContent = `Or make it with ${runner.name}`;
       alt.href = outbound(runner, task.id);
-      alt.dataset.out = `${task.id}/${runner.id}`;
+      alt.dataset.out = outPath(task.id, runner.id);
       alt.hidden = false;
     } else {
       alt.hidden = true;
     }
   }
   const tl = $("verdict-task-link");
-  tl.textContent = `See all ${task.name.toLowerCase()} results`;
+  tl.textContent = task.id === "image-overall" ? "See every image task" : `See all ${task.name.toLowerCase()} results`;
   tl.href = taskUrl;
 
   const fb = $("fallback");
-  if (rec.fallback_cheaper && models[rec.fallback_cheaper] && rec.fallback_cheaper !== best.id) {
+  // the runner-up button already points at the fallback model: no second button to the same link
+  const runnerShown = Boolean(alt && close && runner && runner.id !== best.id);
+  const fallbackIsRunner = runnerShown && rec.fallback_cheaper === runner.id;
+  if (rec.fallback_cheaper && models[rec.fallback_cheaper] && rec.fallback_cheaper !== best.id && !fallbackIsRunner) {
     const cheaper = models[rec.fallback_cheaper];
-    $("fallback-text").textContent = `${cheaper.name} (${cheaper.provider}) ties ${best.name} within the error bars on this task and uses fewer credits per image.`;
+    $("fallback-text").textContent = `${cheaper.name} (${cheaper.provider}) ties ${best.name} within the error bars on this task and uses fewer credits per ${unit}.`;
     const fgo = $("fallback-go");
     fgo.textContent = `Open ${cheaper.name} instead`;
     fgo.href = outbound(cheaper, task.id);
-    fgo.dataset.out = `${task.id}/${cheaper.id}`;
+    fgo.dataset.out = outPath(task.id, cheaper.id);
     fb.hidden = false; fb.open = false;
   } else {
     fb.hidden = true;
   }
 
+  // Early result (under the quality gate, e.g. 4 prompts per video task): say so on the card
+  // and point at the pooled ranking, which is the stronger signal.
+  const earlyEl = $("verdict-early");
+  if (earlyEl) {
+    earlyEl.replaceChildren();
+    const pooled = compass[`${media}_overall`];
+    if (early) {
+      earlyEl.append(`Early result: only ${task.n_prompts} tested requests for this task`);
+      if (pooled && pooled.recommendation) {
+        const a = document.createElement("a");
+        a.href = url(`best-ai-model-for/${pooled.slug}/`);
+        a.textContent = `see the all-${media} ranking`;
+        earlyEl.append("; ", a);
+      }
+      earlyEl.append(".");
+    }
+    earlyEl.hidden = !early;
+  }
+
   const bits = [];
-  if (mode === "keyword") bits.push("Task found by keywords; the router model did not load");
-  else if (scores && scores[task.id] != null) bits.push(`Task match ${Math.round(scores[task.id] * 100)}% of the ${neighbors.length} nearest tested requests`);
+  if (general) {
+    const near = general.closest.map((n) => `${n.name} ${Math.round(n.share * 100)}%`).join(", ");
+    bits.push(`No tested task matches your request closely${near ? ` (closest: ${near})` : ""}, so this is the model ranked best across all ${task.n_prompts} ${mediaOf(task)} requests`);
+  } else if (mode === "keyword") bits.push("Task found by keywords; the router model did not load");
+  else if (scores && scores[task.id] != null) bits.push(`Task match ${Math.round(scores[task.id] * 100)}% of the ${neighbors.length} nearest matches`);
   if (task.judge_agreement_tau != null) bits.push(`Judge agreement ${Number(task.judge_agreement_tau).toFixed(2)}`);
   $("verdict-confidence").textContent = bits.join(". ") + (bits.length ? "." : "");
 
@@ -310,7 +365,9 @@ function render({ compass, router }, taskId, neighbors, mode, scores, request = 
   const byId = Object.fromEntries(compass.prompts.map((p) => [p.id, p]));
   const seen = new Set();
   const items = [];
-  const pool = [...neighbors.filter((n) => n.task === task.id), ...(compass.prompts.filter((p) => p.task === task.id))];
+  const pool = general
+    ? [...neighbors, ...taskPrompts]
+    : [...neighbors.filter((n) => n.task === task.id), ...taskPrompts];
   for (const n of pool) {
     if (items.length >= 4 || seen.has(n.id)) continue;
     const p = byId[n.id];
@@ -344,29 +401,34 @@ function render({ compass, router }, taskId, neighbors, mode, scores, request = 
   });
   $("verdict-proof-title") && ($("verdict-proof-title").hidden = items.length === 0);
 
-  setShare(task, best, compass.models.filter((m) => mediaOf(m) === mediaOf(task)).length, request);
+  setShare(task, best, compass.models.filter((m) => mediaOf(m) === media).length, request, early);
 
-  $("pick-task").hidden = true;
+  if (general) showPickTask("closer", [], { keepVerdict: true });
+  else $("pick-task").hidden = true;
   const v = $("verdict");
   v.hidden = false;
   v.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  if (window.compassCount) window.compassCount(`route/${task.id}/${best.id}/${mode}`);
+  if (window.compassCount) window.compassCount(`route/${task.id}/${best.id}/${general ? "general" : mode}`);
 }
 
 const PICK_MESSAGES = {
   unknown: "Compass could not tell what you want to make. Pick the closest task:",
   unsure: "Compass is not sure. Pick the closest text-to-image task:",
+  "unsure-video": "Compass is not sure. Pick the closest video task:",
+  closer: "Want a task-specific pick? Choose the closest task:",
   scope: "Compass covers images and videos made from text, not GIFs, photo editing, upscaling or writing. Pick a task:",
   video: "Video results are still coming in. Pick a video task to watch every model's clips:",
   error: "Compass could not load its data. Reload the page or pick a task below:",
 };
 
-/* reason: unknown | unsure | scope | error; nearest: [{name, share}] when unsure. */
-function showPickTask(reason = "unknown", nearest = []) {
-  $("verdict").hidden = true;
+/* reason: unknown | unsure | closer | scope | video | error; nearest: [{name, share}] when unsure;
+   media: the request's kind ("video" lists only the video tasks, like reason "video"). */
+function showPickTask(reason = "unknown", nearest = [], { keepVerdict = false, media = "image" } = {}) {
+  if (!keepVerdict) $("verdict").hidden = true;
   const box = $("pick-task");
   const text = $("pick-task-text");
-  if (text) text.textContent = PICK_MESSAGES[reason] || PICK_MESSAGES.unknown;
+  const videoOnly = reason === "video" || media === "video";
+  if (text) text.textContent = PICK_MESSAGES[videoOnly && PICK_MESSAGES[`${reason}-video`] ? `${reason}-video` : reason] || PICK_MESSAGES.unknown;
   const near = $("pick-task-near");
   if (near) {
     if (reason === "unsure" && nearest.length) {
@@ -376,10 +438,11 @@ function showPickTask(reason = "unknown", nearest = []) {
       near.hidden = true;
     }
   }
-  // "video" lists only the video tasks (and the all-video ranking); every other reason lists all
-  box.querySelectorAll("li[data-media]").forEach((li) => { li.hidden = reason === "video" && li.dataset.media !== "video"; });
+  // a video request lists only the video tasks (and the all-video ranking); image requests list all
+  box.querySelectorAll("li[data-media]").forEach((li) => { li.hidden = videoOnly && li.dataset.media !== "video"; });
   box.dataset.reason = reason;
   box.hidden = false;
+  if (keepVerdict) return;
   box.scrollIntoView({ behavior: "smooth", block: "nearest" });
   if (window.compassCount) window.compassCount(`route/none/${reason}`);
 }
@@ -399,37 +462,47 @@ async function ask(text) {
   form.classList.remove("is-settled");
   try {
     const data = await loadData();
-    const media = wantsVideo(q) ? "video" : "image";
-    const inMedia = new Set(data.compass.tasks.filter((t) => mediaOf(t) === media).map((t) => t.id));
-    const pool = data.router.prompts.filter((p) => inMedia.has(p.task));
-    const keywords = Object.fromEntries(Object.entries(data.router.keyword_fallback || {}).filter(([t]) => inMedia.has(t)));
-    if (!pool.length) {  // e.g. video tasks exist but the router has no video prompts yet
-      setStatus("");
-      showPickTask(media === "video" ? "video" : "unknown");
-      return;
-    }
     const gate = data.router.eval || {};
     const minSim = gate.min_similarity ?? DEFAULT_MIN_SIM;
     const minShare = gate.min_task_share ?? DEFAULT_MIN_SHARE;
+    const tasksOf = (md) => new Set(data.compass.tasks.filter((t) => mediaOf(t) === md).map((t) => t.id));
+    let media = wantsVideo(q) ? "video" : "image";
     let mode = "embed";
     let taskId = null, neighbors = [], scores = null;
     try {
-      setStatus("Loading the router (23 MB, once, cached by your browser)…");
+      setStatus("Loading the router (about 27 MB, once, cached by your browser)…");
       const extractor = await withTimeout(loadExtractor(), LOAD_TIMEOUT_MS, "router load");
       setStatus("Reading your request…");
       const vec = await embed(extractor, q);
+      // "people in motion", "ai dance video": close to a video task's own name or search phrase
+      if (media === "image") {
+        const video = tasksOf("video");
+        const anchorSim = Math.max(0, ...data.router.prompts
+          .filter((p) => p.anchor && video.has(p.task)).map((p) => cosine(vec, p.embedding)));
+        if (anchorSim >= (gate.video_anchor_min ?? 0.7)) media = "video";
+      }
+      const inMedia = tasksOf(media);
+      const pool = data.router.prompts.filter((p) => inMedia.has(p.task));
+      if (!pool.length) { setStatus(""); showPickTask(media === "video" ? "video" : "unknown"); return; }
       const r = route(vec, pool, data.router.k);
       taskId = r.task; neighbors = r.neighbors; scores = r.scores;
       const topSim = neighbors.length ? neighbors[0].sim : 0;
-      window.__lastRoute = { task: taskId, topSim, share: scores[taskId], scores };
+      window.__lastRoute = { task: taskId, topSim, share: scores[taskId], scores, media };
       if (!isConfident(topSim, scores[taskId] ?? 0, minSim, minShare)) {
         setStatus("");
-        showPickTask("unsure", nearestTasks(data.compass, scores));
+        const overall = data.compass[`${media}_overall`];
+        if (overall && overall.recommendation) {
+          render(data, overall.id, neighbors, mode, scores, q, { closest: nearestTasks(data.compass, scores) });
+        } else {
+          showPickTask("unsure", nearestTasks(data.compass, scores), { media });
+        }
         return;
       }
     } catch (err) {
       console.warn("router model unavailable, using keywords:", err);
       mode = "keyword";
+      const inMedia = tasksOf(media);
+      const keywords = Object.fromEntries(Object.entries(data.router.keyword_fallback || {}).filter(([t]) => inMedia.has(t)));
       taskId = keywordRoute(q, keywords);
     }
     setStatus("");
