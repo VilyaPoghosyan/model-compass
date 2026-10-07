@@ -6,9 +6,9 @@
       <path d="M5.75 5.75l2.1 2.1M24.15 24.15l2.1 2.1M5.75 26.25l2.1-2.1M24.15 7.85l2.1-2.1"/>
     </g>
     <path d="M16 6l2.3 7.7L26 16l-7.7 2.3L16 26l-2.3-7.7L6 16l7.7-2.3z" fill="currentColor" opacity=".18"/>
-    <path class="needle" d="M16 6l2.3 7.7L16 16l-2.3-2.3z" fill="#B9321F"/>
+    <path class="needle" d="M16 6l2.3 7.7L16 16l-2.3-2.3z" fill="#F40BF4"/>
     <path d="M16 16l2.3 2.3L16 26l-2.3-7.7z" fill="currentColor"/>
     <circle cx="16" cy="16" r="1.6" fill="currentColor"/>
   </symbol>
-  <use href="#rose" fill="#16202A" color="#16202A"/>
+  <use href="#rose" fill="#000000" color="#000000"/>
 </svg>

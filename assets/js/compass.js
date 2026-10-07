@@ -1,14 +1,12 @@
-/* Browser router: embed the request with the same model Python used, vote over the nearest
-   benchmark prompts, show the task's best model with proof. Mirrors the Python router (see /method/). */
+/* Browser router: embed the request with the model Python used, vote over the nearest benchmark
+   prompts, show the task's best model with proof. Mirrors the Python router (see /method/). */
 const TRANSFORMERS_URL = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.6";
 const EMBED_MODEL = "Xenova/all-MiniLM-L6-v2";
 const LOAD_TIMEOUT_MS = 45000;
-// Confidence gate defaults; the real numbers come from router.json eval (exported by Python so
-// both sides agree). Below either floor the page says "not sure" instead of recommending.
+// Confidence gate defaults; the real floors come from router.json eval (exported by Python).
 const DEFAULT_MIN_SIM = 0.35;
 const DEFAULT_MIN_SHARE = 0.4;
-// Requests Compass cannot answer at all: it only covers images generated from text. Checked as
-// whole words / phrases before the model loads, so the answer is instant and spends nothing.
+// Out of scope (Compass only covers images generated from text); checked before the model loads.
 const OUT_OF_SCOPE = [
   "video", "videos", "animate", "animated", "animation", "gif",
   "remove the background", "remove background", "background removal", "cut out the background",
@@ -59,7 +57,7 @@ function withTimeout(promise, ms, label) {
 }
 
 async function embed(extractor, text) {
-  // ONE text per call: the int8 model's dynamic quantisation makes batches drift (parity doc §4).
+  // ONE text per call: batches drift with the int8 model (parity doc §4).
   const out = await extractor(text, { pooling: "mean", normalize: true });
   return Array.from(out.data);
 }
@@ -112,12 +110,12 @@ export function outOfScope(query) {
   return OUT_OF_SCOPE.some((kw) => (kw.includes(" ") ? q.includes(" " + kw + " ") : qWords.has(kw)));
 }
 
-/* Mirrors router.is_confident in Python: nearest prompt close enough AND a clear vote. */
+/* Mirrors router.is_confident: nearest prompt close enough AND a clear vote. */
 export function isConfident(topSim, taskShare, minSim, minShare) {
   return topSim >= minSim && taskShare >= minShare;
 }
 
-/* Close race = the runner-up's 95 % interval overlaps the best model's (rank.is_close_race). */
+/* Close race: the runner-up's 95 % interval overlaps the best's (rank.is_close_race). */
 export function closeRace(ranking) {
   if (!ranking || ranking.length < 2) return false;
   const [a, b] = ranking;
@@ -136,6 +134,50 @@ function outbound(model, taskId) {
 
 function setStatus(text) { status.textContent = text || ""; }
 
+/* First sentence of a "why" (model names like "GPT Image 2.5" do not split it). */
+export function firstSentence(text) {
+  const t = String(text || "").trim();
+  const m = t.match(/^[\s\S]*?[.!?](?=\s+[A-Z“"(]|$)/);
+  return m ? m[0].trim() : t;
+}
+
+/* 'Best AI model for logos' -> 'logos' (pages/task.py headline_noun). */
+export function headlineNoun(task) {
+  const head = String(task.headline || "");
+  const prefix = "Best AI model for ";
+  return head.startsWith(prefix) ? head.slice(prefix.length).trim() : String(task.name || "").toLowerCase();
+}
+
+/* Verdict stat row + short "why" line (mirrors pages/task.py). */
+export function verdictStats(task, top, runner) {
+  const stats = [];
+  if (!top) return stats;
+  stats.push({ value: `${Math.round(top.win_prob_vs_field * 100)}%`, label: "chance of ranking first" });
+  if (runner) stats.push({ value: runner.name, label: "runner-up" });
+  if (task.needs_text && top.ocr_accuracy != null) stats.push({ value: `${Math.round(top.ocr_accuracy * 100)}%`, label: "text spelled right" });
+  return stats;
+}
+
+export function shortWhy(task, top, wins) {
+  if (!top) return "";
+  const n = task.n_prompts || 0;
+  if (task.needs_text && top.ocr_accuracy != null && n) return `Judge's most likely first pick; text spelled right on ${Math.round(top.ocr_accuracy * n)} of ${n}.`;
+  if (wins && n) return `Judge's most likely first pick; first on ${wins} of ${n} requests.`;
+  return "Judge's most likely first pick on this task's requests.";
+}
+
+/* Requests where the model had the best mean judge rank; ties share the win. */
+export function promptWins(prompts, modelId) {
+  let wins = 0;
+  for (const p of prompts) {
+    const ranked = p.outputs.filter((o) => o.judge_rank_mean != null);
+    if (!ranked.length) continue;
+    const best = Math.min(...ranked.map((o) => o.judge_rank_mean));
+    if (ranked.some((o) => o.model === modelId && o.judge_rank_mean === best)) wins += 1;
+  }
+  return wins;
+}
+
 function render({ compass, router }, taskId, neighbors, mode, scores) {
   const task = compass.tasks.find((t) => t.id === taskId);
   const rec = (task && task.recommendation) || router.task_recommendation[taskId];
@@ -144,13 +186,25 @@ function render({ compass, router }, taskId, neighbors, mode, scores) {
   const best = models[rec.best] || { id: rec.best, name: rec.best, provider: "", tier: "standard", deep_link: "#" };
   const taskUrl = url(`best-ai-model-for/${task.slug}/`);
 
-  $("verdict-task").textContent = `For ${task.name.toLowerCase()}`;
+  $("verdict-task").textContent = `Best for ${headlineNoun(task)}`;
   $("verdict-title").textContent = best.name;
   $("verdict-provider").textContent = best.provider;
   const tier = $("verdict-tier");
   tier.textContent = best.tier;
   tier.className = `tier tier--${best.tier}`;
-  $("verdict-why").textContent = rec.why || task.description;
+  const ranking = task.ranking || [];
+  const top = ranking.find((r) => r.model === best.id) || ranking[0];
+  const runnerModel = rec.runner_up && models[rec.runner_up];
+  const taskPrompts = compass.prompts.filter((p) => p.task === task.id);
+  const statsEl = $("verdict-stats");
+  if (statsEl) {
+    statsEl.replaceChildren(...verdictStats(task, top, runnerModel).map((st) => {
+      const li = document.createElement("li");
+      li.append(Object.assign(document.createElement("strong"), { textContent: st.value }), Object.assign(document.createElement("span"), { textContent: st.label }));
+      return li;
+    }));
+  }
+  $("verdict-why").textContent = top ? shortWhy(task, top, promptWins(taskPrompts, best.id)) : firstSentence(rec.why || task.description);
   const close = closeRace(task.ranking);
   const badge = $("verdict-close");
   if (badge) badge.hidden = !close;
@@ -177,7 +231,7 @@ function render({ compass, router }, taskId, neighbors, mode, scores) {
   const fb = $("fallback");
   if (rec.fallback_cheaper && models[rec.fallback_cheaper] && rec.fallback_cheaper !== best.id) {
     const cheaper = models[rec.fallback_cheaper];
-    $("fallback-text").textContent = `${cheaper.name} (${cheaper.provider}) was not separable from ${best.name} on this task within our error bars and uses fewer credits per image.`;
+    $("fallback-text").textContent = `${cheaper.name} (${cheaper.provider}) ties ${best.name} within the error bars on this task and uses fewer credits per image.`;
     const fgo = $("fallback-go");
     fgo.textContent = `Open ${cheaper.name} instead`;
     fgo.href = outbound(cheaper, task.id);
@@ -188,8 +242,9 @@ function render({ compass, router }, taskId, neighbors, mode, scores) {
   }
 
   const bits = [];
-  if (mode === "keyword") bits.push("Task detected by keywords because the router model did not load");
-  else if (scores && scores[task.id] != null) bits.push(`Task match: ${Math.round(scores[task.id] * 100)}% of the ${neighbors.length} nearest tested requests were ${task.name.toLowerCase()}`);
+  if (mode === "keyword") bits.push("Task found by keywords; the router model did not load");
+  else if (scores && scores[task.id] != null) bits.push(`Task match ${Math.round(scores[task.id] * 100)}% of the ${neighbors.length} nearest tested requests`);
+  if (task.judge_agreement_tau != null) bits.push(`Judge agreement ${Number(task.judge_agreement_tau).toFixed(2)}`);
   $("verdict-confidence").textContent = bits.join(". ") + (bits.length ? "." : "");
 
   const proof = $("proof");
@@ -236,12 +291,12 @@ function render({ compass, router }, taskId, neighbors, mode, scores) {
 
 const PICK_MESSAGES = {
   unknown: "Compass could not tell what you want to make. Pick the closest task:",
-  unsure: "Compass is not sure. It covers text-to-image tasks; pick the closest one:",
-  scope: "Compass covers images you generate from text. It cannot help with video, photo editing, upscaling or writing yet. If you want an image, pick a task:",
+  unsure: "Compass is not sure. Pick the closest text-to-image task:",
+  scope: "Compass covers images made from text, not video, photo editing, upscaling or writing. Want an image? Pick a task:",
   error: "Compass could not load its data. Reload the page or pick a task below:",
 };
 
-/* reason: unknown | unsure | scope | error. nearest: [{name, share}] for the "not sure" state. */
+/* reason: unknown | unsure | scope | error; nearest: [{name, share}] when unsure. */
 function showPickTask(reason = "unknown", nearest = []) {
   $("verdict").hidden = true;
   const box = $("pick-task");
@@ -250,7 +305,7 @@ function showPickTask(reason = "unknown", nearest = []) {
   const near = $("pick-task-near");
   if (near) {
     if (reason === "unsure" && nearest.length) {
-      near.textContent = "Closest tested tasks: " + nearest.map((n) => `${n.name} (${Math.round(n.share * 100)}% of the vote)`).join(", ") + ".";
+      near.textContent = "Closest: " + nearest.map((n) => `${n.name} (${Math.round(n.share * 100)}% of the vote)`).join(", ") + ".";
       near.hidden = false;
     } else {
       near.hidden = true;
@@ -329,7 +384,7 @@ if (form) {
   if (params.get("selftest") === "1") selfTest();
 }
 
-/* ?selftest=1: embed the parity fixture texts one by one and compare with Python's vectors. */
+/* ?selftest=1: embed the parity fixture texts and compare with Python's vectors. */
 async function selfTest() {
   const panel = document.createElement("pre");
   panel.id = "selftest";

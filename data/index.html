@@ -14,22 +14,21 @@
 <meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eef1f4">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1419">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fffcf8">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
 <link rel="icon" href="/model-compass/assets/img/rose.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://pastatic.picsart.com" crossorigin>
 <link rel="stylesheet" href="/model-compass/assets/css/site.css">
 <link rel="stylesheet" href="/model-compass/assets/css/pages-text.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Model Compass benchmark: Picsart AI image models by task","description":"12 Picsart AI image models on 80 prompts across 8 tasks: CLIP prompt match, aesthetic score, OCR text accuracy, mean rank from a shuffled AI judge, and Plackett-Luce ratings with 95% bootstrap intervals.","url":"https://vilyapoghosyan.github.io/model-compass/data/","sameAs":"https://vilyapoghosyan.github.io/model-compass/","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Vilya Poghosyan"},"dateModified":"2026-10-07","version":"2026-10-07","keywords":["AI image models","benchmark","Picsart","text to image","model comparison","Plackett-Luce"],"variableMeasured":["clip_score","aesthetic","ocr_exact","ocr_similarity","judge_rank_mean","strength","win_prob_vs_field"],"distribution":[{"@type":"DataDownload","name":"prompts.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/prompts.csv"},{"@type":"DataDownload","name":"models.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/models.csv"},{"@type":"DataDownload","name":"scores.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/scores.csv"},{"@type":"DataDownload","name":"ratings.csv","encodingFormat":"text/csv","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/ratings.csv"},{"@type":"DataDownload","name":"compass.json","encodingFormat":"application/json","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/compass.json"},{"@type":"DataDownload","name":"router.json","encodingFormat":"application/json","contentUrl":"https://vilyapoghosyan.github.io/model-compass/data/router.json"}]}</script>
 </head>
 <body class="page-text page-data" data-utm='{&#34;source&#34;:&#34;model-compass&#34;,&#34;medium&#34;:&#34;referral&#34;,&#34;campaign&#34;:&#34;open-doors&#34;}'>
 <a class="skip" href="#main">Skip to content</a>
+<svg class="rose-defs" aria-hidden="true" focusable="false"><symbol id="rose" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.2"/><g stroke="currentColor" stroke-width="1" opacity=".55"><path d="M16 1.5v3M16 27.5v3M1.5 16h3M27.5 16h3"/><path d="M5.75 5.75l2.1 2.1M24.15 24.15l2.1 2.1M5.75 26.25l2.1-2.1M24.15 7.85l2.1-2.1"/></g><path d="M16 6l2.3 7.7L26 16l-7.7 2.3L16 26l-2.3-7.7L6 16l7.7-2.3z" fill="currentColor" opacity=".18"/><path class="needle" d="M16 6l2.3 7.7L16 16l-2.3-2.3z" fill="#F40BF4"/><path d="M16 16l2.3 2.3L16 26l-2.3-7.7z" fill="currentColor"/><circle cx="16" cy="16" r="1.6" fill="currentColor"/></symbol></svg>
 <header class="site-head">
   <div class="wrap site-head__row">
     <a class="brand" href="/model-compass/" aria-label="Model Compass home">
-      <svg class="brand__rose" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><use href="/model-compass/assets/img/rose.svg#rose"/></svg>
+      <svg class="brand__rose" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><use href="#rose"/></svg>
       <span class="brand__name">Model Compass</span>
     </a>
     <nav class="site-nav" aria-label="Site">
@@ -44,7 +43,8 @@
 <main id="main" class="wrap">
 <header class="text-hero">
   <h1>The data behind every claim</h1>
-  <p class="lede">Every number on this site is in these files: the prompts, the models and their settings, every image's scores and judge rank, and the per-task ratings with their intervals. Download them, check them, build on them.</p>
+  <span class="rule" aria-hidden="true"></span>
+  <p class="lede">Every number on this site comes from these files: prompts, models and settings, every image's scores and judge rank, and the per-task ratings with intervals.</p>
   <ul class="stat-row" aria-label="Dataset size">
     <li class="stat"><span class="stat__value">80</span><span class="stat__label">prompts</span></li>
     <li class="stat"><span class="stat__value">12</span><span class="stat__label">models</span></li>
@@ -71,7 +71,7 @@
   <article class="prose">
     <section id="files">
       <h2>Files</h2>
-      <p>CSV files open in any spreadsheet. The two JSON files are what the site itself loads. All files are regenerated together on every export, so they always agree with each other and with the pages.</p>
+      <p>CSV opens in any spreadsheet; the two JSON files are what the site itself loads. Everything is regenerated together on every export, so the files always agree with each other and with the pages.</p>
       <ul class="files">
         <li class="file">
           <a class="file__name" href="/model-compass/data/prompts.csv" download>prompts.csv</a>
@@ -110,7 +110,7 @@
           <p class="file__actions"><a class="btn btn--quiet" href="/model-compass/data/router.json" download>Download</a></p>
         </li>
       </ul>
-      <p class="small muted">Images are on the site at the paths named in <code>scores.csv</code> (1024 px WebP with the Picsart AI label); the 512 px thumbnails live under <code>img/thumbs/</code> with the same path. Raw judge sheets and the two full rankings per prompt are available on request (see <a href="/model-compass/about/">about</a>).</p>
+      <p class="small muted">Images sit at the paths named in <code>scores.csv</code> (1024 px WebP with the Picsart AI label). The 512 px thumbnails live under <code>img/thumbs/</code> at the same path. Raw judge sheets and both full rankings per prompt are available on request (see <a href="/model-compass/about/">about</a>).</p>
     </section>
 
     <section id="dictionary">
@@ -152,10 +152,10 @@
     <section id="how">
       <h2>How the data was made</h2>
       <ol>
-        <li>80 prompts in 8 tasks were fixed before generation (<code>prompts.csv</code>).</li>
-        <li>Every prompt was sent once to each of 12 models at the settings in <code>models.csv</code>, through Picsart's AI Playground models. One image per prompt, no re-rolls.</li>
-        <li>Three programs scored every image: prompt match, aesthetic score, and for text tasks OCR spelling (<code>scores.csv</code>).</li>
-        <li>An AI judge ranked each prompt's images twice in shuffled order without seeing model names; the mean position is <code>judge_rank_mean</code>.</li>
+        <li>80 prompts in 8 tasks, fixed before generation (<code>prompts.csv</code>).</li>
+        <li>Every prompt sent once to each of 12 models in Picsart's AI Playground, at the settings in <code>models.csv</code>. One image per prompt, no re-rolls.</li>
+        <li>Three programs scored every image: prompt match, aesthetic score, and OCR spelling for text tasks (<code>scores.csv</code>).</li>
+        <li>An AI judge ranked each prompt's images twice in shuffled order without model names; the mean position is <code>judge_rank_mean</code>.</li>
         <li>Per task, the rankings were fitted with Plackett–Luce and bootstrapped 1,000 times over prompts (<code>ratings.csv</code>).</li>
         <li>Prompts were embedded with a small sentence model for the browser router (<code>router.json</code>).</li>
       </ol>
@@ -164,11 +164,11 @@
 
     <section id="licence">
       <h2>Licence and attribution</h2>
-      <p>The benchmark data (all files on this page) is released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. You may copy, share, adapt and build on it, including commercially, as long as you credit the source. A line like this is enough:</p>
+      <p>All files on this page are released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Copy, share, adapt and build on them, commercially too, as long as you credit the source. A line like this is enough:</p>
       <div class="callout callout--quiet">
         <p><code id="attribution">Model Compass benchmark data by Vilya Poghosyan, https://vilyapoghosyan.github.io/model-compass/, licensed under CC BY 4.0.</code></p>
       </div>
-      <p class="small muted">The images were generated with Picsart AI models and carry the Picsart AI label; they are shown here as evidence for the scores. Model names belong to their makers. Nothing here is an official Picsart publication.</p>
+      <p class="small muted">The images were generated with Picsart AI models and carry the Picsart AI label; they are shown as evidence for the scores. Model names belong to their makers. Nothing here is an official Picsart publication.</p>
     </section>
   </article>
 </div>
@@ -176,8 +176,8 @@
 <footer class="site-foot">
   <div class="wrap site-foot__grid">
     <div class="site-foot__disclosure">
-      <p>Built by Vilya Poghosyan, who works at Picsart. This is a personal project, not an official Picsart page. Every image here was made with Picsart models through Picsart's AI Playground and carries the Picsart AI label.</p>
-      <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Last updated 2026-10-07.</p>
+      <p>Built by Vilya Poghosyan, who works at Picsart. A personal project, not an official Picsart page. Every image was made with Picsart models in Picsart's AI Playground and carries the Picsart AI label.</p>
+      <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Updated <time datetime="2026-10-07">2026-10-07</time>.</p>
     </div>
     <div class="site-foot__links">
       <a href="/model-compass/method/">How we measure</a>
