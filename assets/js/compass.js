@@ -6,9 +6,9 @@ const LOAD_TIMEOUT_MS = 45000;
 // Confidence gate defaults; the real floors come from router.json eval (exported by Python).
 const DEFAULT_MIN_SIM = 0.35;
 const DEFAULT_MIN_SHARE = 0.4;
-// Out of scope (Compass only covers images generated from text); checked before the model loads.
+// Out of scope (Compass covers images and videos generated from text); checked before the model loads.
 const OUT_OF_SCOPE = [
-  "video", "videos", "animate", "animated", "animation", "gif",
+  "gif",
   "remove the background", "remove background", "background removal", "cut out the background",
   "upscale", "upscaling", "enhance", "sharpen", "restore", "retouch",
   "edit my", "edit this", "edit the", "edit a photo", "fix my photo", "inpaint", "outpaint",
@@ -110,6 +110,23 @@ export function outOfScope(query) {
   return OUT_OF_SCOPE.some((kw) => (kw.includes(" ") ? q.includes(" " + kw + " ") : qWords.has(kw)));
 }
 
+// A request for a clip: the router then only votes among video tasks (and image requests only
+// among image tasks), so "a video of my sneaker" never lands on product photos.
+const VIDEO_WORDS = [
+  "video", "videos", "clip", "clips", "animate", "animated", "animation", "reel", "reels",
+  "footage", "b-roll", "timelapse", "time-lapse", "slow motion", "slow-mo", "slowmo", "cinemagraph",
+];
+
+export function wantsVideo(query) {
+  const words = query.toLowerCase().match(/[a-z0-9][a-z0-9'+-]*/g) ?? [];
+  const q = " " + words.join(" ") + " ";
+  const qWords = new Set(words);
+  if (q.includes(" clip art ")) qWords.delete("clip");  // clip art is an image
+  return VIDEO_WORDS.some((kw) => (kw.includes(" ") ? q.includes(" " + kw + " ") : qWords.has(kw)));
+}
+
+const mediaOf = (x) => (x && x.media) || "image";
+
 /* Mirrors router.is_confident: nearest prompt close enough AND a clear vote. */
 export function isConfident(topSim, taskShare, minSim, minShare) {
   return topSim >= minSim && taskShare >= minShare;
@@ -178,10 +195,51 @@ export function promptWins(prompts, modelId) {
   return wins;
 }
 
-function render({ compass, router }, taskId, neighbors, mode, scores) {
+/* Share text for a routed request (the URL is appended by share.js). */
+export function resultShareText(request, modelName, taskName, nModels, quote = (t) => t) {
+  return `Asked Model Compass "${quote(request)}" → best AI model: ${modelName} (${taskName}). ${nModels} models tested side by side:`;
+}
+
+/* Point the result card's share control at the task page, carrying the request as ?q=. */
+function setShare(task, best, nModels, request) {
+  const box = document.querySelector("#verdict [data-share]");
+  if (!box) return;
+  const sh = window.compassShare;
+  box.dataset.shareTask = task.id;
+  // Task pages carry a task-specific preview image; fall back to home ?q= when a task has no results page yet.
+  box.dataset.sharePath = task.recommendation ? `best-ai-model-for/${task.slug}/` : "";
+  box.dataset.shareQ = sh ? sh.clean(request) : request.slice(0, 200);
+  box.dataset.shareText = resultShareText(request, best.name, task.name, nModels, sh ? sh.quote : (t) => t.slice(0, 80));
+  box.querySelector(".share__panel").hidden = true;
+  box.querySelector("[data-share-toggle]").setAttribute("aria-expanded", "false");
+}
+
+/* Same markup as templates/_media.html.j2 video_tile (behaviour lives in site.js). */
+const PLAY_SVG = '<svg class="vid__icon vid__icon--play" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg><svg class="vid__icon vid__icon--pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5h3v11H3zM8 1.5h3v11H8z" fill="currentColor"/></svg>';
+function videoTile(o, link, alt, name) {
+  const wrap = document.createElement("div");
+  wrap.className = "vid";
+  const v = document.createElement("video");
+  v.className = "proof__img";
+  v.src = url(o.video); v.poster = url(o.thumb);
+  v.width = 512; v.height = 512;
+  v.muted = true; v.loop = true; v.playsInline = true; v.preload = "none";
+  v.setAttribute("muted", ""); v.setAttribute("playsinline", "");
+  v.setAttribute("aria-label", alt);
+  link.appendChild(v);
+  const btn = document.createElement("button");
+  btn.className = "vid__play"; btn.type = "button";
+  btn.setAttribute("aria-label", `Play clip: ${name}`);
+  btn.setAttribute("aria-pressed", "false");
+  btn.innerHTML = PLAY_SVG;
+  wrap.append(link, btn);
+  return wrap;
+}
+
+function render({ compass, router }, taskId, neighbors, mode, scores, request = "") {
   const task = compass.tasks.find((t) => t.id === taskId);
   const rec = (task && task.recommendation) || router.task_recommendation[taskId];
-  if (!task || !rec || !rec.best) { showPickTask(); return; }
+  if (!task || !rec || !rec.best) { showPickTask(mediaOf(task) === "video" ? "video" : "unknown"); return; }
   const models = Object.fromEntries(compass.models.map((m) => [m.id, m]));
   const best = models[rec.best] || { id: rec.best, name: rec.best, provider: "", tier: "standard", deep_link: "#" };
   const taskUrl = url(`best-ai-model-for/${task.slug}/`);
@@ -266,21 +324,27 @@ function render({ compass, router }, taskId, neighbors, mode, scores) {
     li.className = "proof__item";
     const a = document.createElement("a");
     a.href = url(`compare/?prompt=${encodeURIComponent(p.id)}`);
-    const img = document.createElement("img");
-    img.className = "proof__img";
-    img.loading = index < 2 ? "eager" : "lazy";
-    img.decoding = "async";
-    img.width = 512; img.height = 512;
-    img.src = url(o.thumb);
-    img.alt = `${best.name} output for: ${p.text}`;
-    a.appendChild(img);
     const cap = document.createElement("p");
     cap.className = "proof__cap";
     cap.textContent = p.text;
-    li.append(a, cap);
+    if (o.video) {
+      li.append(videoTile(o, a, `${best.name} clip for: ${p.text}`, best.name), cap);
+    } else {
+      const img = document.createElement("img");
+      img.className = "proof__img";
+      img.loading = index < 2 ? "eager" : "lazy";
+      img.decoding = "async";
+      img.width = 512; img.height = 512;
+      img.src = url(o.thumb);
+      img.alt = `${best.name} output for: ${p.text}`;
+      a.appendChild(img);
+      li.append(a, cap);
+    }
     proof.appendChild(li);
   });
   $("verdict-proof-title") && ($("verdict-proof-title").hidden = items.length === 0);
+
+  setShare(task, best, compass.models.filter((m) => mediaOf(m) === mediaOf(task)).length, request);
 
   $("pick-task").hidden = true;
   const v = $("verdict");
@@ -292,7 +356,8 @@ function render({ compass, router }, taskId, neighbors, mode, scores) {
 const PICK_MESSAGES = {
   unknown: "Compass could not tell what you want to make. Pick the closest task:",
   unsure: "Compass is not sure. Pick the closest text-to-image task:",
-  scope: "Compass covers images made from text, not video, photo editing, upscaling or writing. Want an image? Pick a task:",
+  scope: "Compass covers images and videos made from text, not GIFs, photo editing, upscaling or writing. Pick a task:",
+  video: "Video results are still coming in. Pick a video task to watch every model's clips:",
   error: "Compass could not load its data. Reload the page or pick a task below:",
 };
 
@@ -311,6 +376,8 @@ function showPickTask(reason = "unknown", nearest = []) {
       near.hidden = true;
     }
   }
+  // "video" lists only the video tasks (and the all-video ranking); every other reason lists all
+  box.querySelectorAll("li[data-media]").forEach((li) => { li.hidden = reason === "video" && li.dataset.media !== "video"; });
   box.dataset.reason = reason;
   box.hidden = false;
   box.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -332,6 +399,15 @@ async function ask(text) {
   form.classList.remove("is-settled");
   try {
     const data = await loadData();
+    const media = wantsVideo(q) ? "video" : "image";
+    const inMedia = new Set(data.compass.tasks.filter((t) => mediaOf(t) === media).map((t) => t.id));
+    const pool = data.router.prompts.filter((p) => inMedia.has(p.task));
+    const keywords = Object.fromEntries(Object.entries(data.router.keyword_fallback || {}).filter(([t]) => inMedia.has(t)));
+    if (!pool.length) {  // e.g. video tasks exist but the router has no video prompts yet
+      setStatus("");
+      showPickTask(media === "video" ? "video" : "unknown");
+      return;
+    }
     const gate = data.router.eval || {};
     const minSim = gate.min_similarity ?? DEFAULT_MIN_SIM;
     const minShare = gate.min_task_share ?? DEFAULT_MIN_SHARE;
@@ -342,7 +418,7 @@ async function ask(text) {
       const extractor = await withTimeout(loadExtractor(), LOAD_TIMEOUT_MS, "router load");
       setStatus("Reading your request…");
       const vec = await embed(extractor, q);
-      const r = route(vec, data.router.prompts, data.router.k);
+      const r = route(vec, pool, data.router.k);
       taskId = r.task; neighbors = r.neighbors; scores = r.scores;
       const topSim = neighbors.length ? neighbors[0].sim : 0;
       window.__lastRoute = { task: taskId, topSim, share: scores[taskId], scores };
@@ -354,11 +430,11 @@ async function ask(text) {
     } catch (err) {
       console.warn("router model unavailable, using keywords:", err);
       mode = "keyword";
-      taskId = keywordRoute(q, data.router.keyword_fallback);
+      taskId = keywordRoute(q, keywords);
     }
     setStatus("");
-    if (!taskId) { showPickTask("unknown"); return; }
-    render(data, taskId, neighbors, mode, scores);
+    if (!taskId) { showPickTask(media === "video" ? "video" : "unknown"); return; }
+    render(data, taskId, neighbors, mode, scores, q);
   } catch (err) {
     console.error(err);
     setStatus("");
@@ -379,7 +455,8 @@ if (form) {
     chip.addEventListener("click", () => { input.value = chip.dataset.example; ask(input.value); });
   });
   const params = new URLSearchParams(location.search);
-  const q = params.get("q");
+  // ?q= (shared links): text only, length-limited like the textarea.
+  const q = String(params.get("q") || "").replace(/[\u0000-\u001f\u007f]+/g, " ").trim().slice(0, input.maxLength > 0 ? input.maxLength : 600);
   if (q) { input.value = q; ask(q); }
   if (params.get("selftest") === "1") selfTest();
 }

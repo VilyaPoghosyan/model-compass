@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How we measure: the Model Compass method</title>
-<meta name="description" content="How Model Compass ranks 12 Picsart AI models on 80 prompts across 8 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
+<meta name="description" content="How Model Compass ranks 17 Picsart AI models on 96 prompts across 12 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
 <link rel="canonical" href="https://vilyapoghosyan.github.io/model-compass/method/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Model Compass">
 <meta property="og:title" content="How we measure: the Model Compass method">
-<meta property="og:description" content="How Model Compass ranks 12 Picsart AI models on 80 prompts across 8 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
+<meta property="og:description" content="How Model Compass ranks 17 Picsart AI models on 96 prompts across 12 tasks: three automatic scores, a shuffled AI judge, a human check, Plackett–Luce ratings with error bars, a leave-one-out tested router, and the limits of all of it.">
 <meta property="og:url" content="https://vilyapoghosyan.github.io/model-compass/method/">
 <meta property="og:image" content="https://vilyapoghosyan.github.io/model-compass/og/home.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://pastatic.picsart.com" crossorigin>
 <link rel="stylesheet" href="/model-compass/assets/css/site.css">
 <link rel="stylesheet" href="/model-compass/assets/css/pages-text.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Model Compass measures Picsart AI models","url":"https://vilyapoghosyan.github.io/model-compass/method/","author":{"@type":"Person","name":"Vilya Poghosyan"},"dateModified":"2026-10-07","license":"https://creativecommons.org/licenses/by/4.0/","about":"An open benchmark and router for choosing a Picsart AI image model per task.","isPartOf":{"@type":"WebSite","name":"Model Compass","url":"https://vilyapoghosyan.github.io/model-compass/"},"description":"12 models, 8 tasks, 80 prompts, three automatic scores, a shuffled AI judge, human spot checks, Plackett-Luce ratings with bootstrap error bars and a leave-one-out evaluated router."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How Model Compass measures Picsart AI models","url":"https://vilyapoghosyan.github.io/model-compass/method/","author":{"@type":"Person","name":"Vilya Poghosyan"},"dateModified":"2026-10-07","license":"https://creativecommons.org/licenses/by/4.0/","about":"An open benchmark and router for choosing a Picsart AI image or video model per task.","isPartOf":{"@type":"WebSite","name":"Model Compass","url":"https://vilyapoghosyan.github.io/model-compass/"},"description":"17 models, 12 tasks, 96 prompts, three automatic scores, a shuffled AI judge, human spot checks, Plackett-Luce ratings with bootstrap error bars and a leave-one-out evaluated router."}</script>
 </head>
 <body class="page-text page-method" data-utm='{&#34;source&#34;:&#34;model-compass&#34;,&#34;medium&#34;:&#34;referral&#34;,&#34;campaign&#34;:&#34;open-doors&#34;}'>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,7 +33,7 @@
     </a>
     <nav class="site-nav" aria-label="Site">
       <a href="/model-compass/#tasks">Tasks</a>
-      <a href="/model-compass/compare/">Compare</a>
+<a href="/model-compass/best-ai-model-for/video/">Video</a>      <a href="/model-compass/compare/">Compare</a>
       <a href="/model-compass/method/" aria-current="page">Method</a>
       <a href="/model-compass/data/">Data</a>
       <a href="/model-compass/about/">About</a>
@@ -46,15 +46,15 @@
   <span class="rule" aria-hidden="true"></span>
   <p class="lede">Same requests to every model, a judge that never sees model names, a human check, and error bars that say how sure we are.</p>
   <ul class="stat-row" aria-label="Key numbers">
-    <li class="stat"><span class="stat__value">12</span><span class="stat__label">models you can pick in Picsart</span></li>
-    <li class="stat"><span class="stat__value">80</span><span class="stat__label">prompts in 8 tasks</span></li>
-    <li class="stat"><span class="stat__value">0.57</span><span class="stat__label">judge agreement between two shuffled runs (Kendall tau)</span></li>
-    <li class="stat"><span class="stat__value">76%</span><span class="stat__label">router picks the right task, leave-one-out</span></li>
+    <li class="stat"><span class="stat__value">17</span><span class="stat__label">image and video models you can pick in Picsart</span></li>
+    <li class="stat"><span class="stat__value">96</span><span class="stat__label">prompts in 12 tasks</span></li>
+    <li class="stat"><span class="stat__value">0.59</span><span class="stat__label">judge agreement between two shuffled runs (Kendall tau)</span></li>
+    <li class="stat"><span class="stat__value">72%</span><span class="stat__label">router picks the right task, leave-one-out</span></li>
   </ul>
   <div class="callout callout--short" role="note">
     <p>In short</p>
     <ul>
-      <li>Same 80 requests to all 12 models, settings fixed before generation.</li>
+      <li>Same requests to every model of a kind: 80 to the 12 image models, 16 to the 5 video models; settings fixed before generation.</li>
       <li>A blind AI judge ranks every request's outputs twice, shuffled; humans spot-check.</li>
       <li>Plackett–Luce ratings with 95% bootstrap error bars; overlapping bars mean a tie.</li>
       <li>A router tested leave-one-out sends your request to the right task.</li>
@@ -69,14 +69,14 @@
       <summary>On this page</summary>
       <p class="toc__title">On this page</p>
       <ol>
-<li><a href="#tasks">The tasks</a></li><li><a href="#prompts">The prompts</a></li><li><a href="#models">The models</a></li><li><a href="#settings">Generation settings</a></li><li><a href="#scores">Three automatic scores</a></li><li><a href="#judge">The AI judge</a></li><li><a href="#human">Human check</a></li><li><a href="#ratings">Ratings and error bars</a></li><li><a href="#router">The router</a></li><li><a href="#recommendation">How we recommend</a></li><li><a href="#limits">Limits</a></li><li><a href="#changelog">Changelog</a></li><li><a href="#reproduce">Reproduce it</a></li>      </ol>
+<li><a href="#tasks">The tasks</a></li><li><a href="#prompts">The prompts</a></li><li><a href="#models">The models</a></li><li><a href="#settings">Generation settings</a></li><li><a href="#scores">Three automatic scores</a></li><li><a href="#judge">The AI judge</a></li><li><a href="#video">Video</a></li><li><a href="#human">Human check</a></li><li><a href="#ratings">Ratings and error bars</a></li><li><a href="#router">The router</a></li><li><a href="#recommendation">How we recommend</a></li><li><a href="#limits">Limits</a></li><li><a href="#changelog">Changelog</a></li><li><a href="#reproduce">Reproduce it</a></li>      </ol>
     </details>
   </nav>
 
   <article class="prose">
     <section id="tasks">
       <h2>The tasks</h2>
-      <p>We did not invent the tasks. Other AI design tools sell single-purpose products: an "AI product photo generator", an "AI logo maker", an "AI poster generator". We grouped those into clusters and kept the 8 that came up again and again. Each task is here because people already search for a tool that does exactly that.</p>
+      <p>We did not invent the tasks. Other AI design tools sell single-purpose products: an "AI product photo generator", an "AI logo maker", an "AI poster generator". We grouped those into clusters and kept the 12 that came up again and again. Each task is here because people already search for a tool that does exactly that.</p>
       <p>2 tasks need words inside the image (a brand name, a headline). Spelling can be checked objectively there, so those tasks carry an extra score.</p>
       <div class="table-wrap">
         <table class="table">
@@ -138,6 +138,34 @@
             <td>no</td>
             <td class="num">0.63</td>
           </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/product-videos/">Product video</a> <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td class="num">4</td>
+            <td class="num"></td>
+            <td>no</td>
+            <td class="num">0.70</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/cinematic-videos/">Cinematic scene</a> <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td class="num">4</td>
+            <td class="num"></td>
+            <td>no</td>
+            <td class="num">0.85</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/animated-characters/">Animated character</a> <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td class="num">4</td>
+            <td class="num"></td>
+            <td>no</td>
+            <td class="num">0.75</td>
+          </tr>
+          <tr>
+            <td><a href="/model-compass/best-ai-model-for/people-videos/">People in motion</a> <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td class="num">4</td>
+            <td class="num"></td>
+            <td>no</td>
+            <td class="num">0.50</td>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -145,7 +173,7 @@
 
     <section id="prompts">
       <h2>The prompts</h2>
-      <p>Ten prompts per task, 80 in total, written the way people type. Some are five sloppy words; some are detailed briefs with subject, lighting, materials and style.</p>
+      <p>Ten prompts per image task and 4 per video task, 96 in total, written the way people type. Some are five sloppy words; some are detailed briefs with subject, lighting, materials and style.</p>
       <p>Each task spreads its prompts over the sub-uses the single-task tools sell separately. For product photos that means cosmetics, shoes, drinks, electronics, packaging, food and more, so no niche decides the ranking.</p>
       <ul>
         <li>No real brands, real people or copyrighted characters, and nothing a model would refuse: a refusal would decide the ranking instead of quality.</li>
@@ -158,11 +186,32 @@
     <section id="models">
       <h2>The models</h2>
       <p>Only models you can pick yourself in Picsart's AI Playground, and we recorded where we saw each one offered. A model that exists only behind an API, or that we could not confirm in the picker, is not in the table.</p>
-      <p>We stopped at 12 models to keep every prompt affordable to run through all of them.</p>
+      <p>We stopped at 17 models to keep every prompt affordable to run through all of them.</p>
       <div class="table-wrap">
         <table class="table">
-          <thead><tr><th>Model</th><th>Maker</th><th>Tier</th><th class="num">Credits per image</th><th>Settings used</th></tr></thead>
+          <thead><tr><th>Model</th><th>Maker</th><th>Tier</th><th class="num">Credits per image or clip</th><th>Settings used</th></tr></thead>
           <tbody>
+          <tr>
+            <td>Veo 3.1 <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td>Google</td>
+            <td><span class="tier tier--premium">premium</span></td>
+            <td class="num">48</td>
+            <td class="small">duration 4, resolution 720p</td>
+          </tr>
+          <tr>
+            <td>Seedance 2.5 <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td>ByteDance</td>
+            <td><span class="tier tier--premium">premium</span></td>
+            <td class="num">35</td>
+            <td class="small">duration 5, resolution 720p, colorDepth 8bit, outputFormat mp4</td>
+          </tr>
+          <tr>
+            <td>Kling V3 <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td>Kuaishou</td>
+            <td><span class="tier tier--premium">premium</span></td>
+            <td class="num">20</td>
+            <td class="small">duration 5, renderingSpeed std</td>
+          </tr>
           <tr>
             <td>GPT Image 2</td>
             <td>OpenAI</td>
@@ -176,6 +225,13 @@
             <td><span class="tier tier--premium">premium</span></td>
             <td class="num">5</td>
             <td class="small">resolution 1K, count 1</td>
+          </tr>
+          <tr>
+            <td>Wan 2.7 <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td>Alibaba</td>
+            <td><span class="tier tier--standard">standard</span></td>
+            <td class="num">15</td>
+            <td class="small">duration 5, resolution 720P</td>
           </tr>
           <tr>
             <td>Hunyuan V3</td>
@@ -241,6 +297,13 @@
             <td class="small">resolution 1K, count 1</td>
           </tr>
           <tr>
+            <td>Veo 3.1 Fast <span class="media-badge"><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>Video</span></td>
+            <td>Google</td>
+            <td><span class="tier tier--fast">fast</span></td>
+            <td class="num">12</td>
+            <td class="small">duration 4, resolution 720p</td>
+          </tr>
+          <tr>
             <td>Nano Banana</td>
             <td>Google</td>
             <td><span class="tier tier--fast">fast</span></td>
@@ -300,8 +363,20 @@
         <li><strong>It never sees model names</strong>, prices or any hint of where a tile came from. Tiles are only numbers.</li>
         <li><strong>Every prompt is judged twice, in a different shuffled order.</strong> Judges favour the first or centre tile; two shuffles cancel most of that, and comparing the runs shows how stable the judge is.</li>
       </ul>
-      <p>Agreement between the two runs is <strong>0.57</strong> on average (Kendall tau: 1 is identical order, 0 is no relation). Per task it ranges from 0.39 to 0.67; see the task table above. Low agreement means the judge itself is unsure, and the error bars are wider for it.</p>
+      <p>Agreement between the two runs is <strong>0.59</strong> on average (Kendall tau: 1 is identical order, 0 is no relation). Per task it ranges from 0.39 to 0.85; see the task table above. Low agreement means the judge itself is unsure, and the error bars are wider for it.</p>
       <p>The judge is one AI model looking at a contact sheet. It shares some taste with the aesthetic score, may prefer a certain kind of image, and can misread text. So its ranking sits next to the objective OCR check, and real people spot-check it.</p>
+    </section>
+
+    <section id="video">
+      <h2>Video</h2>
+      <p>4 video tasks, 16 prompts, 5 video models, all 9:16. Same rules as images: every video model gets the same prompts, defaults only, one clip per prompt, no re-rolls. What differs, and what that means:</p>
+      <ul>
+        <li><strong>Frames, not motion.</strong> CLIP and the aesthetic score run on three frames per clip, at 25, 50 and 75% of its length, and are averaged. The judge sees the same three frames per clip as a strip on one sheet. So it judges what is in the frames (subject, prompt fit, look, artefacts), not how smoothly things move.</li>
+        <li><strong>Sound is not judged.</strong> Models that make sound have it on by default and the clips keep it (open a clip on the compare page to hear it), but nothing here scores it.</li>
+        <li><strong>Lengths differ.</strong> Veo models make 4-second clips, the others 5 seconds, each at its default. Three frames per clip make the scores comparable; a longer clip has more chances to go wrong that the frames may miss.</li>
+        <li><strong>Few prompts per task.</strong> 4 prompts per video task, under the 8 we require for a per-task verdict, so video task pages are early results. The <a href="/model-compass/best-ai-model-for/video/">all-video ranking</a> pools all 16 prompts and is the stronger signal.</li>
+        <li>On this site a clip's still is its middle frame; clips are re-encoded to 540×960 with the Picsart AI label and play muted until you open them.</li>
+      </ul>
     </section>
 
     <section id="human">
@@ -331,21 +406,21 @@
 
     <section id="router">
       <h2>The router</h2>
-      <p>Your exact sentence has no result, so the router answers a smaller question: which of our 8 tasks is it closest to? A small sentence model (22 million parameters, 23 MB, running in your browser) turns your text into 384 numbers.</p>
+      <p>Your exact sentence has no result, so the router answers a smaller question: which of our 12 tasks is it closest to? A small sentence model (22 million parameters, 23 MB, running in your browser) turns your text into 384 numbers.</p>
       <p>We compare them with every benchmark prompt's numbers, keep the 5 most similar, and let those vote for their task, weighted by similarity. The recommendation is that task's best model; the neighbours are shown as proof, so you can see when the router guessed wrong.</p>
       <h3>When it stays quiet</h3>
-      <p>Two gates guard the answer. The nearest benchmark prompt must be at least 0.35 cosine-similar to your request, and the winning task must hold at least 40% of the vote. Below either line it says it is not sure and shows the two closest tasks instead. 88% of the benchmark prompts clear that gate when held out.</p>
+      <p>Two gates guard the answer. The nearest benchmark prompt must be at least 0.35 cosine-similar to your request, and the winning task must hold at least 40% of the vote. Below either line it says it is not sure and shows the two closest tasks instead. 82% of the benchmark prompts clear that gate when held out.</p>
       <p>Requests it cannot serve at all (video, photo editing, upscaling, writing) are told so before the model even loads. Nothing you type leaves your browser. If the model fails to download, a plain keyword list per task takes over.</p>
       <h3>How well it routes</h3>
-      <p>There is no separate test set, so we make one. Take one prompt out, route it with the other 79, check the answer, repeat for all 80. This is <strong>leave-one-out accuracy</strong>.</p>
-      <p>The router puts a held-out prompt in the right task <strong>76%</strong> of the time (guessing at random would score 12%). The harder question: is the recommended model the one the judge preferred for that exact prompt? That changes from prompt to prompt inside one task:</p>
+      <p>There is no separate test set, so we make one. Take one prompt out, route it with the other 95, check the answer, repeat for all 96. This is <strong>leave-one-out accuracy</strong>.</p>
+      <p>The router puts a held-out prompt in the right task <strong>72%</strong> of the time (guessing at random would score 8%). The harder question: is the recommended model the one the judge preferred for that exact prompt? That changes from prompt to prompt inside one task:</p>
       <ul class="bars" aria-label="Recommended model equals the judge's winner">
         <li class="is-router"><span class="bars__label"><strong>Compass router (leave-one-out)</strong></span><span class="bars__track"><span class="bars__fill" style="width:31.2%"></span></span><span class="bars__value">31%</span></li>
-        <li class=""><span class="bars__label"><strong>Always the most common winner</strong></span><span class="bars__track"><span class="bars__fill" style="width:21.2%"></span></span><span class="bars__value">21%</span></li>
-        <li class=""><span class="bars__label"><strong>Always the most expensive model</strong></span><span class="bars__track"><span class="bars__fill" style="width:17.5%"></span></span><span class="bars__value">18%</span></li>
-        <li class="is-oracle"><span class="bars__label"><strong>Oracle: knows the true task</strong></span><span class="bars__track"><span class="bars__fill" style="width:35.0%"></span></span><span class="bars__value">35%</span></li>
+        <li class=""><span class="bars__label"><strong>Always the most common winner</strong></span><span class="bars__track"><span class="bars__fill" style="width:24.0%"></span></span><span class="bars__value">24%</span></li>
+        <li class=""><span class="bars__label"><strong>Always the most expensive model</strong></span><span class="bars__track"><span class="bars__fill" style="width:18.8%"></span></span><span class="bars__value">19%</span></li>
+        <li class="is-oracle"><span class="bars__label"><strong>Oracle: knows the true task</strong></span><span class="bars__track"><span class="bars__fill" style="width:35.4%"></span></span><span class="bars__value">35%</span></li>
       </ul>
-      <p class="small muted">All four rows ask the same question on the same 80 prompts: how often is the recommended model the judge's winner for that prompt? The oracle knows the true task and picks its best model. A task router can only approach it; the gap is the price of imperfect routing. The ratings behind the oracle and router rows were fitted on all prompts, so those two are slightly optimistic. Task accuracy itself is clean leave-one-out.</p>
+      <p class="small muted">All four rows ask the same question on the same 96 prompts: how often is the recommended model the judge's winner for that prompt? The oracle knows the true task and picks its best model. A task router can only approach it; the gap is the price of imperfect routing. The ratings behind the oracle and router rows were fitted on all prompts, so those two are slightly optimistic. Task accuracy itself is clean leave-one-out.</p>
       <p>Why nearest neighbours, not a trained classifier? With about ten prompts per task there is not enough data to beat "look at the most similar examples". It needs no training step, is easy to explain, and the neighbours double as the proof gallery.</p>
     </section>
 
@@ -368,12 +443,12 @@
     <section id="limits">
       <h2>Limits</h2>
       <ul>
-        <li><strong>80 prompts is small.</strong> One prompt is ten percentage points of a task's accuracy. Read numbers as "about", and never read a rank difference inside overlapping bars as a finding.</li>
+        <li><strong>96 prompts is small.</strong> One prompt is ten percentage points of a task's accuracy. Read numbers as "about", and never read a rank difference inside overlapping bars as a finding.</li>
         <li><strong>One image per prompt per model.</strong> Models vary between runs; a second image could rank differently. The bars partly cover this; the judge's two runs do not (they see the same image twice).</li>
         <li><strong>We wrote the prompts.</strong> They imitate real requests, but another author would get different absolute numbers. Real visitors type shorter, stranger things, so expect the router to do worse in the wild than in leave-one-out.</li>
         <li><strong>The judge has taste.</strong> One AI model, with a known lean towards polished, detailed images, and it can misread text. Shuffled runs, the OCR check and the human votes limit the damage; they do not remove it.</li>
         <li><strong>English only.</strong> Prompts, OCR and the router's sentence model are English-centric. Other languages route worse; text in other scripts is out of scope.</li>
-        <li><strong>Defaults only.</strong> A model that is excellent with tuning may rank lower here than it deserves.</li>
+<li><strong>Video is judged from stills.</strong> Three frames per clip, so motion quality and sound are not measured; see <a href="#video">video</a>.</li>        <li><strong>Defaults only.</strong> A model that is excellent with tuning may rank lower here than it deserves.</li>
         <li><strong>Dated.</strong> Models and prices change without notice. Every page carries the date of its data (2026-10-07); when a model is updated or added we rerun it and note it in the changelog.</li>
         <li><strong>Built by someone who works at Picsart</strong>, as an independent project. The method and all the data are public so you can check or rerun it; see <a href="/model-compass/about/">about</a>.</li>
       </ul>
@@ -382,7 +457,7 @@
     <section id="changelog">
       <h2>Changelog</h2>
       <ul class="changelog">
-        <li><time datetime="2026-10-09">2026-10-09</time><span>First public release: 12 models, 8 tasks, 80 prompts, 960 images, two judge runs per prompt, router evaluated leave-one-out.</span></li>
+        <li><time datetime="2026-10-09">2026-10-09</time><span>First public release: 17 models, 12 tasks, 96 prompts, 960 images, two judge runs per prompt, router evaluated leave-one-out.</span></li>
         <li><time datetime="2026-10-06">2026-10-06</time><span>Method fixed before any image was generated: tasks, prompts, model list, settings and judge prompt written down and checked by tests first.</span></li>
       </ul>
     </section>
@@ -404,7 +479,7 @@
 <footer class="site-foot">
   <div class="wrap site-foot__grid">
     <div class="site-foot__disclosure">
-      <p>Built by Vilya Poghosyan, who works at Picsart. A personal project, not an official Picsart page. Every image was made with Picsart models in Picsart's AI Playground and carries the Picsart AI label.</p>
+      <p>Built by Vilya Poghosyan, who works at Picsart. A personal project, not an official Picsart page. Every image and clip was made with Picsart models in Picsart's AI Playground and carries the Picsart AI label.</p>
       <p>Benchmark data: CC BY 4.0. Model names belong to their makers. Updated <time datetime="2026-10-07">2026-10-07</time>.</p>
     </div>
     <div class="site-foot__links">
@@ -416,6 +491,7 @@
   </div>
 </footer>
 <script src="/model-compass/assets/js/site.js" defer></script>
+<script src="/model-compass/assets/js/share.js" defer></script>
 <script>if (window.matchMedia && window.matchMedia("(max-width: 899px)").matches) { var d = document.querySelector(".toc details"); if (d) d.open = false; }</script>
 <script data-goatcounter="https://vilya.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

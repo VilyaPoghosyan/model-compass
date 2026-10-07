@@ -1,12 +1,11 @@
 /* Task pages and the compare view; tokens and shared components come from site.css. */
 
-/* shared: breadcrumb, hidden text */
+/* shared: breadcrumb (hidden text lives in site.css) */
 .crumbs { font-size: .9rem; font-weight: 500; color: var(--ink-2); margin: 20px 0 8px; }
 .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; }
 .crumbs li + li::before { content: "/"; color: var(--line); margin-right: 8px; }
 .crumbs a { text-decoration: none; }
 .crumbs a:hover { text-decoration: underline; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* task hero */
 .task-hero { padding: 12px 0 24px; }
@@ -20,6 +19,8 @@
 /* static verdict card (home component, pre-filled) */
 .verdict--static { margin-top: 8px; }
 .verdict--static .proof__cap { -webkit-line-clamp: 2; }
+.early-note { background: var(--surface-2); border: 1.5px solid var(--magenta); border-radius: var(--r-s); padding: 10px 14px; font-size: .95rem; max-width: 72ch; margin: 0 0 16px; }
+.early-note a { font-weight: 500; }
 .pending { background: var(--surface); border: 1.5px dashed var(--line); border-radius: var(--r-l); padding: 24px 22px; margin-top: 8px; }
 .pending h2 { font-size: 1.5rem; margin-bottom: 8px; }
 .pending p { color: var(--ink-2); margin: 0; max-width: 56ch; }
@@ -103,14 +104,14 @@
 .judge-more[open] > summary { margin-bottom: 16px; }
 .judge-tile { flex: 0 0 auto; width: 136px; scroll-snap-align: start; }
 .judge-tile a { display: block; border-radius: var(--r-s); }
-.judge-tile img { width: 136px; height: 136px; object-fit: cover; border-radius: var(--r-s); background: var(--surface-2); }
-.judge-tile.is-winner img { outline: 3px solid var(--magenta); outline-offset: -3px; }
+.judge-tile img, .judge-tile video { width: 136px; height: 136px; object-fit: cover; border-radius: var(--r-s); background: var(--surface-2); }
+.judge-tile.is-winner img, .judge-tile.is-winner video { outline: 3px solid var(--magenta); outline-offset: -3px; }
 .judge-tile__name { display: block; font-weight: 600; font-size: .85rem; line-height: 1.25; margin-top: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .judge-tile__rank { display: block; font-size: .78rem; color: var(--ink-2); }
 .ocr { display: inline-block; border-radius: var(--r-pill); padding: 0 7px; font-size: .72rem; font-weight: 500; border: 1.5px solid var(--line); }
 .ocr--ok { border-color: var(--magenta); color: var(--ink); }
 .ocr--miss { color: var(--ink-2); }
-@media (min-width: 720px) { .judge-tile, .judge-tile img { width: 148px; } .judge-tile img { height: 148px; } }
+@media (min-width: 720px) { .judge-tile, .judge-tile img, .judge-tile video { width: 148px; } .judge-tile img, .judge-tile video { height: 148px; } }
 
 /* method strip */
 .method-strip { margin-top: clamp(40px, 5vw, 56px); background: var(--surface-2); border-radius: var(--r-l); padding: 24px 22px; }
